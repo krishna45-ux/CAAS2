@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollObserver from './components/ScrollObserver';
+import ReloadRedirect from './components/ReloadRedirect';
 
 export const metadata: Metadata = {
   title: 'CAAS — Your Professional Cameraman On Demand',
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -23,6 +24,7 @@ export default function RootLayout({
       </head>
       <body>
         <ScrollObserver />
+        <ReloadRedirect />
         <Navbar />
         {children}
         <Footer />

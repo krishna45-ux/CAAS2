@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [heroTc, setHeroTc] = useState('00:00:00:00');
@@ -103,8 +104,7 @@ export default function Home() {
               </h1>
               <p className="hero__sub">Discover talented photographers and videographers for weddings, parties, corporate events, celebrations, concerts and more.</p>
               <div className="hero__cta">
-                <a href="#find" className="btn btn--blue btn--lg">Find a Cameraman &rarr;</a>
-                <a href="#join" className="btn btn--ghost btn--lg">Join as Cameraman</a>
+                <Link href="/book" className="btn btn--blue btn--lg">Book a Shoot &rarr;</Link>
               </div>
             </div>
             
@@ -157,11 +157,11 @@ export default function Home() {
             <p className="lead-txt reveal d1">Our crew is ready to deploy across a range of real-world scenarios and environments — no brief too big or too small.</p>
           </div>
           <div className="shoot__grid">
-            <article className="shoot-card reveal d1"><img className="shot" src="/images/storyteller.jpg" alt="Cameraman filming social-media content in a studio"/>
+            <article className="shoot-card reveal d1"><img className="shot" src="/images/home_studio.jpg" alt="Cameraman filming social-media content in a studio"/>
               <div className="shoot-card__caption"><b>Social Media Content</b><span>f/2.0 · 35mm</span></div></article>
-            <article className="shoot-card reveal d2"><img className="shot" src="/images/blog_wedding.jpg" alt="Crew covering an outdoor event"/>
+            <article className="shoot-card reveal d2"><img className="shot" src="/images/home_event.jpg" alt="Crew covering an outdoor event"/>
               <div className="shoot-card__caption"><b>Events &amp; Exhibitions</b><span>f/2.8 · 24mm</span></div></article>
-            <article className="shoot-card reveal d3"><img className="shot" src="/images/blog_corporate.jpg" alt="Corporate team on a real-estate shoot"/>
+            <article className="shoot-card reveal d3"><img className="shot" src="/images/home_corporate.jpg" alt="Corporate team on a real-estate shoot"/>
               <div className="shoot-card__caption"><b>Real Estate &amp; Infra</b><span>f/4.0 · 16mm</span></div></article>
           </div>
         </section>
@@ -187,7 +187,7 @@ export default function Home() {
 
         {/* BOTTLENECK (dark) */}
         <section className="section dark bottleneck">
-          <img className="bottleneck__bg" src="/images/blog_lighting.jpg" alt="" aria-hidden="true"/>
+          <img className="bottleneck__bg" src="/images/home_lighting.jpg" alt="" aria-hidden="true"/>
           <div className="wrap bottleneck__grid">
             <div className="reveal">
               <span className="eyebrow">Content OS</span>
@@ -256,17 +256,17 @@ export default function Home() {
               <article className="story reveal-deal">
                 <div className="story__body"><div className="story__label"><b>Priya · Brand Lead</b><span>ON SET / 01</span></div>
                   <p>"The CAAS crew turned up fully organised — I didn't have to babysit a thing. One shift, full setup, cleanup and capture, handled."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/storyteller.jpg" alt="Priya's brand shoot on set"/></div>
+                <div className="story__pic"><img className="shot" src="/images/home_priya.jpg" alt="Priya's brand shoot on set"/></div>
               </article>
               <article className="story reveal-deal d1">
                 <div className="story__body"><div className="story__label"><b>Arjun · NGO Launch</b><span>ON SET / 02</span></div>
                   <p>"The rig they brought for our launch was insane — RED Komodo, the works. The final cut looks like it belongs on Netflix."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/blog_lighting.jpg" alt="Cinematic lighting on the NGO launch shoot"/></div>
+                <div className="story__pic"><img className="shot" src="/images/home_ngo.jpg" alt="Cinematic lighting on the NGO launch shoot"/></div>
               </article>
               <article className="story reveal-deal d2">
                 <div className="story__body"><div className="story__label"><b>Meera · Real Estate</b><span>ON SET / 03</span></div>
                   <p>"I used to underestimate turnaround. Booked at noon, had the high-res edit the same evening. The result? Priceless."</p></div>
-                <div className="story__pic"><img className="shot" src="/images/blog_wedding.jpg" alt="Real-estate property capture"/></div>
+                <div className="story__pic"><img className="shot" src="/images/kc_real_estate.jpg" alt="Real-estate property capture"/></div>
               </article>
             </div>
           </div>
@@ -284,8 +284,8 @@ export default function Home() {
         {/* INDUSTRIES */}
         <section className="section wrap" id="industries">
           <div className="head">
-            <span className="eyebrow">Industries</span>
-            <h2 className="h-section reveal">Industries We Serve</h2>
+            <span className="eyebrow">Services</span>
+            <h2 className="h-section reveal">Services We Provide</h2>
             <p className="lead-txt reveal d1">Deep expertise, translated into the unique visual language of your business.</p>
           </div>
           <div className="ind">
@@ -295,7 +295,7 @@ export default function Home() {
                 <h3 className="reveal-text-up d1">Brands, Creators &amp; Social Media</h3>
                 <p className="reveal-text-up d2">Built for businesses and individuals who create content consistently and need a crew that keeps up.</p>
               </div>
-              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/storyteller.jpg" alt="Creator filming branded content"/></div>
+              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/home_creator.jpg" alt="Creator filming branded content"/></div>
             </article>
             <article className="ind-row">
               <div className="ind-row__txt">
@@ -303,7 +303,7 @@ export default function Home() {
                 <h3 className="reveal-text-up d1">Products, Retail &amp; Hospitality</h3>
                 <p className="reveal-text-up d2">Everything a customer should feel about you before they ever visit or buy.</p>
               </div>
-              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/professional_lens.jpg" alt="Close-up product photography with a cinema lens"/></div>
+              <div className="ind-row__pic reveal-shutter"><img className="shot" src="/images/ind_product.jpg" alt="Close-up product photography with a cinema lens"/></div>
             </article>
             <article className="ind-row">
               <div className="ind-row__txt">
@@ -332,7 +332,7 @@ export default function Home() {
             <p className="lead-txt reveal d1">A living feed of our most recent work — straight off the memory card.</p>
           </div>
           <div className="portfolio__grid">
-            <figure className="pf reveal"><img className="shot" src="/images/professional_lens.jpg" alt="Cinema prime lens detail"/><figcaption className="pf__cap">STILL 01 · f/2.8</figcaption></figure>
+            <figure className="pf reveal"><img className="shot" src="/images/ind_camera_rig.jpg" alt="Cinema prime lens detail"/><figcaption className="pf__cap">STILL 01 · f/2.8</figcaption></figure>
             <figure className="pf reveal d1"><img className="shot" src="/images/blog_lighting.jpg" alt="Golden-hour silhouette shoot"/><figcaption className="pf__cap">STILL 02 · f/1.8</figcaption></figure>
             <figure className="pf reveal d2"><img className="shot" src="/images/storyteller.jpg" alt="Studio storyteller in frame"/><figcaption className="pf__cap">STILL 03 · f/4.0</figcaption></figure>
             <figure className="pf reveal d3"><img className="shot" src="/images/blog_wedding.jpg" alt="Outdoor event coverage"/><figcaption className="pf__cap">STILL 04 · f/2.0</figcaption></figure>
@@ -340,15 +340,16 @@ export default function Home() {
             <figure className="pf reveal d1"><img className="shot" src="/images/hero_poster.jpg" alt="Frame from a recent brand film"/><figcaption className="pf__cap">STILL 06 · f/5.6</figcaption></figure>
             <div className="portfolio__more reveal d2">
               <h3>Wanna See More ???</h3>
-              <a href="#" className="btn btn--coral btn--lg">Check Out Our Portfolio
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
+              <Link href="/portfolio" className="btn btn--coral btn--lg">Check Out Our Portfolio
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </Link>
             </div>
           </div>
         </section>
 
         {/* GEAR (dark) */}
         <section className="section dark gear-section">
-          <img className="gear__bg" src="/images/professional_lens.jpg" alt="" aria-hidden="true"/>
+          <img className="gear__bg" src="/images/ind_cinema.jpg" alt="" aria-hidden="true"/>
           <div className="wrap gear__grid">
             <div className="gear__txt">
               <span className="eyebrow">The equipment</span>
@@ -415,8 +416,8 @@ export default function Home() {
           <h2 className="reveal">Ready to Capture<br/><span className="u-gold u-italic">Precision?</span></h2>
           <p className="reveal d1">Join 500+ brands using CAAS to produce high-end content at scale. No arguments, no complicated quotes — just results.</p>
           <div className="final__row reveal d2">
-            <a href="#pricing" className="btn btn--dark btn--lg">Get Started</a>
-            <a href="#pricing" className="btn btn--ghost btn--lg">View Pricing</a>
+            <Link href="/book" className="btn btn--dark btn--lg">Get Started</Link>
+            <Link href="/pricing" className="btn btn--ghost btn--lg">View Pricing</Link>
           </div>
           <p className="final__small reveal d3">Available across 12 cities · Book in under 60 seconds</p>
         </section>
