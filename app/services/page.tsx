@@ -7,18 +7,18 @@ export default function ServicesPage() {
       
       {/* 1. HERO SECTION */}
       <section className="services-cta page-section">
-        <div className="wrap services-cta__inner">
-          <div className="services-cta__content reveal-left">
+        <div className="wrap">
+          <div className="services-cta__content reveal-left" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <span className="eyebrow eyebrow--cyan">Let's Talk</span>
             <h1 className="h-section" style={{ marginTop: 0 }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h1>
             <p>Whether it's a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
             
-            <div className="services-cta__buttons">
+            <div className="services-cta__buttons" style={{ justifyContent: 'center', marginTop: '24px' }}>
               <Link href="/contact" className="btn btn--blue btn--lg">Request a Custom Quote</Link>
               <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
             </div>
 
-            <div className="services-cta__stats">
+            <div className="services-cta__stats" style={{ justifyContent: 'center', marginTop: '32px' }}>
               <div>
                 <strong>1500+</strong>
                 <span>PROJECTS COMPLETED</span>
@@ -32,10 +32,6 @@ export default function ServicesPage() {
                 <span>DELIVERY PROMISE</span>
               </div>
             </div>
-          </div>
-          
-          <div className="services-cta__image reveal-right">
-             <Image src="/images/hero_cinematic.jpg" alt="Cameraman" fill priority style={{ objectFit: 'cover' }} />
           </div>
         </div>
       </section>
@@ -328,19 +324,19 @@ export default function ServicesPage() {
           <div className="wrap">
             <div className="social-proof__stats">
               <div className="stat-item">
-                <div className="stat-num" data-count="12" data-suffix="+">12+</div>
+                <div className="stat-num" data-count="12" data-suffix="+">12</div>
                 <div className="stat-label">CITIES</div>
               </div>
               <div className="stat-item">
-                <div className="stat-num" data-count="98" data-suffix="%">98%</div>
+                <div className="stat-num" data-count="98" data-suffix="%">98</div>
                 <div className="stat-label">SUCCESS</div>
               </div>
               <div className="stat-item">
-                <div className="stat-num" data-count="50" data-suffix="k+">50k+</div>
+                <div className="stat-num" data-count="50" data-suffix="k+">50</div>
                 <div className="stat-label">PHOTOS/VIDEOS</div>
               </div>
               <div className="stat-item">
-                <div className="stat-num" data-count="24" data-suffix="/7">24/7</div>
+                <div className="stat-num" data-count="24" data-suffix="/7">24</div>
                 <div className="stat-label">AVAILABILITY</div>
               </div>
             </div>
@@ -580,23 +576,6 @@ export default function ServicesPage() {
                 <span>FOUNDER & CEO, CAAS</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      {/* 10. FINAL CTA */}
-      <section className="services-final-cta page-section">
-        <div className="wrap services-final-cta__inner">
-          <div className="services-final-cta__content reveal">
-            <span className="eyebrow eyebrow--cyan">LET'S TALK</span>
-            <h2 className="h-section" style={{ marginTop: '12px' }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h2>
-            <p>Whether it's a single product shoot or a multi-day campaign, our project managers are ready to build your custom production package.</p>
-            <div className="services-final-cta__btns">
-              <Link href="/contact" className="btn btn--cyan btn--lg">Request a Custom Quote</Link>
-              <Link href="/contact" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff' }}>Schedule Consultation</Link>
-            </div>
-          </div>
-          <div className="services-final-cta__img reveal d1">
-            <img src="/images/hero_cinematic.jpg" alt="Cameraman on set" />
           </div>
         </div>
       </section>
