@@ -2205,11 +2205,11 @@
 .pf-curve__title { text-align: center; width: 100%; font-size: clamp(2rem, 4vw, 3rem); color: #fff; padding-bottom: 80px; margin-top: 40px; }
 
 /* 4. THE 3500 CONCEPT */
-.pf-concept { background: var(--cyan-bright); padding: 100px 0; margin-top: 40px; z-index: 1; position: relative; color: var(--ink); }
+.pf-concept { background: var(--cyan-bright); padding: 60px 0; margin-top: 20px; z-index: 1; position: relative; color: var(--ink); }
 .pf-concept__header h2 { font-size: clamp(2.5rem, 6vw, 3.5rem); margin-bottom: 12px; color: var(--ink); letter-spacing: -0.02em; }
-.pf-concept__header p { font-size: 1.15rem; font-weight: 500; margin-bottom: 64px; opacity: 0.85; }
+.pf-concept__header p { font-size: 1.15rem; font-weight: 500; margin-bottom: 40px; opacity: 0.85; }
 
-.pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 .pf-price-card { background: #fff; border-radius: 24px; padding: 48px; box-shadow: 0 30px 60px rgba(0,20,40,0.08); color: var(--ink); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid rgba(0,0,0,0.04); }
 .pf-price-card:hover { transform: translateY(-8px); box-shadow: 0 40px 80px rgba(0,20,40,0.12); }
 .pf-price-card .stars { color: var(--blue-ink); font-size: 1.2rem; margin-bottom: 12px; }

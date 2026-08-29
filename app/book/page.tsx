@@ -4,7 +4,7 @@ export default function BookShoot() {
   return (
     <div className="page-main" data-nav="dark">
       <section className="page-hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <img className="page-hero__bg" src="/images/home_lighting.jpg" alt="" aria-hidden="true" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.25, zIndex: 0 }} />
+        <img className="page-hero__bg" src="/images/pricing_hero_camera.jpg" alt="" aria-hidden="true" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.25, zIndex: 0 }} />
         <div className="page-hero__inner wrap" style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center', zIndex: 2, position: 'relative' }}>
           <h1 className="hero__title" style={{ fontSize: 'clamp(2.5rem, 10vw, 5rem)', fontFamily: 'var(--display)', fontWeight: 800, color: '#ffffff', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>Coming Soon!</h1>
           <p className="hero__sub" style={{ fontSize: 'clamp(1rem, 4vw, 1.25rem)', color: '#e2e8f0', lineHeight: 1.6, fontWeight: 500 }}>
