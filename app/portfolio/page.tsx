@@ -6,7 +6,7 @@ export default function PortfolioPage() {
   const [nicheTab, setNicheTab] = useState('inspiration'); 
 
   return (
-    <main id="top" className="page-main pf-page">
+    <main id="top" className="page-main pf-page" data-nav="light">
       {/* 1. HERO */}
       <section className="pf-hero wrap page-section">
         <div className="pf-hero__inner">

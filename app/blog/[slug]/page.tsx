@@ -6,7 +6,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const postTitle = params.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   return (
-    <main id="top" className="page-main">
+    <main id="top" className="page-main" data-nav="dark">
       {/* ARTICLE HERO */}
       <section className="article-hero dark">
         <div className="wrap">

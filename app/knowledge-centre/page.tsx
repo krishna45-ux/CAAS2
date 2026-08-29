@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function KnowledgeCentrePage() {
   return (
-    <main id="top" className="page-main kc-page">
+    <main id="top" className="page-main kc-page" data-nav="light">
       {/* 1. KNOWLEDGE CENTRE HERO */}
       <section className="kc-hero">
         <div className="wrap kc-hero__inner">

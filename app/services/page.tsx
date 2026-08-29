@@ -3,34 +3,41 @@ import Link from 'next/link';
 
 export default function ServicesPage() {
   return (
-    <main id="top" className="page-main services-page">
+    <main id="top" className="page-main services-page" data-nav="light">
       
-      {/* 1. HERO SECTION */}
-      <section className="services-cta page-section">
+      {/* 1. HERO — two-column, per Figma */}
+      <section className="services-cta services-hero-v2 page-section">
         <div className="wrap">
-          <div className="services-cta__content reveal-left" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <span className="eyebrow eyebrow--cyan">Let's Talk</span>
-            <h1 className="h-section" style={{ marginTop: 0 }}>Ready to elevate your<br/><span className="u-cyan">brand's</span> visual identity?</h1>
-            <p>Whether it's a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
-            
-            <div className="services-cta__buttons" style={{ justifyContent: 'center', marginTop: '24px' }}>
-              <Link href="/contact" className="btn btn--blue btn--lg">Request a Custom Quote</Link>
-              <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
+          <div className="services-cta__inner">
+            <div className="services-cta__content">
+              <span className="eyebrow eyebrow--cyan">Our Services</span>
+              <h1 className="hero__title">
+                <span className="line"><span>Specialized</span></span><br/>
+                <span className="line"><span className="u-cyan">Content</span></span><br/>
+                <span className="line"><span>Production.</span></span>
+              </h1>
+              <p className="hero__sub">Bring a production-ready crew to any brief — product, brand, corporate, real estate or event. One system, any shoot, on demand.</p>
+              <div className="services-cta__buttons">
+                <Link href="/book" className="btn btn--primary btn--lg">Book a Shoot &rarr;</Link>
+                <Link href="#niche-section" className="btn btn--ghost btn--lg">Explore Services</Link>
+              </div>
+              <div className="services-cta__stats">
+                <div>
+                  <strong>1500+</strong>
+                  <span>PROJECTS COMPLETED</span>
+                </div>
+                <div>
+                  <strong>15+</strong>
+                  <span>SPECIALIZED VERTICALS</span>
+                </div>
+                <div>
+                  <strong>48hr</strong>
+                  <span>DELIVERY PROMISE</span>
+                </div>
+              </div>
             </div>
-
-            <div className="services-cta__stats" style={{ justifyContent: 'center', marginTop: '32px' }}>
-              <div>
-                <strong>1500+</strong>
-                <span>PROJECTS COMPLETED</span>
-              </div>
-              <div>
-                <strong>15+</strong>
-                <span>SPECIALIZED VERTICALS</span>
-              </div>
-              <div>
-                <strong>48hr</strong>
-                <span>DELIVERY PROMISE</span>
-              </div>
+            <div className="services-cta__image reveal d1">
+              <Image src="/images/ind_camera_rig.jpg" alt="Cinema camera rig on set" fill priority sizes="(max-width: 900px) 100vw, 45vw" style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </div>
@@ -501,6 +508,36 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* 7c. PRICING — "premium content shouldn't have premium complexities" */}
+      <section className="services-pricing page-section wrap">
+        <div className="svc-price">
+          <div className="svc-price__copy">
+            <span className="eyebrow eyebrow--cyan">Simple pricing</span>
+            <h2 className="h-section">Premium content shouldn&rsquo;t have<br/>premium complexities.</h2>
+            <p>One transparent rate covers the crew, the kit and the deliverables. Extra hours and add-ons are priced up front — no re-quoting halfway through a shoot.</p>
+            <ul className="svc-price__list">
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Professional cameraman &amp; crew</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Cinema-grade kit &amp; lighting</li>
+              <li><svg viewBox="0 0 24 24" fill="none"><path d="m5 13 4 4 10-10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>Raw + edited deliverables</li>
+            </ul>
+          </div>
+
+          <div className="svc-price__card">
+            <span className="svc-price__badge">Starting from</span>
+            <div className="svc-price__amount">
+              <span className="svc-price__cur">&#8377;</span>3500
+            </div>
+            <div className="svc-price__rate">Cameraman for a 3-hour session</div>
+            <div className="svc-price__extra">
+              <b>Need more time?</b>
+              <span>&#8377;1000 / extra hour</span>
+            </div>
+            <Link href="/book" className="btn btn--primary btn--lg svc-price__cta">Book a Shoot &rarr;</Link>
+            <p className="svc-price__note">Equipment, travel and production requirements are quoted per project brief.</p>
+          </div>
+        </div>
+      </section>
+
       {/* 8. WHAT WE DON'T SHOOT */}
       <section className="services-exclusion page-section wrap">
         <div className="exclusion-card reveal">
@@ -575,6 +612,27 @@ export default function ServicesPage() {
                 <strong>Shaurya Goyal</strong><br/>
                 <span>FOUNDER & CEO, CAAS</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* 10. FINAL CTA */}
+      <section className="services-final-cta page-section">
+        <div className="wrap">
+          <div className="services-final-cta__inner">
+            <div className="services-final-cta__content">
+              <span className="eyebrow eyebrow--cyan">Let&rsquo;s Talk</span>
+              <h2 className="h-section">Ready to elevate your<br/><span className="u-cyan">brand&rsquo;s</span> visual identity?</h2>
+              <p>Whether it&rsquo;s a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
+              <div className="services-final-cta__btns">
+                <Link href="/contact" className="btn btn--primary btn--lg">Request a Custom Quote</Link>
+                <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
+              </div>
+            </div>
+            <div className="services-final-cta__img">
+              <Image src="/images/professional_lens.jpg" alt="Cinema prime lens" fill style={{ objectFit: 'cover' }} />
             </div>
           </div>
         </div>

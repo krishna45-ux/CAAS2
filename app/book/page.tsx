@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function BookShoot() {
   return (
-    <div className="page-main">
+    <div className="page-main" data-nav="dark">
       <section className="page-hero" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <img className="page-hero__bg" src="/images/home_lighting.jpg" alt="" aria-hidden="true" style={{ opacity: 0.25 }} />
         <div className="page-hero__inner wrap" style={{ maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center', zIndex: 2 }}>

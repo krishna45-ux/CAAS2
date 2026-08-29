@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import './responsive-overrides.css';
+import './home.css';
+import './pages-theme.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollObserver from './components/ScrollObserver';
-import ReloadRedirect from './components/ReloadRedirect';
+import MotionProvider from './components/MotionProvider';
+import PageTransition from './components/PageTransition';
 
 export const metadata: Metadata = {
   title: 'CAAS — Your Professional Cameraman On Demand',
@@ -21,14 +24,23 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+        <noscript>
+          <style>{`
+            [style*="opacity:0"],[style*="opacity: 0"]{opacity:1!important;transform:none!important}
+            .split__word{overflow:visible!important}
+            .reveal,.reveal-left,.reveal-right{opacity:1!important;transform:none!important}
+            .home .hero{position:relative!important}
+          `}</style>
+        </noscript>
       </head>
       <body>
-        <ScrollObserver />
-        <ReloadRedirect />
-        <Navbar />
-        {children}
-        <Footer />
+        <MotionProvider>
+          <ScrollObserver />
+          <Navbar />
+          <PageTransition>{children}</PageTransition>
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );

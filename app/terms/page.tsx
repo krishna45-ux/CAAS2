@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <main id="top" className="page-main">
+    <main id="top" className="page-main" data-nav="dark">
       <section className="page-hero">
         <div className="wrap page-hero__inner">
           <h1 className="hero__title" style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)' }}>

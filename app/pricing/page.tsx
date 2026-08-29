@@ -29,7 +29,7 @@ export default function PricingPage() {
   ];
 
   return (
-    <main id="top" className="page-main pricing-page">
+    <main id="top" className="page-main pricing-page" data-nav="light">
       {/* 1. CONTACT HERO */}
       <section className="contact-hero wrap page-section">
         <div className="contact-hero__inner">

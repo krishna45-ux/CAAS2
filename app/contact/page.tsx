@@ -2,7 +2,7 @@
 
 export default function ContactPage() {
   return (
-    <main id="top" className="page-main">
+    <main id="top" className="page-main" data-nav="dark">
       <section className="page-hero dark">
         <div className="wrap page-hero__inner">
           <span className="eyebrow">— GET IN TOUCH</span>

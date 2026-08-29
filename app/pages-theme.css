@@ -1,0 +1,615 @@
+/* ============================================================
+   CAAS — INNER PAGES THEME
+   Brings every page onto the same language as the home page:
+   blue is the only accent, one card treatment, one radius scale,
+   and a consistent set of camera motifs — viewfinder brackets,
+   mono readouts, film perforations, aperture rings.
+   Loaded after pages.css so it wins without !important.
+   ============================================================ */
+
+/* ---------- rhythm ---------- */
+.page-main .page-section{padding-block:clamp(64px,8vw,124px)}
+.page-main section + section{position:relative}
+
+/* ---------- HEROES ---------- */
+
+.page-main .page-hero,
+.page-main .pf-hero,
+.page-main .kc-hero,
+.page-main .services-cta,
+.page-main .contact-hero{
+  position:relative;
+}
+/* a soft blue key-light behind every hero, like a lamp off frame */
+.page-main .page-hero::after,
+.page-main .pf-hero::after,
+.page-main .kc-hero::after,
+.page-main .services-cta::after,
+.page-main .contact-hero::after{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(70% 62% at 50% -6%,var(--blue-08),transparent 66%);
+}
+.page-main .page-hero>*,
+.page-main .pf-hero>*,
+.page-main .kc-hero>*,
+.page-main .services-cta>*,
+.page-main .contact-hero>*{position:relative;z-index:1}
+
+/* dark heroes keep the glow but stronger, against navy */
+.page-main .page-hero{background:var(--ink);color:#fff;overflow:hidden}
+.page-main .page-hero::after{
+  background:radial-gradient(80% 70% at 50% -10%,rgba(0,128,255,.3),transparent 66%);
+}
+.page-main .page-hero__bg{opacity:.2;filter:grayscale(.35) contrast(1.06)}
+
+/* hero headline treatment matches the home page */
+.page-main .page-hero h1,
+.page-main .pf-hero__title,
+.page-main .kc-hero__title,
+.page-main .services-cta h1,
+.page-main .contact-hero h1{
+  font-family:var(--display);font-weight:800;
+  letter-spacing:-.035em;line-height:1.04;
+  text-wrap:balance;
+}
+
+/* ---------- readouts / eyebrows / badges ---------- */
+
+.page-main .eyebrow,
+.page-main .eyebrow--cyan{color:var(--blue-ink)}
+.page-main .eyebrow::before{background:currentColor}
+.page-main .page-hero .eyebrow{color:var(--blue-lift)}
+
+.page-main .pf-hero__badge,
+.page-main .kc-badge-small,
+.page-main .contact-badge,
+.page-main .comparison-card__badge{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--mono);font-weight:500;
+  font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--blue-ink);background:var(--blue-08);
+  border:1px solid var(--blue-16);border-radius:999px;
+  padding:.5em 1em;
+}
+/* a live-dot on the lead badge, echoing the hero REC readout */
+.page-main .pf-hero__badge::before,
+.page-main .kc-badge-small::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--blue);flex:none;
+  animation:recPulse 2s var(--ease) infinite;
+}
+
+.page-main .kc-tag,
+.page-main .blog-card__cat,
+.page-main .pf-badge--cyan{
+  font-family:var(--mono);font-size:.64rem;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;
+  background:var(--blue);color:#fff;
+  border-radius:999px;padding:.42em .85em;
+}
+.page-main .kc-tag--white{background:#fff;color:var(--ink)}
+
+/* ---------- CARDS: one treatment everywhere ---------- */
+
+.page-main .bento-card,
+.page-main .blog-card,
+.page-main .contact-card,
+.page-main .stat-card,
+.page-main .team-card,
+.page-main .standard-card,
+.page-main .pf-niche-card,
+.page-main .pf-guide-card,
+.page-main .pf-icon-box,
+.page-main .pf-price-card,
+.page-main .kc-hub-card,
+.page-main .kc-post-card,
+.page-main .exclusion-card{
+  position:relative;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--card-shadow);
+  /* must also carry opacity+transform: these cards double as scroll-reveal
+     targets, and a shorthand here outranks .reveal's own transition */
+  transition:transform .6s var(--ease-out),opacity .6s var(--ease-out),
+             box-shadow .5s var(--ease-out),border-color .4s var(--ease);
+  overflow:hidden;
+}
+.page-main .bento-card:hover,
+.page-main .blog-card:hover,
+.page-main .contact-card:hover,
+.page-main .stat-card:hover,
+.page-main .team-card:hover,
+.page-main .standard-card:hover,
+.page-main .pf-niche-card:hover,
+.page-main .pf-guide-card:hover,
+.page-main .pf-icon-box:hover,
+.page-main .kc-hub-card:hover,
+.page-main .kc-post-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--card-shadow-lg);
+  border-color:var(--blue-28);
+}
+
+/* a blue rule that draws itself along the card's top edge on hover */
+.page-main .bento-card::before,
+.page-main .blog-card::before,
+.page-main .contact-card::before,
+.page-main .pf-niche-card::before,
+.page-main .pf-guide-card::before,
+.page-main .kc-post-card::before{
+  content:"";position:absolute;top:0;left:0;height:2px;width:0;z-index:4;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  transition:width .6s var(--ease-out);
+}
+.page-main .bento-card:hover::before,
+.page-main .blog-card:hover::before,
+.page-main .contact-card:hover::before,
+.page-main .pf-niche-card:hover::before,
+.page-main .pf-guide-card:hover::before,
+.page-main .kc-post-card:hover::before{width:100%}
+
+/* dark card variants keep the same shape, inverted */
+.page-main .kc-hub-card--dark,
+.page-main .kc-post-card--dark,
+.page-main .kc-discover-item__content--dark,
+.page-main .comparison-card--caas{
+  background:var(--ink);color:#fff;border-color:rgba(255,255,255,.12);
+}
+.page-main .comparison-card--caas{
+  background:linear-gradient(160deg,var(--ink-2),var(--ink));
+}
+.page-main .comparison-card--traditional{background:var(--paper-2)}
+
+/* ---------- imagery: rack-focus on approach ---------- */
+
+.page-main .bento-card__img img,
+.page-main .blog-card__pic img,
+.page-main .pf-niche-card__img img,
+.page-main .team-card__pic img,
+.page-main .pf-hero__image img,
+.page-main .kc-hero__image img,
+.page-main .services-cta__image img{
+  transition:transform .9s var(--ease-out),filter .7s var(--ease-out);
+  filter:saturate(.94) contrast(1.02);
+}
+.page-main .bento-card:hover .bento-card__img img,
+.page-main .blog-card:hover .blog-card__pic img,
+.page-main .pf-niche-card:hover .pf-niche-card__img img,
+.page-main .team-card:hover .team-card__pic img{
+  transform:scale(1.06);filter:saturate(1.08) contrast(1.05);
+}
+
+.page-main .pf-hero__image,
+.page-main .kc-hero__image,
+.page-main .services-cta__image{
+  border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--card-shadow-lg);
+}
+
+/* ---------- tabs / toggles ---------- */
+
+.page-main .pf-tab,
+.page-main .pf-toggle__btn{
+  font-family:var(--body);font-weight:600;font-size:.9rem;
+  border-radius:999px;min-height:44px;padding:.6em 1.2em;
+  color:var(--muted);border:1px solid var(--line);background:transparent;
+  transition:color .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);
+}
+.page-main .pf-tab:hover,
+.page-main .pf-toggle__btn:hover{color:var(--blue-ink);border-color:var(--blue-28);background:var(--blue-08)}
+.page-main .pf-tab.is-active,
+.page-main .pf-toggle__btn.is-active{
+  background:var(--blue);border-color:var(--blue);color:#fff;
+  box-shadow:var(--blue-glow);
+}
+.page-main .pf-toggle{border:0;gap:8px;display:inline-flex}
+
+/* ---------- numbers & stats: tabular, camera-readout flavour ---------- */
+
+.page-main .stat-card__num,
+.page-main .services-cta__stats strong,
+.page-main .pf-price-card .price{
+  font-family:var(--display);font-weight:800;
+  font-variant-numeric:tabular-nums;letter-spacing:-.035em;
+  color:var(--text);
+}
+.page-main .pf-price-card .price{color:var(--blue)}
+.page-main .stat-card__label,
+.page-main .services-cta__stats span{
+  font-family:var(--mono);font-size:.66rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.page-main .services-cta__stats{gap:clamp(24px,4vw,56px)}
+.page-main .services-cta__stats>div{position:relative;padding-left:18px}
+.page-main .services-cta__stats>div::before{
+  content:"";position:absolute;left:0;top:.35em;bottom:.35em;width:2px;
+  background:linear-gradient(180deg,var(--blue),transparent);
+}
+
+/* ---------- lists with check / cross glyphs ---------- */
+
+.page-main .comparison-card__list li svg,
+.page-main .bento-card__check-list li svg{width:18px;height:18px;flex:none}
+.page-main .comparison-card--caas .comparison-card__list li svg{color:var(--blue-lift)}
+.page-main .comparison-card--traditional .comparison-card__list li svg{color:var(--muted)}
+
+/* ---------- feedback / stars ---------- */
+
+.page-main .kc-feedback__btn{
+  border-radius:50%;border:1px solid var(--line);color:var(--blue-ink);
+  min-width:44px;min-height:44px;
+  transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);
+}
+.page-main .kc-feedback__btn:hover,
+.page-main .kc-feedback__btn--active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.page-main .stars{color:var(--gold-deep);letter-spacing:.06em}
+
+/* ---------- links ---------- */
+
+/* every inline "read more"-style link, however it was named on each page */
+.page-main a[class*="link"],
+.page-main a[class*="read"],
+.page-main a[class*="browse"],
+.page-main .btn-text{
+  display:inline-flex;align-items:center;gap:.5em;min-height:44px;
+  font-weight:600;color:var(--blue-ink);
+  transition:gap .35s var(--ease-out),color .3s var(--ease);
+}
+.page-main a[class*="link"]:hover,
+.page-main a[class*="read"]:hover,
+.page-main a[class*="browse"]:hover,
+.page-main .btn-text:hover{gap:.9em;color:var(--blue)}
+
+/* ---------- dark CTA bands ---------- */
+
+.page-main .kc-cta,
+.page-main .services-final-cta,
+.page-main .trust-cta{
+  position:relative;overflow:hidden;
+  background:var(--ink);color:#fff;
+}
+.page-main .kc-cta::before,
+.page-main .services-final-cta::before,
+.page-main .trust-cta::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(70% 90% at 50% 110%,rgba(0,128,255,.32),transparent 62%);
+}
+.page-main .kc-cta>*,
+.page-main .services-final-cta>*,
+.page-main .trust-cta>*{position:relative;z-index:1}
+
+/* aperture-blade ring, used as a quiet backdrop mark on CTA bands */
+.page-main .kc-cta::after,
+.page-main .services-final-cta::after{
+  content:"";position:absolute;z-index:0;pointer-events:none;
+  width:min(52vw,520px);aspect-ratio:1;border-radius:50%;
+  right:-8%;top:50%;transform:translateY(-50%);
+  border:1px dashed rgba(0,128,255,.28);
+  box-shadow:inset 0 0 90px rgba(0,128,255,.12);
+}
+
+/* ---------- forms ---------- */
+
+.page-main input,
+.page-main textarea,
+.page-main select{
+  font-family:var(--body);font-size:1rem;
+  min-height:48px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--card);color:var(--text);
+  padding:.8em 1em;
+  transition:border-color .3s var(--ease),box-shadow .3s var(--ease);
+}
+.page-main textarea{min-height:120px;padding-top:.9em}
+.page-main input:focus,
+.page-main textarea:focus,
+.page-main select:focus{
+  outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 4px var(--blue-16);
+}
+.page-main label{font-size:.86rem;font-weight:600;color:var(--text)}
+
+/* ---------- motion: reveals get a spring-ish settle ---------- */
+
+.page-main .reveal,
+.page-main .reveal-left,
+.page-main .reveal-right{will-change:transform,opacity}
+
+@media (prefers-reduced-motion:reduce){
+  .page-main .bento-card,
+  .page-main .blog-card,
+  .page-main .contact-card,
+  .page-main .pf-niche-card{transition:none}
+  .page-main .pf-hero__badge::before,
+  .page-main .kc-badge-small::before{animation:none}
+}
+
+/* ============================================================
+   HERO LINE REVEAL
+   Every inner page still ships <span class="line"><span>…</span></span>
+   from the original hero. Give that structure the same mask-reveal the
+   home page uses, so all heroes share one signature — no markup edits.
+   PageTransition remounts on route change, so it replays per page.
+   ============================================================ */
+
+.page-main .hero__title .line,
+.page-main .pf-hero__title .line{
+  display:inline-block;overflow:hidden;vertical-align:top;
+  padding-bottom:.14em;margin-bottom:-.14em;
+}
+.page-main .hero__title .line>*,
+.page-main .pf-hero__title .line>*{
+  display:inline-block;
+  animation:lineUp .95s var(--ease-out) both;
+}
+@keyframes lineUp{
+  from{transform:translateY(110%);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+.page-main .hero__title .line:nth-of-type(1)>*{animation-delay:.14s}
+.page-main .hero__title .line:nth-of-type(2)>*{animation-delay:.26s}
+.page-main .hero__title .line:nth-of-type(3)>*{animation-delay:.38s}
+.page-main .hero__title .line:nth-of-type(4)>*{animation-delay:.50s}
+
+/* headings without .line markup still get a soft rise */
+.page-main .kc-hero__title,
+.page-main .services-cta h1{animation:heroRise 1s var(--ease-out) both;animation-delay:.14s}
+@keyframes heroRise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* the supporting copy follows the headline in */
+.page-main .page-hero .eyebrow,
+.page-main .pf-hero__badge,
+.page-main .contact-badge{animation:heroRise .8s var(--ease-out) both;animation-delay:.05s}
+.page-main .page-hero .hero__sub,
+.page-main .pf-hero__sub,
+.page-main .kc-hero__desc{animation:heroRise .9s var(--ease-out) both;animation-delay:.5s}
+.page-main .hero__ctas,
+.page-main .services-cta__buttons,
+.page-main .pf-stats,
+.page-main .services-cta__stats{animation:heroRise .9s var(--ease-out) both;animation-delay:.62s}
+
+/* ============================================================
+   ACCENT UNIFICATION
+   The pages inherited four different highlight utilities. Blue leads,
+   so they all resolve to blue — bright on dark grounds, ink on paper.
+   ============================================================ */
+
+.u-cyan,.u-coral,.u-gold{color:var(--blue-ink)}
+.dark .u-cyan,.dark .u-coral,.dark .u-gold,.dark .u-blue,
+.page-hero .u-cyan,.page-hero .u-coral,.page-hero .u-gold,.page-hero .u-blue{
+  color:var(--blue-lift);
+}
+
+/* ============================================================
+   VIEWFINDER FRAMING on hero imagery
+   ============================================================ */
+
+.page-main .pf-hero__image-wrap,
+.page-main .kc-hero__image,
+.page-main .services-cta__image{position:relative}
+
+.page-main .pf-hero__image-wrap::before,
+.page-main .pf-hero__image-wrap::after,
+.page-main .kc-hero__image::before,
+.page-main .kc-hero__image::after{
+  content:"";position:absolute;width:26px;height:26px;z-index:4;pointer-events:none;
+  border:1.5px solid rgba(255,255,255,.55);
+}
+.page-main .pf-hero__image-wrap::before,
+.page-main .kc-hero__image::before{top:16px;left:16px;border-right:0;border-bottom:0}
+.page-main .pf-hero__image-wrap::after,
+.page-main .kc-hero__image::after{bottom:16px;right:16px;border-left:0;border-top:0}
+.page-main .pf-hero__image-wrap::after{bottom:52px}
+
+/* a slow light sweep across hero stills — a lamp passing the lens */
+.page-main .pf-hero__image::after,
+.page-main .kc-hero__image::after{content:none}
+.page-main .pf-hero__image,
+.page-main .kc-hero__image{overflow:hidden;position:relative}
+.page-main .pf-hero__image::before,
+.page-main .services-cta__image::before{
+  content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:linear-gradient(115deg,transparent 38%,rgba(255,255,255,.16) 50%,transparent 62%);
+  transform:translateX(-120%);
+  animation:lensSweep 5.5s var(--ease-out) 1.2s infinite;
+}
+@keyframes lensSweep{
+  0%{transform:translateX(-120%)}
+  55%,100%{transform:translateX(120%)}
+}
+
+/* ============================================================
+   STAT BLOCKS — camera readout styling
+   ============================================================ */
+
+.page-main .pf-stat h3,
+.page-main .pf-stats h3{
+  font-family:var(--display);font-weight:800;
+  font-variant-numeric:tabular-nums;letter-spacing:-.035em;
+  color:var(--text);
+}
+.page-main .pf-stat span,
+.page-main .pf-stats span{
+  font-family:var(--mono);font-size:.64rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+}
+.page-main .pf-stats{gap:clamp(22px,3.5vw,48px)}
+.page-main .pf-stat{position:relative;padding-left:16px}
+.page-main .pf-stat::before{
+  content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:2px;
+  background:linear-gradient(180deg,var(--blue),transparent);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .page-main .hero__title .line>*,
+  .page-main .pf-hero__title .line>*,
+  .page-main .kc-hero__title,
+  .page-main .services-cta h1,
+  .page-main .page-hero .eyebrow,
+  .page-main .pf-hero__badge,
+  .page-main .contact-badge,
+  .page-main .page-hero .hero__sub,
+  .page-main .pf-hero__sub,
+  .page-main .kc-hero__desc,
+  .page-main .hero__ctas,
+  .page-main .services-cta__buttons,
+  .page-main .pf-stats,
+  .page-main .services-cta__stats{animation:none}
+  .page-main .pf-hero__image::before,
+  .page-main .services-cta__image::before{animation:none;opacity:0}
+}
+
+
+/* ---------- comparison card: the annotation hangs outside on purpose ---------- */
+.page-main .comparison-card{
+  position:relative;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--card-shadow);
+  overflow:visible;
+  transition:transform .6s var(--ease-out),opacity .6s var(--ease-out),
+             box-shadow .5s var(--ease-out),border-color .4s var(--ease);
+}
+.page-main .comparison-card--caas{
+  background:linear-gradient(160deg,var(--ink-2),var(--ink));
+  color:#fff;border-color:rgba(255,255,255,.12);
+}
+.page-main .comparison-card--traditional{background:var(--paper-2)}
+
+@media (max-width:900px){
+  /* keep the annotation on the card instead of off the screen edge */
+  .page-main .comparison-card__note{
+    position:static;transform:rotate(-2deg);
+    max-width:none;margin-top:14px;text-align:right;
+  }
+}
+
+/* ============================================================
+   SERVICES — two-column hero (Figma)
+   .hero__title / .hero__sub in home.css are unscoped and paint white,
+   which is right on the dark heroes but invisible on this light one.
+   ============================================================ */
+
+.page-main .services-hero-v2 .hero__title{
+  color:var(--text);
+  font-size:clamp(2.6rem,5.4vw,4.6rem);
+  line-height:1.02;letter-spacing:-.035em;margin:.4rem 0 0;
+}
+.page-main .services-hero-v2 .hero__sub{
+  color:var(--muted);max-width:44ch;
+  margin-top:1.2rem;font-size:1.05rem;line-height:1.65;
+}
+.page-main .services-hero-v2 .services-cta__inner{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:clamp(32px,5vw,72px);align-items:center;
+}
+.page-main .services-hero-v2 .services-cta__buttons{
+  display:flex;gap:14px;flex-wrap:wrap;margin-top:2rem;
+}
+.page-main .services-hero-v2 .services-cta__stats{
+  display:flex;gap:clamp(24px,4vw,52px);margin-top:2.6rem;flex-wrap:wrap;
+}
+.page-main .services-hero-v2 .services-cta__image{
+  aspect-ratio:4/5;border-radius:var(--radius-lg);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--card-shadow-lg);
+}
+
+/* ============================================================
+   SERVICES — the ₹3500 block
+   ============================================================ */
+
+.svc-price{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:clamp(32px,5vw,72px);align-items:center;
+}
+.svc-price__copy h2{margin:.5rem 0 1.1rem}
+.svc-price__copy p{color:var(--muted);max-width:48ch;line-height:1.7}
+.svc-price__list{list-style:none;display:flex;flex-direction:column;gap:.85em;margin-top:1.7rem}
+.svc-price__list li{display:flex;gap:.75em;align-items:center;font-size:1rem}
+.svc-price__list li svg{width:20px;height:20px;flex:none;color:var(--blue)}
+
+.svc-price__card{
+  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:calc(var(--radius-lg) + 4px);
+  box-shadow:var(--card-shadow-lg);
+  padding:clamp(28px,3.5vw,44px);
+}
+/* a blue key-light in the corner, matching the rest of the site */
+.svc-price__card::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(62% 52% at 100% 0%,var(--blue-08),transparent 70%);
+}
+.svc-price__card>*{position:relative;z-index:1}
+.svc-price__badge{
+  display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--blue-ink);
+  background:var(--blue-08);border:1px solid var(--blue-16);
+  border-radius:999px;padding:.5em 1em;
+}
+.svc-price__amount{
+  display:flex;align-items:baseline;gap:.04em;margin-top:1.1rem;
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(3.2rem,6.4vw,5rem);letter-spacing:-.04em;line-height:1;
+  font-variant-numeric:tabular-nums;color:var(--text);
+}
+.svc-price__cur{color:var(--blue)}
+.svc-price__rate{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--blue-ink);margin-top:.8em;
+}
+.svc-price__extra{
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px;
+  margin-top:1.6rem;padding:.9em 1.1em;
+  background:var(--paper-2);border-radius:var(--radius-sm);
+}
+.svc-price__extra b{font-weight:600;font-size:.95rem}
+.svc-price__extra span{
+  font-family:var(--mono);font-size:.86rem;color:var(--blue-ink);font-weight:500;
+}
+.svc-price__cta{width:100%;margin-top:1.5rem}
+.svc-price__note{
+  margin-top:1.1rem;font-size:.82rem;color:var(--muted);line-height:1.55;text-align:center;
+}
+
+@media (max-width:900px){
+  .page-main .services-hero-v2 .services-cta__inner,
+  .svc-price{grid-template-columns:1fr;gap:32px}
+  .page-main .services-hero-v2 .services-cta__image{aspect-ratio:16/10}
+  .page-main .services-hero-v2 .services-cta__buttons .btn{width:100%}
+  .page-main .services-hero-v2 .services-cta__buttons .magnetic{width:100%}
+}
+
+/* ============================================================
+   Ghost buttons on dark bands
+   .btn--ghost resolves --fg to var(--text) (dark ink). These
+   sections set color:#fff but carry no .dark class, so the ink
+   token stays light-mode and the button renders invisible.
+   ============================================================ */
+.page-main .services-final-cta .btn--ghost,
+.page-main .services-final-cta .btn--outline,
+.page-main .kc-cta .btn--ghost,
+.page-main .kc-cta .btn--outline,
+.page-main .trust-cta .btn--ghost,
+.page-main .page-hero .btn--ghost,
+.page-main .page-hero .btn--outline,
+.page-main .pf-bts .btn--ghost,
+.page-main .pf-expertise .btn--ghost{
+  --fg:#fff;
+  border-color:rgba(255,255,255,.38);
+}
+.page-main .services-final-cta .btn--ghost:hover,
+.page-main .services-final-cta .btn--outline:hover,
+.page-main .kc-cta .btn--ghost:hover,
+.page-main .kc-cta .btn--outline:hover,
+.page-main .trust-cta .btn--ghost:hover,
+.page-main .page-hero .btn--ghost:hover,
+.page-main .page-hero .btn--outline:hover,
+.page-main .pf-bts .btn--ghost:hover,
+.page-main .pf-expertise .btn--ghost:hover{
+  --fg:#fff;
+  border-color:var(--blue-lift);
+  background:var(--blue-16);
+}
