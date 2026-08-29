@@ -2065,12 +2065,15 @@
    ============================================================ */
 
 /* 1. HERO */
-.pf-hero { padding-top: 140px; }
+.pf-hero { 
+  padding-top: clamp(80px, 10vw, 120px) !important; 
+  padding-bottom: clamp(14px, 2vw, 24px) !important; 
+}
 .pf-hero__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .pf-hero__badge { display: inline-block; padding: 4px 12px; border: 1px solid var(--blue-ink); color: var(--blue-ink); font-weight: 700; font-size: 0.75rem; letter-spacing: 0.1em; margin-bottom: 24px; border-radius: 4px; text-transform: uppercase; }
 .pf-hero__title { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 24px; color: var(--ink); font-family: var(--display); letter-spacing: -0.02em; }
-.pf-hero__sub { font-size: 1.1rem; color: var(--muted); max-width: 480px; margin-bottom: 40px; }
-.pf-stats { display: flex; gap: 48px; margin-bottom: 48px; }
+.pf-hero__sub { font-size: 1.1rem; color: var(--muted); max-width: 480px; margin-bottom: 32px; }
+.pf-stats { display: flex; gap: 48px; margin-bottom: 24px; }
 .pf-stat h3 { font-size: 2.5rem; color: var(--ink); margin-bottom: 4px; font-family: var(--display); }
 .pf-stat span { font-size: 0.75rem; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; }
 
@@ -2085,11 +2088,14 @@
 .pf-hero__hint { text-align: right; margin-top: 16px; font-size: 0.85rem; color: var(--muted); font-style: italic; }
 
 /* 2. NICHE & TOGGLE */
-.pf-niche { padding-block: 100px; }
-.pf-niche__headline { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 32px; }
-.pf-niche__btw { font-size: 1.2rem; color: var(--muted); font-weight: 600; margin-bottom: 24px; }
+.pf-niche { 
+  padding-top: clamp(20px, 2.5vw, 36px) !important; 
+  padding-bottom: clamp(40px, 5vw, 64px) !important; 
+}
+.pf-niche__headline { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: 20px; }
+.pf-niche__btw { font-size: 1.2rem; color: var(--muted); font-weight: 600; margin-bottom: 16px; }
 
-.pf-toggle-wrap { display: flex; flex-direction: column; align-items: center; margin-bottom: 80px; }
+.pf-toggle-wrap { display: flex; flex-direction: column; align-items: center; margin-bottom: 48px; }
 .pf-toggle { display: inline-flex; border: 1px solid var(--blue-ink); border-radius: 8px; overflow: hidden; margin-bottom: 12px; }
 .pf-toggle__btn { padding: 12px 24px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; color: var(--blue-ink); background: transparent; transition: all 0.2s; cursor: pointer; }
 .pf-toggle__btn.is-active { background: var(--blue-ink); color: #fff; }
@@ -2279,21 +2285,21 @@
 
 /* PRICING & CONTACT STYLES */
 .pricing-page { background: var(--paper); }
-.contact-hero { padding-top: clamp(140px, 18vh, 180px); padding-bottom: 60px; position: relative; }
+.contact-hero { padding-top: clamp(90px, 12vh, 130px); padding-bottom: 24px; position: relative; }
 .contact-hero__inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
-.contact-hero__content { position: relative; z-index: 2; padding: 40px 0; padding-right: 10%; }
+.contact-hero__content { position: relative; z-index: 2; padding: 24px 0; padding-right: 10%; }
 .contact-hero__content .hero__sub { color: var(--muted); max-width: 100%; }
 .contact-hero__bg { position: absolute; right: 0; top: 0; bottom: 0; width: 50%; background: var(--paper-2) url('/images/professional_lens.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
-.contact-badge { border: 1px solid var(--ink); padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; border-radius: 4px; display: inline-block; margin-bottom: 24px; }
+.contact-badge { border: 1px solid var(--ink); padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; border-radius: 4px; display: inline-block; margin-bottom: 20px; }
 
-.contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: -40px; position: relative; z-index: 10; margin-bottom: 80px; }
+.contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 0; position: relative; z-index: 10; margin-bottom: clamp(32px, 4vw, 56px); }
 .contact-card { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); }
 .contact-card__icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(0,0,0,0.03); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; color: var(--ink); }
 .contact-card__icon svg { width: 24px; height: 24px; }
 .contact-card__info h3 { font-size: 1.5rem; margin: 8px 0 12px; }
 .contact-card__info p { color: var(--muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 24px; }
 
-.pricing-transition { text-align: center; margin-bottom: 60px; padding-top: 80px; }
+.pricing-transition { text-align: center; margin-bottom: 20px; padding-top: 20px; }
 .transition-title { font-size: 1.8rem; font-family: var(--display); margin-bottom: 24px; }
 .transition-path { width: 100%; max-width: 800px; margin: 0 auto; height: 60px; overflow: visible; }
 
@@ -2558,8 +2564,8 @@
    PORTFOLIO — VIDEO REEL SECTION
    ============================================================ */
 .pf-reel {
-  padding-block: 0;
-  padding-bottom: clamp(60px, 8vh, 100px);
+  padding-top: clamp(8px, 1.2vw, 16px) !important;
+  padding-bottom: clamp(16px, 2.5vw, 32px) !important;
 }
 
 .pf-reel__inner {
@@ -3959,3 +3965,53 @@
     border-color: transparent transparent transparent #00C2FF;
   }
 }
+
+/* ============================================================
+   SERVICES PAGE SECTION SPACING & INTRO
+   ============================================================ */
+.services-page .services-hero-v2 {
+  padding-block: clamp(70px, 9vw, 110px) clamp(24px, 3.5vw, 40px);
+}
+
+.services-page .services-intro {
+  padding-top: clamp(20px, 2.5vw, 36px) !important;
+  padding-bottom: clamp(14px, 1.8vw, 24px) !important;
+  text-align: center;
+}
+
+.services-intro__text-wrap {
+  max-width: 860px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.services-intro__text {
+  font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.services-intro__subtext {
+  font-size: clamp(0.95rem, 1.2vw, 1.08rem);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.services-page .services-comparison {
+  padding-top: clamp(12px, 1.5vw, 20px) !important;
+  padding-bottom: clamp(24px, 3vw, 40px) !important;
+}
+
+.services-page .services-expertise {
+  padding-top: clamp(20px, 2.5vw, 36px) !important;
+  padding-bottom: clamp(40px, 5vw, 64px) !important;
+}
+
+.services-page .niche-section {
+  padding-top: clamp(28px, 3.5vw, 48px) !important;
+  padding-bottom: clamp(40px, 5vw, 64px) !important;
+}
+

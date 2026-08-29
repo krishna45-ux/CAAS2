@@ -93,9 +93,9 @@ export default function PricingPage() {
       </section>
 
       {/* 3. PRICING TRANSITION */}
-      <section className="pricing-transition wrap reveal" style={{ position: 'relative', zIndex: 5, paddingBottom: 0, marginBottom: '-20px' }}>
-        <h2 className="transition-title" style={{ marginBottom: 0, position: 'relative', zIndex: 2 }}>Follow Along for <span className="u-cyan">Pricing</span></h2>
-        <div className="transition-path" style={{ maxWidth: '900px', height: '150px', margin: '0 auto', marginTop: '-45px', position: 'relative', zIndex: 1 }}>
+      <section className="pricing-transition wrap reveal" style={{ position: 'relative', zIndex: 5, paddingBlock: '12px 0', margin: '0 auto' }}>
+        <h2 className="transition-title" style={{ marginBottom: 0, position: 'relative', zIndex: 2, fontSize: '1.5rem' }}>Follow Along for <span className="u-cyan">Pricing</span></h2>
+        <div className="transition-path" style={{ maxWidth: '900px', height: '110px', margin: '0 auto', marginTop: '-35px', position: 'relative', zIndex: 1 }}>
           <svg viewBox="0 0 900 150" fill="none" preserveAspectRatio="none" style={{ width: '100%', height: '100%', overflow: 'visible' }}>
             <path d="M 620 30 L 850 30 Q 880 30 880 60 L 880 70 Q 880 100 850 100 L 150 100 Q 120 100 120 130 L 120 145" stroke="#b0b5c9" strokeWidth="4" />
             <path d="M 105 135 L 120 155 L 135 135 Z" fill="#b0b5c9" />
@@ -104,7 +104,7 @@ export default function PricingPage() {
       </section>
 
       {/* 4. PRICING HERO */}
-      <section className="pricing-intro wrap" style={{ paddingTop: '20px', paddingBottom: '120px' }}>
+      <section className="pricing-intro wrap" style={{ paddingTop: '10px', paddingBottom: 'clamp(28px, 3.5vw, 48px)' }}>
         <div className="pricing-intro__inner">
           <div className="pricing-intro__content reveal">
             <span className="badge badge--cyan" style={{ border: '1px solid var(--cyan)', color: 'var(--cyan)', padding: '6px 12px', fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.05em', display: 'inline-block', marginBottom: '24px' }}>TRANSPARENT BILLING</span>
@@ -130,17 +130,17 @@ export default function PricingPage() {
       </section>
 
       {/* 5. BASE PACKAGE */}
-      <section className="pricing-base wrap page-section" style={{ paddingTop: '160px' }}>
-        <div className="base-header text-center reveal" style={{ marginBottom: '60px' }}>
+      <section className="pricing-base wrap" style={{ paddingTop: 'clamp(16px, 2vw, 28px)', paddingBottom: 'clamp(32px, 4vw, 56px)' }}>
+        <div className="base-header text-center reveal" style={{ marginBottom: '36px' }}>
           <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>The Baseline, to <span className="u-cyan" style={{ fontStyle: 'italic' }}>Serve Your Purpose</span></h2>
-          <div className="divider divider--cyan" style={{ margin: '24px auto', width: '60px', height: '3px', background: 'var(--cyan)' }}></div>
+          <div className="divider divider--cyan" style={{ margin: '20px auto', width: '60px', height: '3px', background: 'var(--cyan)' }}></div>
           <p style={{ color: 'var(--muted)', maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>Every production starts here. A comprehensive setup designed to cover 80% of professional content needs.</p>
         </div>
         
         <div className="base-card reveal" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.04)', display: 'grid', gridTemplateColumns: '1fr 1fr', overflow: 'hidden' }}>
-          <div className="base-card__left" style={{ padding: '60px', borderRight: '1px solid rgba(0,0,0,0.05)' }}>
+          <div className="base-card__left" style={{ padding: '50px 40px', borderRight: '1px solid rgba(0,0,0,0.05)' }}>
             <span className="eyebrow eyebrow--cyan" style={{ color: 'var(--cyan)', fontWeight: 700, letterSpacing: '0.05em', fontSize: '0.85rem' }}>STANDARD SESSION</span>
-            <div className="base-price" style={{ margin: '24px 0 8px', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+            <div className="base-price" style={{ margin: '20px 0 8px', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
               <span className="amount" style={{ fontSize: '3.5rem', fontWeight: 800, fontFamily: 'var(--display)', lineHeight: 1 }}>{currency === 'INR' ? '₹3,500' : '$45'}</span> <span className="duration" style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>/ 6 Hours</span>
             </div>
             <p className="base-sub" style={{ fontSize: '0.9rem', color: 'var(--muted)', marginBottom: '24px' }}>*Includes setup and simplify your local breakdown.</p>
@@ -175,11 +175,11 @@ export default function PricingPage() {
       </section>
 
       {/* 6. ADD ONS MENU */}
-      <section id="addons" className="pricing-addons wrap page-section">
-        <div className="addons-header reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+      <section id="addons" className="pricing-addons wrap" style={{ paddingTop: 'clamp(16px, 2vw, 28px)', paddingBottom: 'clamp(28px, 3.5vw, 48px)' }}>
+        <div className="addons-header reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px' }}>
           <div style={{ maxWidth: '600px' }}>
-            <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '16px' }}>Menu of Services</h2>
-            <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Tailor your session with specific post-production or specialized gear add-ons. Pay only for what your story requires.</p>
+            <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '12px' }}>Menu of Services</h2>
+            <p style={{ color: 'var(--muted)', fontSize: '1.05rem' }}>Tailor your session with specific post-production or specialized gear add-ons. Pay only for what your story requires.</p>
           </div>
           <div className="currency-toggle" style={{ display: 'flex', background: 'var(--bg-alt)', borderRadius: '8px', padding: '4px' }}>
             <button 
@@ -223,7 +223,7 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="addons-grid reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+        <div className="addons-grid reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
           {[
             { icon: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-2.4 2.4a3 3 0 0 1-4.24-4.24l2.4-2.4a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.4z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'EXPRESS EDITING', priceInr: '₹1,500/HR', priceUsd: '$20/HR', desc: 'Quick turnaround video editing. Same-day delivery for short-form content.' },
             { icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'COLOR GRADING', priceInr: '₹2,500/MIN', priceUsd: '$35/MIN', desc: 'Cinema grade color correction and stylized grading for high-end look.' },
@@ -232,50 +232,50 @@ export default function PricingPage() {
             { icon: <><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'GIMBAL STABILIZATION', priceInr: '₹1,500/DAY', priceUsd: '$20/DAY', desc: 'Professional 3-axis gimbal for cinematic movement and tracking shots.' },
             { icon: <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'ADDITIONAL OPERATOR', priceInr: '₹3,000/SHIFT', priceUsd: '$40/SHIFT', desc: 'Hire an extra set of hands for complex multi-camera shoots or lighting assistance.' }
           ].map((item, i) => (
-            <div className="addon-card" key={i} style={{ padding: '32px', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', background: '#fff', display: 'flex', gap: '24px', alignItems: 'flex-start' }}>
-              <div className="addon-card__icon" style={{ background: 'var(--bg-alt)', width: '48px', height: '48px', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--ink)' }}><svg viewBox="0 0 24 24" fill="none" width="20">{item.icon}</svg></div>
+            <div className="addon-card" key={i} style={{ padding: '28px', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', background: '#fff', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
+              <div className="addon-card__icon" style={{ background: 'var(--bg-alt)', width: '44px', height: '44px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--ink)' }}><svg viewBox="0 0 24 24" fill="none" width="20">{item.icon}</svg></div>
               <div className="addon-card__content">
-                <div className="addon-card__header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                  <h4 style={{ margin: 0, fontSize: '1rem', fontWeight: 700 }}>{item.title}</h4>
-                  <span className="price" style={{ color: 'var(--cyan)', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '0.05em' }}>{currency === 'INR' ? item.priceInr : item.priceUsd}</span>
+                <div className="addon-card__header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                  <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 700 }}>{item.title}</h4>
+                  <span className="price" style={{ color: 'var(--cyan)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.05em' }}>{currency === 'INR' ? item.priceInr : item.priceUsd}</span>
                 </div>
-                <p style={{ margin: 0, color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.5 }}>{item.desc}</p>
+                <p style={{ margin: 0, color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="addons-footer text-center" style={{ marginTop: '40px', padding: '30px', background: 'var(--bg-alt)', borderRadius: '12px' }}>
+        <div className="addons-footer text-center" style={{ marginTop: '28px', padding: '24px', background: 'var(--bg-alt)', borderRadius: '12px' }}>
           <p style={{ margin: 0, fontSize: '0.95rem', color: 'var(--muted)' }}>Need something else? We offer custom quotes for multi-day shoots, international travel, and large-scale studio productions. <a href="#inquiry" className="link-cyan" style={{ fontWeight: 600 }}>Contact Sales →</a></p>
         </div>
       </section>
 
       {/* 7. INQUIRY FORM */}
-      <section id="inquiry" className="inquiry-section wrap page-section">
-        <div className="inquiry-grid reveal" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '60px' }}>
-          <div className="inquiry-form-card" style={{ background: '#fff', padding: '60px', borderRadius: '24px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.02)' }}>
+      <section id="inquiry" className="inquiry-section wrap" style={{ paddingTop: 'clamp(16px, 2vw, 28px)', paddingBottom: 'clamp(32px, 4vw, 56px)' }}>
+        <div className="inquiry-grid reveal" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '48px' }}>
+          <div className="inquiry-form-card" style={{ background: '#fff', padding: '48px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)', boxShadow: '0 20px 40px rgba(0,0,0,0.02)' }}>
             <h2 className="h-section" style={{ fontSize: '2rem', marginBottom: '8px' }}>Inquiry Form</h2>
-            <p className="subtitle" style={{ color: 'var(--muted)', marginBottom: '32px' }}>Fill in the details below and we'll connect you with the right specialist.</p>
+            <p className="subtitle" style={{ color: 'var(--muted)', marginBottom: '28px' }}>Fill in the details below and we'll connect you with the right specialist.</p>
             
             <form className="inquiry-form">
-              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
+              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
                 <div className="form-group">
                   <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>FULL NAME</label>
-                  <input type="text" placeholder="John Doe" style={{ width: '100%', padding: '16px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }} />
+                  <input type="text" placeholder="John Doe" style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s' }} />
                 </div>
                 <div className="form-group">
                   <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>COMPANY NAME</label>
-                  <input type="text" placeholder="Acme Productions" style={{ width: '100%', padding: '16px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }} />
+                  <input type="text" placeholder="Acme Productions" style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s' }} />
                 </div>
               </div>
-              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '24px' }}>
+              <div className="form-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
                 <div className="form-group">
                   <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>EMAIL ADDRESS</label>
-                  <input type="email" placeholder="john@example.com" style={{ width: '100%', padding: '16px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }} />
+                  <input type="email" placeholder="john@example.com" style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s' }} />
                 </div>
                 <div className="form-group">
                   <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>INTEREST/SERVICE</label>
-                  <select style={{ width: '100%', padding: '16px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s', appearance: 'none' }}>
+                  <select style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s', appearance: 'none' }}>
                     <option>Commercial Videography</option>
                     <option>Corporate Film</option>
                     <option>Event Coverage</option>
@@ -284,9 +284,9 @@ export default function PricingPage() {
               </div>
               <div className="form-group">
                 <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>PROJECT DETAILS</label>
-                <textarea placeholder="Tell us about your requirements, date and location..." rows={4} style={{ width: '100%', padding: '16px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s', resize: 'vertical' }}></textarea>
+                <textarea placeholder="Tell us about your requirements, date and location..." rows={4} style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s', resize: 'vertical' }}></textarea>
               </div>
-              <button type="button" className="btn btn--cyan" style={{ marginTop: '24px', padding: '16px 32px', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              <button type="button" className="btn btn--cyan" style={{ marginTop: '20px', padding: '14px 28px', border: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
                 Send Inquiry 
                 <svg viewBox="0 0 24 24" fill="none" width="16" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
               </button>
@@ -294,60 +294,60 @@ export default function PricingPage() {
           </div>
 
           <div className="inquiry-sidebar">
-            <div className="sidebar-item" style={{ display: 'flex', gap: '16px', marginBottom: '32px' }}>
+            <div className="sidebar-item" style={{ display: 'flex', gap: '16px', marginBottom: '28px' }}>
               <div className="sidebar-icon" style={{ color: 'var(--cyan)' }}>
                 <svg viewBox="0 0 24 24" fill="none" width="24" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
               <div>
-                <h4 style={{ margin: '0 0 4px', fontSize: '1.1rem' }}>Our Studio</h4>
-                <p style={{ margin: '0 0 8px', color: 'var(--muted)', fontSize: '0.95rem', lineHeight: 1.5 }}>Precision Plaza, 4th Floor, Sector 5<br/>Tech City, Bangalore, KA - 560001</p>
-                <a href="#" className="link-muted" style={{ fontSize: '0.9rem', color: 'var(--ink)' }}>www.caas.pro</a>
+                <h4 style={{ margin: '0 0 4px', fontSize: '1.05rem' }}>Our Studio</h4>
+                <p style={{ margin: '0 0 6px', color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Precision Plaza, 4th Floor, Sector 5<br/>Tech City, Bangalore, KA - 560001</p>
+                <a href="#" className="link-muted" style={{ fontSize: '0.85rem', color: 'var(--ink)' }}>www.caas.pro</a>
               </div>
             </div>
 
-            <div className="sidebar-box" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '16px', padding: '32px', marginBottom: '24px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px' }}>
+            <div className="sidebar-box" style={{ background: '#fff', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '16px', padding: '28px', marginBottom: '20px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
                 <div className="sidebar-icon u-cyan" style={{ color: 'var(--cyan)' }}>
-                  <svg viewBox="0 0 24 24" fill="none" width="24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" width="22" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 </div>
-                <h4 style={{ margin: 0, fontSize: '1.2rem' }}>Business Hours</h4>
+                <h4 style={{ margin: 0, fontSize: '1.1rem' }}>Business Hours</h4>
               </div>
-              <ul className="hours-list" style={{ listStyle: 'none', padding: 0, margin: '0 0 24px' }}>
-                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid rgba(0,0,0,0.05)', fontSize: '0.95rem' }}><span style={{ color: 'var(--muted)' }}>Monday - Friday</span> <strong>09:00 AM - 07:00 PM</strong></li>
-                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', borderBottom: '1px solid rgba(0,0,0,0.05)', fontSize: '0.95rem' }}><span style={{ color: 'var(--muted)' }}>Saturday</span> <strong>10:00 AM - 04:00 PM</strong></li>
-                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 0', fontSize: '0.95rem' }}><span style={{ color: 'var(--muted)' }}>Sunday</span> <span className="muted" style={{ color: 'var(--muted)' }}>Closed</span></li>
+              <ul className="hours-list" style={{ listStyle: 'none', padding: 0, margin: '0 0 20px' }}>
+                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid rgba(0,0,0,0.05)', fontSize: '0.9rem' }}><span style={{ color: 'var(--muted)' }}>Monday - Friday</span> <strong>09:00 AM - 07:00 PM</strong></li>
+                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid rgba(0,0,0,0.05)', fontSize: '0.9rem' }}><span style={{ color: 'var(--muted)' }}>Saturday</span> <strong>10:00 AM - 04:00 PM</strong></li>
+                <li style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', fontSize: '0.9rem' }}><span style={{ color: 'var(--muted)' }}>Sunday</span> <span className="muted" style={{ color: 'var(--muted)' }}>Closed</span></li>
               </ul>
               <p className="hours-note" style={{ margin: 0, fontSize: '0.8rem', color: 'var(--muted)' }}>* Core, On-field shoots are available 24/7 upon prior booking.</p>
             </div>
 
-            <div className="sidebar-box text-center hq-box" style={{ background: '#f8f9fa', borderRadius: '16px', padding: '40px 24px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <div className="hq-icon" style={{ color: 'var(--cyan)', marginBottom: '16px' }}>
-                <svg viewBox="0 0 24 24" fill="none" width="32" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div className="sidebar-box text-center hq-box" style={{ background: '#f8f9fa', borderRadius: '16px', padding: '32px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <div className="hq-icon" style={{ color: 'var(--cyan)', marginBottom: '12px' }}>
+                <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
-              <h4 style={{ margin: '0 0 8px', fontSize: '0.85rem', letterSpacing: '0.05em' }}>HQ LOCATED IN BANGALORE</h4>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--muted)' }}>Open in Google Maps</p>
+              <h4 style={{ margin: '0 0 6px', fontSize: '0.85rem', letterSpacing: '0.05em' }}>HQ LOCATED IN BANGALORE</h4>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--muted)' }}>Open in Google Maps</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 8. TRUST CTA */}
-      <section className="trust-cta reveal wrap" style={{ margin: '80px auto' }}>
-        <div className="trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', backgroundColor: '#111727', borderRadius: '32px', overflow: 'hidden' }}>
+      <section className="trust-cta reveal wrap" style={{ maxWidth: '1060px', margin: 'clamp(28px, 3.5vw, 44px) auto' }}>
+        <div className="trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', backgroundColor: '#111727', borderRadius: '20px', overflow: 'hidden' }}>
           
-          <div className="trust-cta__content" style={{ padding: '80px 60px' }}>
-            <h2 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.2rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px', color: '#fff' }}>
+          <div className="trust-cta__content" style={{ padding: 'clamp(32px, 3.5vw, 44px) clamp(24px, 3.5vw, 40px)' }}>
+            <h2 style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.2rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.15, marginBottom: '14px', color: '#fff' }}>
               Doesn't Feel Like<br/><span style={{ color: 'rgba(255,255,255,0.5)' }}>Trusting Us?</span>
             </h2>
-            <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, maxWidth: '400px', margin: 0 }}>
+            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.55, maxWidth: '400px', margin: 0 }}>
               We're here with a clear intent — to build on trust, deliver the right service, and always put your needs first.
             </p>
           </div>
 
-          <div className="trust-cta__right" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#162032', borderRadius: '48px 0 0 48px', padding: '40px' }}>
-            <div className="trust-cta__buttons" style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <Link href="#inquiry" className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '16px 32px' }}>BOOK A SHOOT NOW</Link>
-              <Link href="#inquiry" className="btn btn--ghost btn--lg" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff', borderRadius: '999px', padding: '16px 32px' }}>BULK QUOTES</Link>
+          <div className="trust-cta__right" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#162032', borderRadius: '24px 0 0 24px', padding: '24px 32px' }}>
+            <div className="trust-cta__buttons" style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <Link href="#inquiry" className="btn btn--cyan" style={{ borderRadius: '999px', padding: '12px 24px', fontSize: '0.85rem', fontWeight: 700 }}>BOOK A SHOOT NOW</Link>
+              <Link href="#inquiry" className="btn btn--ghost" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff', borderRadius: '999px', padding: '12px 24px', fontSize: '0.85rem', fontWeight: 700 }}>BULK QUOTES</Link>
             </div>
           </div>
           
@@ -355,19 +355,19 @@ export default function PricingPage() {
       </section>
 
       {/* 9. FAQ */}
-      <section className="pricing-faq wrap page-section" style={{ paddingBlock: '100px' }}>
-        <div className="faq-header text-center reveal" style={{ marginBottom: '60px' }}>
-          <div className="faq-icon" style={{ display: 'inline-flex', width: '40px', height: '40px', borderRadius: '50%', background: 'rgba(0, 221, 255, 0.1)', color: 'var(--cyan)', alignItems: 'center', justifyContent: 'center', fontSize: '1.2rem', fontWeight: 700, marginBottom: '16px' }}>?</div>
-          <h2 className="h-section" style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Pricing Policy & FAQ</h2>
-          <p style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>Everything you need to know about our billing and session management.</p>
+      <section className="pricing-faq wrap" style={{ paddingBlock: 'clamp(28px, 3.5vw, 48px)' }}>
+        <div className="faq-header text-center reveal" style={{ marginBottom: '36px' }}>
+          <div className="faq-icon" style={{ display: 'inline-flex', width: '36px', height: '36px', borderRadius: '50%', background: 'rgba(0, 221, 255, 0.1)', color: 'var(--cyan)', alignItems: 'center', justifyContent: 'center', fontSize: '1.1rem', fontWeight: 700, marginBottom: '12px' }}>?</div>
+          <h2 className="h-section" style={{ fontSize: '2.2rem', marginBottom: '12px' }}>Pricing Policy & FAQ</h2>
+          <p style={{ color: 'var(--muted)', fontSize: '1.05rem' }}>Everything you need to know about our billing and session management.</p>
         </div>
         <div className="faq-list reveal d1" style={{ maxWidth: '800px', margin: '0 auto' }}>
           {faqs.map((faq, i) => (
-            <div className={`faq-item ${activeFaq === i ? 'active' : ''}`} key={i} style={{ borderBottom: '1px solid rgba(0,0,0,0.1)', padding: '24px 0' }}>
+            <div className={`faq-item ${activeFaq === i ? 'active' : ''}`} key={i} style={{ borderBottom: '1px solid rgba(0,0,0,0.1)', padding: '20px 0' }}>
               <button 
                 className="faq-question" 
                 onClick={() => toggleFaq(i)}
-                style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', padding: 0, textAlign: 'left', cursor: 'pointer', fontFamily: 'var(--display)', fontSize: '1.1rem', fontWeight: 700, color: 'var(--ink)' }}
+                style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'none', border: 'none', padding: 0, textAlign: 'left', cursor: 'pointer', fontFamily: 'var(--display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--ink)' }}
               >
                 {faq.q}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" style={{ transform: activeFaq === i ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }}>
@@ -375,7 +375,7 @@ export default function PricingPage() {
                 </svg>
               </button>
               <div className="faq-answer" style={{ maxHeight: activeFaq === i ? '200px' : '0', overflow: 'hidden', transition: 'max-height 0.3s ease', opacity: activeFaq === i ? 1 : 0 }}>
-                <p style={{ color: 'var(--muted)', lineHeight: 1.6, paddingTop: '16px', margin: 0 }}>{faq.a}</p>
+                <p style={{ color: 'var(--muted)', lineHeight: 1.6, paddingTop: '14px', margin: 0 }}>{faq.a}</p>
               </div>
             </div>
           ))}
