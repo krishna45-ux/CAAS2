@@ -186,10 +186,6 @@ export default function KnowledgeCentrePage() {
                   <div className="kc-feedback__stars">⭐⭐⭐⭐⭐</div>
                 </div>
               </div>
-              <div className="kc-feedback__nav">
-                <button className="kc-feedback__btn">&lt;</button>
-                <button className="kc-feedback__btn kc-feedback__btn--active">&gt;</button>
-              </div>
             </div>
             <div className="kc-feedback__right">
               <img src="/images/happy_dog.jpg" alt="Happy dog" />

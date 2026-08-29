@@ -123,8 +123,6 @@ export default function Hero() {
             as="h1"
             className="hero__title"
             text={'Find the right\nperson to capture\nyour moment.'}
-            highlight={['capture']}
-            highlightClass="u-blue"
             delay={0.25}
             stagger={0.05}
           />

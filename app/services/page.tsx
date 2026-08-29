@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Stagger, StaggerItem, Reveal } from '../components/motion';
 
 export default function ServicesPage() {
   return (
@@ -399,9 +400,10 @@ export default function ServicesPage() {
         </div> {/* closes niche-diagram */}
       
       {/* Footer text for Niche Section */}
-      <div className="wrap" style={{ marginTop: '40px' }}>
+      <div className="wrap" style={{ marginTop: '16px' }}>
         <div className="niche-footer-text reveal">
-          <span className="text-red" style={{ color: 'var(--red)' }}>Trusted by the NCR's most</span><br/>ambitious brands.
+          <span style={{ color: 'var(--muted)', fontSize: '0.65em', display: 'block', textTransform: 'uppercase', letterSpacing: '0.12em', fontFamily: 'var(--mono)', fontWeight: 700, marginBottom: '4px' }}>Trusted by the NCR's most</span>
+          <span style={{ color: 'var(--ink)' }}>ambitious brands.</span>
         </div>
       </div>
       </section>
@@ -410,27 +412,27 @@ export default function ServicesPage() {
       <section className="services-social-proof">
         <div className="social-proof-block reveal">
           <div className="wrap">
-            <div className="social-proof__stats">
-              <div className="stat-item">
-                <div className="stat-num" data-count="12" data-suffix="+">12</div>
-                <div className="stat-label">CITIES</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num" data-count="98" data-suffix="%">98</div>
-                <div className="stat-label">SUCCESS</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num" data-count="50" data-suffix="k+">50</div>
-                <div className="stat-label">PHOTOS/VIDEOS</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-num" data-count="24" data-suffix="/7">24</div>
-                <div className="stat-label">AVAILABILITY</div>
-              </div>
-            </div>
+            <Stagger className="social-proof__stats" gap={0.1}>
+              <StaggerItem className="stat-item" dir="up">
+                <div className="stat-num">12+</div>
+                <div className="stat-label">VERTICALS</div>
+              </StaggerItem>
+              <StaggerItem className="stat-item" dir="up">
+                <div className="stat-num">98%</div>
+                <div className="stat-label">CLIENT NPS</div>
+              </StaggerItem>
+              <StaggerItem className="stat-item" dir="up">
+                <div className="stat-num">50k+</div>
+                <div className="stat-label">CONTENT UNITS</div>
+              </StaggerItem>
+              <StaggerItem className="stat-item" dir="up">
+                <div className="stat-num">24/7</div>
+                <div className="stat-label">GLOBAL REACH</div>
+              </StaggerItem>
+            </Stagger>
 
-            <div className="social-proof__testimonials">
-              <div className="testimonial-card">
+            <Stagger className="social-proof__testimonials" gap={0.15}>
+              <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>"CAAS completely transformed how we handle our monthly social content. No more calling freelancers, we just book a slot and the quality is consistently world-class."</p>
                 <div className="testimonial-author">
@@ -440,9 +442,9 @@ export default function ServicesPage() {
                     <span>Marketing Director, Lumera</span>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <div className="testimonial-card">
+              <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>"The turnaround time is what hooked us. Getting high-end drone footage delivered within 48 hours is unheard of in this industry. A total game-changer for our workflow."</p>
                 <div className="testimonial-author">
@@ -452,9 +454,9 @@ export default function ServicesPage() {
                     <span>Founder of Apex Creatives</span>
                   </div>
                 </div>
-              </div>
+              </StaggerItem>
 
-              <div className="testimonial-card">
+              <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
                 <p>"The level of professionalism and attention to detail from the CAAS crew is unmatched. They perfectly captured the essence of our corporate culture in just one shoot."</p>
                 <div className="testimonial-author">
@@ -464,13 +466,17 @@ export default function ServicesPage() {
                     <span>Head of Communications, TechNova</span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </StaggerItem>
+            </Stagger>
 
-            <div className="social-proof__ctas">
-              <Link href="/pricing" className="btn btn--white">Book a Shoot</Link>
-              <Link href="/portfolio" className="btn btn--outline-cyan">View Portfolio</Link>
-            </div>
+            <Stagger className="social-proof__ctas" gap={0.1}>
+              <StaggerItem dir="up">
+                <Link href="/pricing" className="btn btn--white">Book a Shoot</Link>
+              </StaggerItem>
+              <StaggerItem dir="up">
+                <Link href="/portfolio" className="btn btn--outline-cyan">View Portfolio</Link>
+              </StaggerItem>
+            </Stagger>
           </div>
         </div>
       </section>
@@ -618,7 +624,7 @@ export default function ServicesPage() {
           <div className="svc-price__card">
             <span className="svc-price__badge">Starting from</span>
             <div className="svc-price__amount">
-              <span className="svc-price__cur">&#8377;</span>3500
+              <span className="svc-price__cur">&#8377;</span>3,500
             </div>
             <div className="svc-price__rate">Cameraman for a 3-hour session</div>
             <div className="svc-price__extra">
@@ -635,7 +641,7 @@ export default function ServicesPage() {
       <section className="services-exclusion page-section wrap" id="niche-section">
         <div className="exclusion-card reveal" style={{ padding: 0, background: 'transparent', boxShadow: 'none', border: 'none', display: 'flex', justifyContent: 'center' }}>
           <Image 
-            src="/images/Image 107.png" 
+            src="/images/ChatGPT_Image_Aug_29,_2026,_07_56_59_PM_upscaled.png" 
             alt="What We Don't Shoot" 
             width={1200} 
             height={600} 
@@ -677,7 +683,7 @@ export default function ServicesPage() {
             <div className="gallery-quote__author">
               <div className="author-logo">SG</div>
               <div>
-                <strong>Shaurya Goyal</strong><br/>
+                <strong>Shaurya Goyal</strong>
                 <span>FOUNDER & CEO, CAAS</span>
               </div>
             </div>
@@ -687,18 +693,34 @@ export default function ServicesPage() {
 
 
       {/* 10. FINAL CTA */}
-      <section className="svc-cta-final page-section">
+      <section className="svc-cta-final page-section" style={{ backgroundColor: '#0B1A33' }}>
         <div className="svc-cta-final__bg">
-          <Image src="/images/Group 11.png" alt="CAAS Photographer" fill style={{ objectFit: 'cover', objectPosition: 'center right' }} quality={100} />
+          <Image src="/images/Group 11.png" alt="CAAS Photographer" fill style={{ objectFit: 'contain', objectPosition: 'bottom right' }} quality={100} />
           <div className="svc-cta-final__overlay"></div>
         </div>
         <div className="wrap svc-cta-final__wrap">
           <div className="svc-cta-final__content reveal">
             <span className="svc-cta-pill">Contact Sales</span>
-            <h2>Ready to elevate your <span className="u-cyan">brand&rsquo;s</span> visual identity?</h2>
+            <h2>Ready to elevate your <span className="u-cyan" style={{ color: 'var(--cyan)' }}>brand&rsquo;s</span> visual identity?</h2>
             <p>Whether it&rsquo;s a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
             <div className="svc-cta-final__btns">
-              <Link href="/contact" className="btn btn--primary btn--lg">Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ backgroundColor: 'var(--cyan)', color: 'var(--ink)' }}>Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--outline btn--lg" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Schedule Consultation</Link>
+            </div>
+            
+            <div style={{ display: 'flex', gap: '40px', marginTop: '48px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '32px' }}>
+              <div>
+                <div style={{ color: 'var(--cyan)', fontWeight: 700, fontSize: '1.1rem', marginBottom: '4px' }}>₹3500</div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>BASE SESSION RATE</div>
+              </div>
+              <div>
+                <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', marginBottom: '4px' }}>13+</div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>SPECIALIZED INDUSTRIES</div>
+              </div>
+              <div>
+                <div style={{ color: '#fff', fontWeight: 700, fontSize: '1.1rem', marginBottom: '4px' }}>48hr</div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>DELIVERY PROMISE</div>
+              </div>
             </div>
           </div>
         </div>

@@ -36,13 +36,13 @@ export function Marquee() {
 export function Statement() {
   return (
     <section className="section statement wrap">
-      <SplitText
-        as="h2"
-        className="statement__h"
-        text={'Not Just Camera,\na Cameraman …'}
-        stagger={0.06}
-        duration={0.95}
-      />
+      <Reveal dir="up">
+        <h2 className="statement__h">
+          <span>Not Just <span className="statement__strike">Camera</span>,</span>
+          <br />
+          <span>a <span className="statement__accent">Cameraman &hellip;</span></span>
+        </h2>
+      </Reveal>
       <Reveal dir="up" delay={0.18}>
         <div className="lead-card">
           <span className="lead-card__bar" aria-hidden="true" />

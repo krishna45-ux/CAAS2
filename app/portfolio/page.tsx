@@ -15,7 +15,7 @@ export default function PortfolioPage() {
             <h1 className="pf-hero__title">
               We've Been<br/>
               Busy Behind the<br/>
-              <span className="u-coral u-italic">Camera.</span>
+              <span className="u-cyan u-italic">Camera.</span>
             </h1>
             <p className="pf-hero__sub">From restaurant kitchens and factory floors to creators, products, properties and brand campaigns — here's what CAAS has been capturing lately.</p>
             
@@ -65,7 +65,7 @@ export default function PortfolioPage() {
         <div className="pf-niche__head text-center reveal">
           <h2 className="pf-niche__headline">
             <span className="u-cyan">Great shoots</span> don't just happen.<br/>
-            The <span className="u-coral u-italic">Camera</span> is only one part of the job.<br/>
+            The <span className="u-cyan u-italic">Camera</span> is only one part of the job.<br/>
             Here's what happens behind the scenes to<br/>
             make them happen & <span className="u-cyan u-italic">Deliver Results.</span>
           </h2>
@@ -93,7 +93,7 @@ export default function PortfolioPage() {
             </div>
           </div>
           
-          <h3 className="pf-niche__title u-coral">Specific Niche in Mind?</h3>
+          <h3 className="pf-niche__title u-cyan">Specific Niche in Mind?</h3>
         </div>
 
         <div className="pf-niche-grid">
@@ -274,7 +274,7 @@ export default function PortfolioPage() {
       <section className="pf-concept">
         <div className="wrap">
           <div className="pf-concept__header text-center reveal">
-            <h2>The <span className="u-red">₹3500</span> Concept</h2>
+            <h2>The <span className="u-red">₹3,500</span> Concept</h2>
             <p>Professional camera. Real results. Fixed start. Flexible beyond.</p>
           </div>
           
@@ -284,7 +284,7 @@ export default function PortfolioPage() {
               <div className="pf-price-card">
                 <div className="stars">★★★★★</div>
                 <div className="pkg">STARTING PACKAGE</div>
-                <div className="price">₹3500</div>
+                <div className="price">₹3,500</div>
                 <div className="title">CAMERAMAN FOR A DAY (5 HOURS)</div>
                 <p>5 hours of professional shooting with an experienced cameraman.</p>
                 <div className="addon">

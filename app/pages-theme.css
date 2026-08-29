@@ -84,7 +84,7 @@
 .page-main .pf-badge--cyan{
   font-family:var(--mono);font-size:.64rem;font-weight:500;
   letter-spacing:.14em;text-transform:uppercase;
-  background:var(--blue);color:#fff;
+  background:var(--blue);color:var(--ink);
   border-radius:999px;padding:.42em .85em;
 }
 .page-main .kc-tag--white{background:#fff;color:var(--ink)}
@@ -231,7 +231,7 @@
 .page-main .pf-toggle__btn:hover{color:var(--blue-ink);border-color:var(--blue-28);background:var(--blue-08)}
 .page-main .pf-tab.is-active,
 .page-main .pf-toggle__btn.is-active{
-  background:var(--blue);border-color:var(--blue);color:#fff;
+  background:var(--blue);border-color:var(--blue);color:var(--ink);
   box-shadow:var(--blue-glow);
 }
 .page-main .pf-toggle{border:0;gap:8px;display:inline-flex}
@@ -245,7 +245,7 @@
   font-variant-numeric:tabular-nums;letter-spacing:-.035em;
   color:var(--text);
 }
-.page-main .pf-price-card .price{color:var(--blue)}
+.page-main .pf-price-card .price{color:var(--ink)}
 .page-main .stat-card__label,
 .page-main .services-cta__stats span{
   font-family:var(--mono);font-size:.66rem;
@@ -370,7 +370,7 @@
 .page-main .hero__title .line,
 .page-main .pf-hero__title .line{
   display:inline-block;overflow:hidden;vertical-align:top;
-  padding-bottom:.14em;margin-bottom:-.14em;
+  padding-bottom:.25em;margin-bottom:-.25em;
 }
 .page-main .hero__title .line>*,
 .page-main .pf-hero__title .line>*{
@@ -409,9 +409,10 @@
    so they all resolve to blue — bright on dark grounds, ink on paper.
    ============================================================ */
 
-.u-cyan,.u-coral,.u-gold{color:var(--blue-ink)}
-.dark .u-cyan,.dark .u-coral,.dark .u-gold,.dark .u-blue,
-.page-hero .u-cyan,.page-hero .u-coral,.page-hero .u-gold,.page-hero .u-blue{
+.u-cyan{color:var(--cyan) !important}
+.u-coral,.u-gold{color:var(--blue-ink)}
+.dark .u-coral,.dark .u-gold,
+.page-hero .u-coral,.page-hero .u-gold{
   color:var(--blue-lift);
 }
 
@@ -601,7 +602,7 @@
   font-size:clamp(3.2rem,6.4vw,5rem);letter-spacing:-.04em;line-height:1;
   font-variant-numeric:tabular-nums;color:var(--text);
 }
-.svc-price__cur{color:var(--blue)}
+.svc-price__cur{color:var(--text)}
 .svc-price__rate{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
   text-transform:uppercase;color:var(--blue-ink);margin-top:.8em;

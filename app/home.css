@@ -11,7 +11,7 @@
 .split__line{display:block}
 .split__word{
   display:inline-block;overflow:hidden;vertical-align:top;
-  margin-right:.26em;padding-bottom:.14em;margin-bottom:-.14em;
+  margin-right:.26em;padding-bottom:.25em;margin-bottom:-.25em;
 }
 .split__inner{display:inline-block;will-change:transform}
 
@@ -96,10 +96,7 @@
   margin-top:clamp(.5rem,1.4vh,1rem);letter-spacing:-.035em;color:#fff;
   text-wrap:balance;
 }
-.hero__title .u-blue{
-  color:var(--blue);
-  text-shadow:0 0 42px rgba(0,128,255,.5);
-}
+
 .hero__sub{
   margin-top:clamp(.7rem,2vh,1.5rem);
   font-size:clamp(.95rem,min(1.35vw,2.3vh),1.22rem);
@@ -198,8 +195,27 @@
 .home .shoot{padding-top:clamp(24px,3vw,44px)}
 .statement__h{
   font-family:var(--display);font-weight:800;
-  font-size:clamp(2.2rem,6.2vw,4.8rem);line-height:1.02;letter-spacing:-.035em;
+  font-size:clamp(2.2rem,6.2vw,4.8rem);line-height:1.15;letter-spacing:-.035em;
   color:var(--text);
+}
+.statement__strike{
+  position:relative;
+  display:inline-block;
+}
+.statement__strike::after{
+  content:"";
+  position:absolute;
+  left:-3%;
+  right:-3%;
+  top:52%;
+  height:clamp(4px, 0.08em, 6px);
+  background:var(--text);
+  border-radius:3px;
+  transform:translateY(-50%);
+}
+.statement__accent{
+  color:var(--cyan);
+  font-style:italic;
 }
 .lead-card{
   position:relative;margin:clamp(34px,5vw,58px) auto 0;max-width:960px;
@@ -579,7 +595,7 @@
   font-size:clamp(3rem,6.6vw,4.8rem);letter-spacing:-.04em;line-height:1;
   font-variant-numeric:tabular-nums;color:var(--text);
 }
-.pricing__cur{color:var(--blue)}
+.pricing__cur{color:var(--text)}
 .home .pricing__rate{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
   color:var(--blue-ink);text-transform:uppercase;margin-top:.8em;
@@ -594,7 +610,7 @@
 .home .pricing__cta-row{display:flex;justify-content:flex-end}
 
 /* ============================================================
-   MONTHLY — was invisible: it used an undefined --cyan
+   MONTHLY — Compact vertical banner
    ============================================================ */
 
 .home .monthly__card{
@@ -604,35 +620,35 @@
   border-radius:0 !important;
   max-width:none !important;
   margin:0 !important;
-  padding:clamp(36px,5vw,70px) clamp(20px, 4vw, 60px);
+  padding:clamp(24px, 3vw, 40px) clamp(20px, 4vw, 60px);
   box-shadow:none !important;
 }
 .monthly__grid-bg{
-  position:absolute;inset:0;opacity:.14;pointer-events:none;
+  position:absolute;inset:0;opacity:.12;pointer-events:none;
   background-image:linear-gradient(rgba(10,14,36,.25) 1px,transparent 1px),
                    linear-gradient(90deg,rgba(10,14,36,.25) 1px,transparent 1px);
-  background-size:36px 36px;
+  background-size:32px 32px;
   -webkit-mask-image:radial-gradient(120% 90% at 100% 0%,#000,transparent 68%);
           mask-image:radial-gradient(120% 90% at 100% 0%,#000,transparent 68%);
 }
 .home .monthly__ey{
-  position:relative;font-family:var(--mono);font-size:.85rem;font-weight:700;
-  letter-spacing:.18em;text-transform:uppercase;color:rgba(10,14,36,.75);
+  position:relative;font-family:var(--mono);font-size:.75rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:rgba(10,14,36,.7);
 }
 .home .monthly__card h3{
   position:relative;font-family:var(--display);font-weight:900;
-  font-size:clamp(2.2rem,4.2vw,3.4rem);margin:.3em 0 .45em;color:#0A0E24;
-  letter-spacing:-0.02em;line-height:1.1;
+  font-size:clamp(2.4rem, 4vw, 3.8rem);margin:.15em 0 .3em;color:#0A0E24;
+  letter-spacing:-0.02em;line-height:1.15;
 }
 .home .monthly__card p{
-  position:relative;font-size:1.2rem;max-width:52ch;color:rgba(10,14,36,.88);
-  line-height:1.6;font-weight:500;
+  position:relative;font-size:clamp(1.1rem, 1.4vw, 1.25rem);max-width:55ch;color:rgba(10,14,36,.85);
+  line-height:1.5;font-weight:500;
 }
 
 .monthly__content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 60px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -647,16 +663,16 @@
 }
 .monthly__img {
   width: 100%;
-  max-width: 650px;
+  max-width: 480px;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-  transform: scale(1.15);
+  filter: drop-shadow(0 14px 28px rgba(0,0,0,0.22));
+  transform: none;
 }
 
 @media (max-width: 900px) {
   .monthly__content-wrapper {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
     text-align: center;
   }
   .monthly__text {
@@ -664,6 +680,9 @@
   }
   .home .monthly__card p {
     margin: 0 auto;
+  }
+  .monthly__img {
+    max-width: 340px;
   }
 }
 
