@@ -11,7 +11,8 @@
 .split__line{display:block}
 .split__word{
   display:inline-block;overflow:hidden;vertical-align:top;
-  margin-right:.26em;padding-bottom:.4em;margin-bottom:-.4em;
+  padding: .2em .15em .4em .15em;
+  margin: -.2em .11em -.4em -.15em;
 }
 .split__inner{display:inline-block;will-change:transform}
 
