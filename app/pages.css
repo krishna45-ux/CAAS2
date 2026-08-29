@@ -2206,28 +2206,33 @@
 
 /* 4. THE 3500 CONCEPT */
 .pf-concept { background: var(--cyan-bright); padding: 100px 0; margin-top: 40px; z-index: 1; position: relative; color: var(--ink); }
-.pf-concept__header h2 { font-size: 3rem; margin-bottom: 8px; color: var(--ink); }
-.pf-concept__header p { font-size: 1.2rem; font-weight: 500; margin-bottom: 64px; }
+.pf-concept__header h2 { font-size: clamp(2.5rem, 6vw, 3.5rem); margin-bottom: 12px; color: var(--ink); letter-spacing: -0.02em; }
+.pf-concept__header p { font-size: 1.15rem; font-weight: 500; margin-bottom: 64px; opacity: 0.85; }
 
 .pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.pf-price-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); color: var(--ink); }
-.pf-price-card .stars { color: var(--blue-ink); font-size: 1.2rem; margin-bottom: 8px; }
-.pf-price-card .pkg { font-size: 0.75rem; font-weight: 700; color: var(--blue-ink); margin-bottom: 16px; letter-spacing: 0.1em; }
-.pf-price-card .price { font-size: 4rem; font-weight: 800; font-family: var(--display); line-height: 1; color: var(--ink); margin-bottom: 16px; }
-.pf-price-card .title { font-weight: 700; margin-bottom: 8px; font-size: 1.2rem; }
-.pf-price-card hr { margin: 24px 0; border: none; border-top: 1px solid var(--line); }
-.pf-price-card .addon { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 24px; }
-.pf-price-card .addon .icon { font-size: 1.5rem; background: rgba(0,0,0,0.03); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.pf-price-card .addon .price { font-size: 1.2rem; font-family: var(--body); margin: 4px 0; color: var(--ink); font-weight: 700; }
+.pf-price-card { background: #fff; border-radius: 24px; padding: 48px; box-shadow: 0 30px 60px rgba(0,20,40,0.08); color: var(--ink); transition: transform 0.4s ease, box-shadow 0.4s ease; border: 1px solid rgba(0,0,0,0.04); }
+.pf-price-card:hover { transform: translateY(-8px); box-shadow: 0 40px 80px rgba(0,20,40,0.12); }
+.pf-price-card .stars { color: var(--blue-ink); font-size: 1.2rem; margin-bottom: 12px; }
+.pf-price-card .pkg { font-size: 0.75rem; font-weight: 700; color: var(--blue-ink); margin-bottom: 16px; letter-spacing: 0.12em; text-transform: uppercase; }
+.pf-price-card .price { font-size: clamp(3.5rem, 6vw, 4.5rem); font-weight: 800; font-family: var(--display); line-height: 1; color: var(--ink); margin-bottom: 16px; letter-spacing: -0.03em; }
+.pf-price-card .title { font-weight: 700; margin-bottom: 12px; font-size: 1.25rem; letter-spacing: -0.01em; }
+.pf-price-card hr { margin: 32px 0; border: none; border-top: 1px solid rgba(0,0,0,0.08); }
+.pf-price-card .addon { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 32px; }
+.pf-price-card .addon .icon { font-size: 1.5rem; background: rgba(0,0,0,0.03); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none; }
+.pf-price-card .addon .price { font-size: 1.25rem; font-family: var(--body); margin: 4px 0; color: var(--ink); font-weight: 700; }
 .pf-price-card .addon .small { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
-.pf-price-card .note { display: flex; gap: 8px; background: rgba(0,0,0,0.03); padding: 12px; border-radius: 8px; font-size: 0.85rem; align-items: center; }
+.pf-price-card .note { display: flex; gap: 12px; background: rgba(0,0,0,0.03); padding: 16px; border-radius: 12px; font-size: 0.85rem; align-items: center; line-height: 1.5; color: var(--muted); }
 
 .pf-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 48px 0; }
-.pf-features-grid .f-box { display: flex; flex-direction: column; gap: 4px; }
-.pf-features-grid .f-icon { font-size: 2rem; margin-bottom: 12px; background: rgba(255,255,255,0.2); width: 64px; height: 64px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
-.pf-concept__ctas { display: flex; gap: 16px; margin-bottom: 24px; }
-.btn--ghost-white { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
-.pf-trusted { font-size: 0.85rem; color: var(--ink); opacity: 0.8; display: flex; align-items: center; gap: 8px; }
+.pf-features-grid .f-box { display: flex; flex-direction: column; gap: 8px; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.5); transition: transform 0.3s ease, background 0.3s ease; }
+.pf-features-grid .f-box:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.6); }
+.pf-features-grid .f-box strong { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+.pf-features-grid .f-box span { font-size: 0.9rem; color: rgba(0,20,40,0.7); line-height: 1.4; }
+.pf-features-grid .f-icon { font-size: 2rem; margin-bottom: 16px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.05); width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+.pf-concept__ctas { display: flex; gap: 16px; margin-bottom: 32px; }
+.btn--ghost-white { background: rgba(255,255,255,0.3); backdrop-filter: blur(8px); border: 1.5px solid transparent; color: var(--ink); transition: background 0.3s ease; }
+.btn--ghost-white:hover { background: rgba(255,255,255,0.6); border-color: transparent; color: var(--ink); }
+.pf-trusted { font-size: 0.9rem; color: var(--ink); opacity: 0.8; display: flex; align-items: center; gap: 10px; font-weight: 500; }
 
 /* 5. GUIDE CARDS */
 .pf-guide { padding-block: 100px; }
