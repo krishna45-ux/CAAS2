@@ -332,10 +332,10 @@ export default function PricingPage() {
       </section>
 
       {/* 8. TRUST CTA */}
-      <section className="trust-cta reveal wrap" style={{ maxWidth: '1060px', margin: 'clamp(28px, 3.5vw, 44px) auto' }}>
-        <div className="trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', backgroundColor: '#111727', borderRadius: '20px', overflow: 'hidden' }}>
+      <section className="trust-cta reveal wrap" style={{ maxWidth: '1040px', margin: 'clamp(28px, 3.5vw, 44px) auto' }}>
+        <div className="trust-cta__inner" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', backgroundColor: '#111727', borderRadius: '28px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.18)', border: '1px solid rgba(255,255,255,0.08)' }}>
           
-          <div className="trust-cta__content" style={{ padding: 'clamp(32px, 3.5vw, 44px) clamp(24px, 3.5vw, 40px)' }}>
+          <div className="trust-cta__content" style={{ padding: 'clamp(36px, 3.5vw, 48px) clamp(28px, 3.5vw, 44px)' }}>
             <h2 style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.2rem)', fontFamily: 'var(--display)', fontWeight: 800, lineHeight: 1.15, marginBottom: '14px', color: '#fff' }}>
               Doesn't Feel Like<br/><span style={{ color: 'rgba(255,255,255,0.5)' }}>Trusting Us?</span>
             </h2>
@@ -344,7 +344,7 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="trust-cta__right" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#162032', borderRadius: '24px 0 0 24px', padding: '24px 32px' }}>
+          <div className="trust-cta__right" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#162032', borderRadius: '28px 0 0 28px', padding: '24px 32px' }}>
             <div className="trust-cta__buttons" style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
               <Link href="#inquiry" className="btn btn--cyan" style={{ borderRadius: '999px', padding: '12px 24px', fontSize: '0.85rem', fontWeight: 700 }}>BOOK A SHOOT NOW</Link>
               <Link href="#inquiry" className="btn btn--ghost" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#fff', borderRadius: '999px', padding: '12px 24px', fontSize: '0.85rem', fontWeight: 700 }}>BULK QUOTES</Link>

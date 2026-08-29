@@ -295,20 +295,24 @@
 /* ---------- dark CTA bands ---------- */
 
 .page-main .kc-cta,
-.page-main .services-final-cta,
-.page-main .trust-cta{
+.page-main .services-final-cta{
   position:relative;overflow:hidden;
   background:var(--ink);color:#fff;
 }
 .page-main .kc-cta::before,
-.page-main .services-final-cta::before,
-.page-main .trust-cta::before{
+.page-main .services-final-cta::before{
   content:"";position:absolute;inset:0;pointer-events:none;
   background:radial-gradient(70% 90% at 50% 110%,rgba(0,128,255,.32),transparent 62%);
 }
 .page-main .kc-cta>*,
-.page-main .services-final-cta>*,
-.page-main .trust-cta>*{position:relative;z-index:1}
+.page-main .services-final-cta>*{position:relative;z-index:1}
+
+.page-main .trust-cta{
+  background:transparent !important;
+  color:inherit;
+  position:relative;
+}
+.page-main .trust-cta::before{display:none !important}
 
 /* aperture-blade ring, used as a quiet backdrop mark on CTA bands */
 .page-main .kc-cta::after,

@@ -599,31 +599,35 @@
 
 .home .monthly__card{
   position:relative;overflow:hidden;
-  background:linear-gradient(135deg,var(--blue),var(--blue-deep));
-  color:#fff;
+  background:linear-gradient(135deg,var(--cyan),#00D5D5);
+  color:var(--ink);
   border-radius:0 !important;
   max-width:none !important;
   margin:0 !important;
-  padding:clamp(30px,5vw,70px) clamp(20px, 4vw, 60px);
+  padding:clamp(36px,5vw,70px) clamp(20px, 4vw, 60px);
   box-shadow:none !important;
 }
 .monthly__grid-bg{
   position:absolute;inset:0;opacity:.14;pointer-events:none;
-  background-image:linear-gradient(rgba(255,255,255,.6) 1px,transparent 1px),
-                   linear-gradient(90deg,rgba(255,255,255,.6) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(10,14,36,.25) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(10,14,36,.25) 1px,transparent 1px);
   background-size:36px 36px;
   -webkit-mask-image:radial-gradient(120% 90% at 100% 0%,#000,transparent 68%);
           mask-image:radial-gradient(120% 90% at 100% 0%,#000,transparent 68%);
 }
 .home .monthly__ey{
-  position:relative;font-family:var(--mono);font-size:.9rem;
-  letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78);
+  position:relative;font-family:var(--mono);font-size:.85rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(10,14,36,.75);
 }
 .home .monthly__card h3{
-  position:relative;font-family:var(--display);font-weight:800;
-  font-size:clamp(2rem,4vw,3.2rem);margin:.35em 0 .5em;color:#fff;
+  position:relative;font-family:var(--display);font-weight:900;
+  font-size:clamp(2.2rem,4.2vw,3.4rem);margin:.3em 0 .45em;color:#0A0E24;
+  letter-spacing:-0.02em;line-height:1.1;
 }
-.home .monthly__card p{position:relative;font-size:1.25rem;max-width:50ch;color:rgba(255,255,255,.9);line-height:1.6}
+.home .monthly__card p{
+  position:relative;font-size:1.2rem;max-width:52ch;color:rgba(10,14,36,.88);
+  line-height:1.6;font-weight:500;
+}
 
 .monthly__content-wrapper {
   display: grid;
@@ -645,7 +649,7 @@
   width: 100%;
   max-width: 650px;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
   transform: scale(1.15);
 }
 
