@@ -736,17 +736,13 @@
   .hero__cta{margin-top:1.7rem;width:100%}
   .hero__cta .magnetic,.hero__cta .btn{width:100%}
   .hero__inner{padding-top:clamp(88px,12vh,120px);grid-template-rows:1fr auto}
-  .hero__bottom-row{flex-direction:column;align-items:stretch;gap:1rem}
-  .hero__features{
-    flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;
-    padding-bottom:4px;margin-inline:calc(clamp(20px,3vw,34px) * -1);
-    padding-inline:clamp(20px,3vw,34px);
-    -ms-overflow-style:none;scrollbar-width:none;
+  .home .hero__bottom-row{flex-direction:column;align-items:flex-start;gap:1rem}
+  .home .hero__features{
+    flex-direction:column; align-items:flex-start; gap:12px;
   }
-  .hero__features::-webkit-scrollbar{display:none}
   .feature{flex:none;scroll-snap-align:start}
-  .hero__scroll{display:none}
-  .hero__hud{display:none}
+  .home .hero__scroll{display:none}
+  .home .hero__hud{display:none}
 
   .crew__top,.bottleneck__grid,.booking__grid,.gear__grid{grid-template-columns:1fr;gap:34px}
   .home .pricing__card{grid-template-columns:1fr;gap:32px}
