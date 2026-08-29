@@ -370,7 +370,7 @@
 .page-main .hero__title .line,
 .page-main .pf-hero__title .line{
   display:inline-block;overflow:hidden;vertical-align:top;
-  padding-bottom:.25em;margin-bottom:-.25em;
+  padding-bottom:.4em;margin-bottom:-.4em;
 }
 .page-main .hero__title .line>*,
 .page-main .pf-hero__title .line>*{
