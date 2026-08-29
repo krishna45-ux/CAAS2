@@ -284,3 +284,19 @@
     font-size: 4rem !important;
   }
 }
+
+.svc-cta-mobile-bg {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .svc-cta-desktop-bg {
+    display: none !important;
+  }
+  .svc-cta-mobile-bg {
+    display: block !important;
+  }
+  .svc-cta-final__bg {
+    opacity: 0.6; /* Slight dimming so text is readable over the big image */
+  }
+}
+

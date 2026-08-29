@@ -695,7 +695,8 @@ export default function ServicesPage() {
       {/* 10. FINAL CTA */}
       <section className="svc-cta-final page-section" style={{ backgroundColor: '#0B1A33' }}>
         <div className="svc-cta-final__bg">
-          <Image src="/images/Group 11.png" alt="CAAS Photographer" fill style={{ objectFit: 'contain', objectPosition: 'bottom right' }} quality={100} />
+          <Image src="/images/Group 11.png" alt="CAAS Photographer" fill className="svc-cta-desktop-bg" style={{ objectFit: 'contain', objectPosition: 'bottom right' }} quality={100} />
+          <Image src="/images/cta-bg-mobile.png" alt="CAAS Photographer Mobile" fill className="svc-cta-mobile-bg" style={{ objectFit: 'cover', objectPosition: 'bottom right' }} quality={100} />
           <div className="svc-cta-final__overlay"></div>
         </div>
         <div className="wrap svc-cta-final__wrap">
