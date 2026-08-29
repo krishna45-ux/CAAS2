@@ -120,9 +120,9 @@ export default function PricingPage() {
           </div>
           <div className="pricing-intro__quote-wrap reveal d1">
              <div className="pricing-intro__bg"></div>
-             <div className="quote-box" style={{ background: 'var(--cyan)', color: '#fff', padding: '40px', maxWidth: '300px', position: 'relative', zIndex: 2, transform: 'translateY(100px)' }}>
-                <span className="eyebrow" style={{ color: '#fff', opacity: 0.8, letterSpacing: '0.1em', fontSize: '0.75rem', display: 'block', marginBottom: '16px' }}>TRUSTED BY</span>
-                <p style={{ fontStyle: 'italic', fontSize: '1.2rem', lineHeight: 1.5, margin: 0 }}>"CAAS simplified our entire production budget overnight."</p>
+             <div className="pricing-quote-card">
+                <span className="eyebrow">TRUSTED BY</span>
+                <p>&ldquo;CAAS simplified our entire production budget overnight.&rdquo;</p>
              </div>
           </div>
         </div>

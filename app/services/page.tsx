@@ -60,83 +60,115 @@ export default function ServicesPage() {
 
       {/* 3. COMPARISON SECTION */}
       <section className="services-comparison page-section wrap">
-        <div className="comparison-grid">
-          {/* Traditional Process */}
-          <div className="comparison-card comparison-card--traditional reveal-left">
-            <div className="comparison-card__header">
-              <span className="comparison-card__badge">Traditional Process</span>
+        <div className="comp-container">
+          
+          {/* TOP CARDS */}
+          <div className="comp-cards">
+            
+            {/* TRADITIONAL */}
+            <div className="comp-card comp-card--trad reveal-left">
+              <div className="comp-badge comp-badge--black">Traditional Process</div>
+              
+              <div className="comp-trad-path">
+                <svg viewBox="0 0 100 400" preserveAspectRatio="none">
+                  <path d="M 50 0 C 90 40, 20 80, 50 120 C 80 160, 20 200, 50 240 C 90 280, 20 320, 50 360 C 80 380, 60 400, 60 400" fill="none" stroke="#ccc" strokeWidth="2" strokeDasharray="6,6" />
+                </svg>
+              </div>
+
+              <ul className="comp-list comp-list--trad">
+                <li><span className="comp-x">✕</span> Ask friends</li>
+                <li><span className="comp-x">✕</span> Search Instagram</li>
+                <li><span className="comp-x">✕</span> Wait for replies</li>
+                <li><span className="comp-x">✕</span> Compare prices</li>
+                <li><span className="comp-x">✕</span> Hope they arrive</li>
+                <li><span className="comp-x">✕</span> Explain everything again</li>
+                <li><span className="comp-x">✕</span> Worry about equipment</li>
+                <li><span className="comp-x">✕</span> Repeat next month</li>
+              </ul>
+              
+              <div className="comp-trad-note">
+                <div className="comp-trad-note-arrow">
+                  <svg viewBox="0 0 40 40" fill="none"><path d="M40,40 Q10,30 5,10" stroke="#f03e3e" strokeWidth="1.5"/><polygon points="5,10 10,12 2,18" fill="#f03e3e"/></svg>
+                </div>
+                <div className="comp-trad-note-text">
+                  Time Consuming<br/>Unreliable<br/>Stressful
+                </div>
+                <div className="comp-trad-note-underline">
+                   <svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0,5 Q50,0 100,5" stroke="#f03e3e" strokeWidth="2" fill="none"/></svg>
+                </div>
+              </div>
             </div>
-            <ul className="comparison-card__list">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Ask friends</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Search Instagram</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Wait for replies</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Compare prices</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Hope they arrive</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Explain everything again</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Worry about equipment</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18" strokeWidth="2" strokeLinecap="round"/><line x1="6" y1="6" x2="18" y2="18" strokeWidth="2" strokeLinecap="round"/></svg> Repeat next month</li>
-            </ul>
-            <div className="comparison-card__alert">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10" strokeWidth="2"/><line x1="12" y1="8" x2="12" y2="12" strokeWidth="2" strokeLinecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" strokeWidth="2" strokeLinecap="round"/></svg>
-              <span><strong>Unpredictable. Time-Consuming. Stressful.</strong><br/>The traditional way costs you more than money.</span>
+
+            {/* VS BADGE */}
+            <div className="comp-vs reveal">VS</div>
+
+            {/* CAAS */}
+            <div className="comp-card comp-card--caas reveal-right">
+              <div className="comp-badge comp-badge--cyan">With CAAS</div>
+              
+              <div className="comp-timeline-line"></div>
+              
+              <ul className="comp-list comp-list--caas">
+                <li>
+                  <div className="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                  <div className="comp-step-text">Book</div>
+                  <div className="comp-step-num">01</div>
+                </li>
+                <li>
+                  <div className="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                  <div className="comp-step-text">Confirm</div>
+                  <div className="comp-step-num">02</div>
+                </li>
+                <li>
+                  <div className="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
+                  <div className="comp-step-text">Shoot</div>
+                  <div className="comp-step-num">03</div>
+                </li>
+                <li>
+                  <div className="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></div>
+                  <div className="comp-step-text">Receive Files</div>
+                  <div className="comp-step-num">04</div>
+                </li>
+                <li>
+                  <div className="comp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg></div>
+                  <div className="comp-step-text">Done.</div>
+                  <div className="comp-step-num">05</div>
+                </li>
+              </ul>
+              
+              <div className="comp-slogan">
+                <span>Simple. Reliable. Every Time.</span>
+                <svg className="comp-slogan-line" viewBox="0 0 200 10" preserveAspectRatio="none"><path d="M0,5 Q100,0 200,8" stroke="#00C2FF" strokeWidth="3" fill="none"/></svg>
+              </div>
+            </div>
+
+          </div>
+
+          {/* BOTTOM BANNER */}
+          <div className="comp-banner reveal">
+            <div className="comp-banner__side comp-banner__side--trad">
+              <div className="comp-banner-icon text-red">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <div className="comp-banner-text">
+                <strong className="text-red">Unpredictable. Time-Consuming. Stressful.</strong>
+                <span>The traditional way costs you more than money.</span>
+              </div>
             </div>
             
-            {/* Hand-drawn arrow note */}
-            <div className="comparison-card__note">
-              Time Consuming,<br/>Unreliable,<br/>Stressful!
+            <div className="comp-banner__sep"></div>
+            
+            <div className="comp-banner__side comp-banner__side--caas">
+              <div className="comp-banner-icon text-cyan">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="16 10 11 15 8 12"></polyline></svg>
+              </div>
+              <div className="comp-banner-text">
+                <strong className="text-cyan">Predictable. Efficient. Professional.</strong>
+                <span>CAAS makes content creation effortless.</span>
+              </div>
             </div>
           </div>
 
-          <div className="comparison-divider reveal">VS</div>
-
-          {/* With CAAS */}
-          <div className="comparison-card comparison-card--caas reveal-right">
-            <div className="comparison-card__header">
-              <span className="comparison-card__badge">With CAAS</span>
-            </div>
-            <ul className="comparison-card__steps">
-              <li>
-                <div className="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                <div className="step-content">
-                  <strong>Book</strong>
-                  <span className="step-num">01</span>
-                </div>
-              </li>
-              <li>
-                <div className="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
-                <div className="step-content">
-                  <strong>Confirm</strong>
-                  <span className="step-num">02</span>
-                </div>
-              </li>
-              <li>
-                <div className="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg></div>
-                <div className="step-content">
-                  <strong>Shoot</strong>
-                  <span className="step-num">03</span>
-                </div>
-              </li>
-              <li>
-                <div className="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></div>
-                <div className="step-content">
-                  <strong>Receive Files</strong>
-                  <span className="step-num">04</span>
-                </div>
-              </li>
-              <li>
-                <div className="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg></div>
-                <div className="step-content">
-                  <strong>Done.</strong>
-                  <span className="step-num">05</span>
-                </div>
-              </li>
-            </ul>
-            <div className="comparison-card__slogan">Simple. Reliable. Every Time.</div>
-            <div className="comparison-card__alert">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-              <span><strong>Predictable. Efficient. Professional.</strong><br/>CAAS makes content creation effortless.</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -257,76 +289,125 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 5. NICHE DIAGRAM */}
-      <section id="niche-section" className="services-niche page-section wrap">
-        <div className="head head--center">
-          <h2 className="h-section reveal">Specialized <span className="u-red">Expertise</span> for<br/>Every Niche.</h2>
+      {/* 5. NICHE DIAGRAM - High Fidelity Infographic */}
+      <section id="niche-section" className="niche-section page-section">
+        <div className="niche-header reveal">
+          <h2>Specialized <span className="text-red">Expertise</span> for<br/>Every Niche.</h2>
         </div>
         
-        <div className="niche-diagram reveal">
-          <div className="niche-diagram__pill">
-            <div className="niche-diagram__line"></div>
+        <div className="niche-diagram">
+          <div className="niche-pill-bg"></div>
+          
+          <div className="niche-timeline">
+            {/* ROW 1: Left */}
+            <div className="niche-item left reveal-left">
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#00C2FF'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></div>
+                 <span>Product Shoot</span>
+              </div>
+              <div className="niche-connector left"><div className="niche-arrow"></div></div>
+            </div>
             
-            {/* Left Branches */}
-            <div className="niche-item niche-item--left" style={{ top: '5%' }}>
-              <div className="niche-item__box">Product Shoot</div>
-              <div className="niche-item__arrow"></div>
+            {/* ROW 2: Right */}
+            <div className="niche-item right reveal-right">
+              <div className="niche-connector right"><div className="niche-arrow"></div></div>
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#e74c3c'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></div>
+                 <span>Brand Campaigns Shoot</span>
+              </div>
             </div>
-            <div className="niche-item niche-item--left" style={{ top: '23%' }}>
-              <div className="niche-item__box">Fashion & Models Shoot</div>
-              <div className="niche-item__arrow"></div>
-            </div>
-            <div className="niche-item niche-item--left" style={{ top: '41%' }}>
-              <div className="niche-item__box">Interviews & Podcasts Shoot</div>
-              <div className="niche-item__arrow"></div>
-            </div>
-            <div className="niche-item niche-item--left" style={{ top: '59%' }}>
-              <div className="niche-item__box">Travel & Hospitality Shoot</div>
-              <div className="niche-item__arrow"></div>
-            </div>
-            <div className="niche-item niche-item--left" style={{ top: '77%' }}>
-              <Link href="/contact" className="niche-item__box niche-item__box--cyan">
-                Don't Look Confused,<br/><strong>Reach Out to us Directly</strong>
-              </Link>
-              <div className="niche-item__arrow"></div>
+            
+            {/* ROW 3: Left */}
+            <div className="niche-item left reveal-left">
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#9b59b6'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                 <span>Fashion & Models Shoot</span>
+              </div>
+              <div className="niche-connector left"><div className="niche-arrow"></div></div>
             </div>
 
-            {/* Right Branches */}
-            <div className="niche-item niche-item--right" style={{ top: '14%' }}>
-              <div className="niche-item__arrow"></div>
-              <div className="niche-item__box">Brand Campaigns Shoot</div>
+            {/* ROW 4: Right */}
+            <div className="niche-item right reveal-right">
+              <div className="niche-connector right"><div className="niche-arrow"></div></div>
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#2ecc71'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                 <span>Events & Experiences Shoot</span>
+              </div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '32%' }}>
-              <div className="niche-item__arrow"></div>
-              <div className="niche-item__box">Events & Experiences Shoot</div>
+
+            {/* ROW 5: Left */}
+            <div className="niche-item left reveal-left">
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#3498db'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg></div>
+                 <span>Interviews & Podcasts Shoot</span>
+              </div>
+              <div className="niche-connector left"><div className="niche-arrow"></div></div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '50%' }}>
-              <div className="niche-item__arrow"></div>
-              <div className="niche-item__box">Fitness & Sports Shoot</div>
+
+            {/* ROW 6: Right */}
+            <div className="niche-item right reveal-right">
+              <div className="niche-connector right"><div className="niche-arrow"></div></div>
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#e67e22'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6l3 3-3 3"></path><path d="M21 9H3"></path><path d="M6 18l-3-3 3-3"></path><path d="M3 15h18"></path></svg></div>
+                 <span>Fitness & Sports Shoot</span>
+              </div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '68%' }}>
-              <div className="niche-item__arrow"></div>
-              <div className="niche-item__box">Corporate Shoot</div>
+
+            {/* ROW 7: Left */}
+            <div className="niche-item left reveal-left">
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#e67e22'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                 <span>Travel & Hospitality Shoot</span>
+              </div>
+              <div className="niche-connector left"><div className="niche-arrow"></div></div>
             </div>
-            <div className="niche-item niche-item--right" style={{ top: '86%' }}>
-              <div className="niche-item__arrow"></div>
-              <div className="niche-item__box">Office Party & MEET UPS</div>
+
+            {/* ROW 8: Right */}
+            <div className="niche-item right reveal-right">
+              <div className="niche-connector right"><div className="niche-arrow"></div></div>
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#2980b9'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+                 <span>Corporate Shoot</span>
+              </div>
             </div>
+
+            {/* ROW 9: Left (Cyan special card) */}
+            <div className="niche-item left reveal-left">
+              <Link href="/contact" className="niche-card niche-card--cyan">
+                 <div className="niche-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                 <span>Don't Look Confused,<br/><i>Reach Out to us Directly</i></span>
+              </Link>
+              <div className="niche-connector left"><div className="niche-arrow"></div></div>
+            </div>
+
+            {/* ROW 10: Right */}
+            <div className="niche-item right reveal-right">
+              <div className="niche-connector right"><div className="niche-arrow"></div></div>
+              <div className="niche-card">
+                 <div className="niche-icon" style={{color: '#8e44ad'}}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                 <span>Office Party & MEET UPS</span>
+              </div>
+            </div>
+            
           </div>
+
+          <div className="niche-pill-text reveal">
+            It all Starts with Shoot<br/>
+            &<br/>
+            <span className="text-cyan">Ends with Planning for Next</span>
+          </div>
+        </div> {/* closes niche-diagram */}
+      
+      {/* Footer text for Niche Section */}
+      <div className="wrap" style={{ marginTop: '40px' }}>
+        <div className="niche-footer-text reveal">
+          <span className="text-red" style={{ color: 'var(--red)' }}>Trusted by the NCR's most</span><br/>ambitious brands.
         </div>
-        <div className="niche-diagram__footer reveal" style={{ position: 'static', margin: '40px auto 0', transform: 'none', color: 'var(--text)' }}>
-          It all Starts with Shoot<br/>&<br/><span className="u-cyan">Ends with Planning for Next</span>
-        </div>
+      </div>
       </section>
 
       {/* 6. SOCIAL PROOF / STATS */}
       <section className="services-social-proof">
-        <div className="wrap">
-          <div className="head head--center">
-            <h2 className="h-section reveal">Trusted by the <span className="u-red">NCR's</span> most<br/>ambitious brands.</h2>
-          </div>
-        </div>
-        
         <div className="social-proof-block reveal">
           <div className="wrap">
             <div className="social-proof__stats">
@@ -369,6 +450,18 @@ export default function ServicesPage() {
                   <div>
                     <strong>Marcus Chen</strong>
                     <span>Founder of Apex Creatives</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-stars">★★★★★</div>
+                <p>"The level of professionalism and attention to detail from the CAAS crew is unmatched. They perfectly captured the essence of our corporate culture in just one shoot."</p>
+                <div className="testimonial-author">
+                  <div className="testimonial-avatar" style={{ backgroundColor: '#1a5f7a' }}></div>
+                  <div>
+                    <strong>Priya Sharma</strong>
+                    <span>Head of Communications, TechNova</span>
                   </div>
                 </div>
               </div>
@@ -539,40 +632,15 @@ export default function ServicesPage() {
       </section>
 
       {/* 8. WHAT WE DON'T SHOOT */}
-      <section className="services-exclusion page-section wrap">
-        <div className="exclusion-card reveal">
-          <div className="exclusion-card__content">
-            <div className="exclusion-card__left">
-              <span className="eyebrow eyebrow--red">ONE THING</span>
-              <h2>WE DON'T<br/><span className="u-red">SHOOT.</span></h2>
-              <p>We choose not to cover weddings, pre-weddings, family functions or personal gatherings.</p>
-              <div className="exclusion-alert">
-                <div className="exclusion-alert__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
-                <div>
-                  <strong>THAT'S INTENTIONAL.</strong><br/>
-                  <span>CAAS is built for businesses, brands, creators and commercial productions.</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="exclusion-card__center">
-              <div className="red-cross">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-              </div>
-            </div>
-
-            <div className="exclusion-card__right">
-              <ul>
-                <li><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path></svg></div> WEDDINGS</li>
-                <li><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path></svg></div> PRE-WEDDINGS</li>
-                <li><div className="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"></path></svg></div> FAMILY FUNCTIONS &<br/>PERSONAL GATHERINGS</li>
-              </ul>
-            </div>
-          </div>
-          <div className="exclusion-card__banner">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <strong>WE AREN'T TRYING TO BE EVERYONE'S CAMERAMAN. <span className="u-cyan">WE'RE BUILDING EXPERTISE AROUND COMMERCIAL CONTENT.</span></strong>
-          </div>
+      <section className="services-exclusion page-section wrap" id="niche-section">
+        <div className="exclusion-card reveal" style={{ padding: 0, background: 'transparent', boxShadow: 'none', border: 'none', display: 'flex', justifyContent: 'center' }}>
+          <Image 
+            src="/images/Image 107.png" 
+            alt="What We Don't Shoot" 
+            width={1200} 
+            height={600} 
+            style={{ width: '100%', height: 'auto', maxWidth: '1200px' }} 
+          />
         </div>
       </section>
 
@@ -619,20 +687,18 @@ export default function ServicesPage() {
 
 
       {/* 10. FINAL CTA */}
-      <section className="services-final-cta page-section">
-        <div className="wrap">
-          <div className="services-final-cta__inner">
-            <div className="services-final-cta__content">
-              <span className="eyebrow eyebrow--cyan">Let&rsquo;s Talk</span>
-              <h2 className="h-section">Ready to elevate your<br/><span className="u-cyan">brand&rsquo;s</span> visual identity?</h2>
-              <p>Whether it&rsquo;s a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
-              <div className="services-final-cta__btns">
-                <Link href="/contact" className="btn btn--primary btn--lg">Request a Custom Quote</Link>
-                <Link href="/contact" className="btn btn--ghost btn--lg">Schedule Consultation</Link>
-              </div>
-            </div>
-            <div className="services-final-cta__img">
-              <Image src="/images/professional_lens.jpg" alt="Cinema prime lens" fill style={{ objectFit: 'cover' }} />
+      <section className="svc-cta-final page-section">
+        <div className="svc-cta-final__bg">
+          <Image src="/images/Group 11.png" alt="CAAS Photographer" fill style={{ objectFit: 'cover', objectPosition: 'center right' }} quality={100} />
+          <div className="svc-cta-final__overlay"></div>
+        </div>
+        <div className="wrap svc-cta-final__wrap">
+          <div className="svc-cta-final__content reveal">
+            <span className="svc-cta-pill">Contact Sales</span>
+            <h2>Ready to elevate your <span className="u-cyan">brand&rsquo;s</span> visual identity?</h2>
+            <p>Whether it&rsquo;s a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
+            <div className="svc-cta-final__btns">
+              <Link href="/contact" className="btn btn--primary btn--lg">Request a Custom Quote</Link>
             </div>
           </div>
         </div>

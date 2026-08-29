@@ -189,7 +189,7 @@
     border-radius: 0 !important;
   }
 
-  .quote-box {
+  .quote-box, .pricing-quote-card {
     transform: none !important;
     max-width: 100% !important;
     margin-top: 24px !important;

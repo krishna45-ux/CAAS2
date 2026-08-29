@@ -254,12 +254,19 @@ export function Pricing() {
 
 export function Monthly() {
   return (
-    <section className="section monthly wrap">
+    <section className="monthly">
       <Reveal dir="up" className="monthly__card">
         <span className="monthly__grid-bg" aria-hidden="true" />
-        <div className="monthly__ey">Need shoots every month?</div>
-        <h3>We&rsquo;ve already planned for this.</h3>
-        <p>Whether you&rsquo;re managing 3 brands or 30, our monthly production plans make sure you always have a professional crew ready — exactly when your content calendar demands it.</p>
+        <div className="monthly__content-wrapper">
+          <div className="monthly__text">
+            <div className="monthly__ey">Need shoots every month?</div>
+            <h3>We&rsquo;ve already planned for this.</h3>
+            <p>Whether you&rsquo;re managing 3 brands or 30, our monthly production plans make sure you always have a professional crew ready — exactly when your content calendar demands it.</p>
+          </div>
+          <div className="monthly__visual">
+            <img src="/images/monthly_3d_elements-Photoroom.png" alt="3D calendar and camera" className="monthly__img" />
+          </div>
+        </div>
       </Reveal>
     </section>
   );
