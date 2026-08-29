@@ -2284,12 +2284,20 @@
 
 
 /* PRICING & CONTACT STYLES */
-.pricing-page { background: var(--paper); }
-.contact-hero { padding-top: clamp(90px, 12vh, 130px); padding-bottom: 24px; position: relative; }
-.contact-hero__inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
-.contact-hero__content { position: relative; z-index: 2; padding: 24px 0; padding-right: 10%; }
+.contact-hero { padding-top: clamp(140px, 16vh, 180px) !important; padding-bottom: 32px; position: relative; }
+.contact-hero__inner { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 4vw, 60px); }
+.contact-hero__content { position: relative; z-index: 2; padding: 12px 0; padding-right: 4%; }
 .contact-hero__content .hero__sub { color: var(--muted); max-width: 100%; }
-.contact-hero__bg { position: absolute; right: 0; top: 0; bottom: 0; width: 50%; background: var(--paper-2) url('/images/professional_lens.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
+.contact-hero__bg {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  min-height: 440px;
+  background: var(--paper-2) url('/images/pricing_hero_camera.jpg') no-repeat center center / cover;
+  border-radius: 24px;
+  z-index: 1;
+  box-shadow: 0 24px 50px -16px rgba(0,0,0,0.14);
+}
 .contact-badge { border: 1px solid var(--ink); padding: 4px 12px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; border-radius: 4px; display: inline-block; margin-bottom: 20px; }
 
 .contact-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 0; position: relative; z-index: 10; margin-bottom: clamp(32px, 4vw, 56px); }
@@ -2339,9 +2347,9 @@
 }
 
 @media (max-width: 992px) {
-  .contact-hero__inner { grid-template-columns: 1fr; }
-  .contact-hero__bg { right: -20px; left: -20px; width: auto; }
-  .contact-cards { grid-template-columns: 1fr; margin-top: 40px; }
+  .contact-hero__inner { grid-template-columns: 1fr; gap: 32px; }
+  .contact-hero__bg { width: 100%; min-height: 300px; aspect-ratio: 16/10; }
+  .contact-cards { grid-template-columns: 1fr; margin-top: 32px; }
   .pricing-intro__inner { grid-template-columns: 1fr; }
   .base-card { grid-template-columns: 1fr !important; }
   .addons-grid { grid-template-columns: 1fr !important; }
@@ -3970,7 +3978,8 @@
    SERVICES PAGE SECTION SPACING & INTRO
    ============================================================ */
 .services-page .services-hero-v2 {
-  padding-block: clamp(70px, 9vw, 110px) clamp(24px, 3.5vw, 40px);
+  padding-top: clamp(140px, 16vh, 180px) !important;
+  padding-bottom: clamp(24px, 3.5vw, 40px) !important;
 }
 
 .services-page .services-intro {
