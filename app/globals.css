@@ -15,24 +15,24 @@
   --paper-2:#E3E9F3;      /* recessed light surface */
   --card:#FFFFFF;
 
-  /* ---- BLUE: the lead accent. Everything active, live or
+  /* ---- BLUE / CYAN: the lead accent. Everything active, live or
      clickable is blue; every other hue is a supporting role. ---- */
-  --blue:#0080ff;
-  --blue-lift:#4DA3FF;    /* hover / blue on dark */
-  --blue-deep:#0059B3;    /* pressed */
-  --blue-ink:#0063C7;     /* blue TEXT that clears 4.5:1 on white */
-  --blue-04:rgba(0,128,255,.04);
-  --blue-08:rgba(0,128,255,.08);
-  --blue-16:rgba(0,128,255,.16);
-  --blue-28:rgba(0,128,255,.28);
-  --blue-glow:0 18px 50px -18px rgba(0,128,255,.65);
-  --blue-glow-lg:0 30px 90px -28px rgba(0,128,255,.75);
+  --blue:#00F7F7;
+  --blue-lift:#5CFFFF;    /* hover / blue on dark */
+  --blue-deep:#00D6D6;    /* pressed */
+  --blue-ink:#008A8A;     /* blue TEXT that clears 4.5:1 on white */
+  --blue-04:rgba(0,247,247,.04);
+  --blue-08:rgba(0,247,247,.08);
+  --blue-16:rgba(0,247,247,.16);
+  --blue-28:rgba(0,247,247,.28);
+  --blue-glow:0 18px 50px -18px rgba(0,247,247,.65);
+  --blue-glow-lg:0 30px 90px -28px rgba(0,247,247,.75);
 
   /* ---- supporting hues: rare highlights only ---- */
-  --cyan:#38E9F3;         /* was referenced 15× but never defined */
-  --cyan-bright:#38E9F3;
-  --cyan-ink:#0A8B99;
-  --hero-blue:#0080ff;    /* legacy alias — kept for other pages */
+  --cyan:#00F7F7;
+  --cyan-bright:#00F7F7;
+  --cyan-ink:#008A8A;
+  --hero-blue:#00F7F7;    /* legacy alias — kept for other pages */
   --coral:#FB4A34;
   --coral-deep:#E23A26;
   --sun:#FFD24A;
@@ -171,7 +171,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 
 /* PRIMARY — blue. The single most important action on any screen. */
 .btn--primary,.btn--blue,.btn--cyan,.btn--coral{
-  --bg:var(--blue);--fg:#fff;
+  --bg:var(--blue);--fg:var(--ink);
   box-shadow:var(--blue-glow);
 }
 .btn--primary:hover,.btn--blue:hover,.btn--cyan:hover,.btn--coral:hover{
@@ -359,9 +359,9 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .nav__tc .rec{width:7px;height:7px;border-radius:50%;background:var(--blue);
   animation:recPulse 2s var(--ease) infinite}
 @keyframes recPulse{
-  0%{box-shadow:0 0 0 0 rgba(0,128,255,.55)}
-  70%{box-shadow:0 0 0 7px rgba(0,128,255,0)}
-  100%{box-shadow:0 0 0 0 rgba(0,128,255,0)}
+  0%{box-shadow:0 0 0 0 rgba(0,247,247,.55)}
+  70%{box-shadow:0 0 0 7px rgba(0,247,247,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,247,247,0)}
 }
 .nav__cta{padding:.72em 1.35em;font-size:.88rem;min-height:42px}
 
@@ -410,7 +410,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .nav-sheet{
   position:fixed;inset:0;z-index:1001;
   background:
-    radial-gradient(120% 80% at 100% 0%,rgba(0,128,255,.22),transparent 58%),
+    radial-gradient(120% 80% at 100% 0%,rgba(0,247,247,.22),transparent 58%),
     var(--void);
   display:flex;flex-direction:column;justify-content:center;
   padding:clamp(84px,14vh,140px) clamp(24px,7vw,60px) clamp(32px,6vh,60px);
@@ -447,7 +447,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .scrubber{position:fixed;top:0;left:0;right:0;height:2.5px;z-index:101;
   transform-origin:0 50%;transform:scaleX(0);
   background:linear-gradient(90deg,var(--blue-deep),var(--blue),var(--cyan));
-  box-shadow:0 0 14px rgba(0,128,255,.7)}
+  box-shadow:0 0 14px rgba(0,247,247,.7)}
 
 /* ============================================================
    HERO
@@ -747,7 +747,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 }
 .footer::before{
   content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(90% 60% at 50% 0%,rgba(0,128,255,.14),transparent 62%);
+  background:radial-gradient(90% 60% at 50% 0%,rgba(0,247,247,.14),transparent 62%);
 }
 .footer>*{position:relative;z-index:1}
 
@@ -809,7 +809,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
   color:rgba(255,255,255,.75);
   transition:background .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease);
 }
-.footer__social a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.footer__social a:hover{background:var(--blue);border-color:var(--blue);color:var(--ink)}
 .footer__social svg{width:18px;height:18px}
 
 /* ---- wordmark ---- */
@@ -828,7 +828,7 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 }
 .wordmark__fill{
   position:absolute;inset:0;
-  background:linear-gradient(180deg,var(--blue) 0%,rgba(0,128,255,0) 88%);
+  background:linear-gradient(180deg,var(--blue) 0%,rgba(0,247,247,0) 88%);
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;color:transparent;
 }

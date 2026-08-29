@@ -131,6 +131,37 @@
   border-color:var(--blue-28);
 }
 
+/* Portfolio expertise category cards */
+.page-main .pf-expertise .pf-icon-box {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+  padding: 32px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+.page-main .pf-expertise .pf-icon-box .icon {
+  font-size: 2.2rem !important;
+  color: var(--cyan) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.page-main .pf-expertise .pf-icon-box span:not(.icon) {
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  color: #ffffff !important;
+}
+.page-main .pf-expertise .pf-icon-box:hover {
+  background: rgba(0, 247, 247, 0.14) !important;
+  border-color: var(--cyan) !important;
+  box-shadow: 0 16px 36px rgba(0, 247, 247, 0.28) !important;
+}
+
 /* a blue rule that draws itself along the card's top edge on hover */
 .page-main .bento-card::before,
 .page-main .blog-card::before,
