@@ -513,4 +513,18 @@
   .pf-avatar-card .review-text {
     display: none !important;
   }
+  
+  /* Scale down avatar cards on mobile to prevent huge gaps and horizontal overlapping */
+  .pf-avatar-card.sm { width: 90px !important; height: 130px !important; }
+  .pf-avatar-card.sm img { width: 90px !important; height: 90px !important; }
+  
+  .pf-avatar-card.md { width: 110px !important; height: 160px !important; }
+  .pf-avatar-card.md img { width: 110px !important; height: 110px !important; }
+  
+  .pf-avatar-card.lg { width: 140px !important; height: 190px !important; }
+  .pf-avatar-card.lg img { width: 140px !important; height: 140px !important; }
+  
+  .pf-avatar-card .avatar-title {
+    font-size: 0.85rem !important;
+  }
 }
