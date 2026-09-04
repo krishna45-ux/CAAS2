@@ -309,7 +309,13 @@
     font-size: clamp(1.8rem, 6vw, 2.2rem) !important;
   }
   .lead-txt, .hero__sub, .pf-hero__sub, .pf-concept__header p, .pf-surf p {
-    font-size: 1rem !important;
+    font-size: 0.85rem !important;
+    text-align: left !important;
+  }
+  
+  .services-cta__inner, .services-cta__content, .hero__inner, .hero__content {
+    text-align: left !important;
+    align-items: flex-start !important;
   }
 
   /* Button Overrides */
