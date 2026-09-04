@@ -499,7 +499,7 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .funfact__card--split { grid-template-columns: 1fr; grid-template-rows: 260px auto auto; }
+  .funfact__card--split { grid-template-columns: 1fr; grid-template-rows: 260px auto auto; height: auto; }
   .funfact__visual { min-height: 260px; }
   .funfact__divider { flex-direction: row; padding: 12px 0; }
 }
