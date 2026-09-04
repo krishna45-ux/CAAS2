@@ -9,9 +9,17 @@ import { Magnetic, EASE } from './motion';
 const LINKS = [
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/knowledge-centre', label: 'Knowledge Centre' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/pricing', label: 'Contact Us' },
+  {
+    href: '/knowledge-centre',
+    label: 'Knowledge Centre',
+    dropdown: [
+      { href: '/blog', label: 'Blogs' },
+      { href: '/knowledge-centre/guides', label: 'Guides' },
+      { href: '/knowledge-centre/case-studies', label: 'Case Studies' },
+      { href: '/knowledge-centre/news-trends', label: 'News & Trends' },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -94,28 +102,92 @@ export default function Navbar() {
             <img src="/images/nav_logo.png" className="brand__logo" alt="" width="776" height="236" />
           </Link>
 
-          <nav className="nav__links" aria-label="Primary" onMouseLeave={close}>
+          <nav className="nav__links" aria-label="Primary" onMouseLeave={() => setHovered(null)}>
             {LINKS.map((l) => {
               const active = pathname === l.href || (l.href !== '/' && pathname.startsWith(l.href));
               return (
-                <Link
+                <div
                   key={l.href}
-                  href={l.href}
-                  className={`nav__link ${active ? 'is-active' : ''}`}
-                  aria-current={active ? 'page' : undefined}
+                  className="nav__item"
                   onMouseEnter={() => setHovered(l.href)}
+                  onMouseLeave={() => setHovered(null)}
+                  style={{ position: 'relative' }}
                 >
-                  {/* the blue pill slides between items instead of fading in place */}
-                  {hovered === l.href && (
-                    <motion.span
-                      layoutId="nav-hover"
-                      className="nav__link-bg"
-                      transition={{ type: 'spring', stiffness: 380, damping: 32 }}
-                    />
+                  <Link
+                    href={l.href}
+                    className={`nav__link ${active ? 'is-active' : ''}`}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {/* the blue pill slides between items instead of fading in place */}
+                    {hovered === l.href && (
+                      <motion.span
+                        layoutId="nav-hover"
+                        className="nav__link-bg"
+                        transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                    <span className="nav__link-txt">
+                      {l.label}
+                      {l.dropdown && (
+                        <svg style={{ width: 10, height: 10, marginLeft: 4, display: 'inline', verticalAlign: 'middle', transition: 'transform 0.2s', transform: hovered === l.href ? 'rotate(180deg)' : 'rotate(0deg)' }} viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                      )}
+                    </span>
+                    {active && <motion.span layoutId="nav-active" className="nav__link-dot" />}
+                  </Link>
+
+                  {/* Dropdown */}
+                  {l.dropdown && hovered === l.href && (
+                    <div style={{ position: 'absolute', top: '100%', left: '50%', transform: 'translateX(-50%)', paddingTop: '16px', zIndex: 50 }}>
+                      <motion.div
+                        className="nav__dropdown"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        style={{
+                          background: 'rgba(17, 23, 39, 0.95)',
+                          backdropFilter: 'blur(12px)',
+                          WebkitBackdropFilter: 'blur(12px)',
+                          border: '1px solid rgba(255,255,255,0.08)',
+                          borderRadius: '16px',
+                          padding: '8px',
+                          minWidth: '200px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '4px',
+                          boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+                        }}
+                      >
+                        {l.dropdown.map(drop => (
+                          <Link 
+                            key={drop.href} 
+                            href={drop.href}
+                            className="nav__dropdown-item"
+                            style={{
+                              padding: '10px 16px',
+                              color: 'rgba(255,255,255,0.7)',
+                              fontSize: '0.9rem',
+                              fontWeight: 500,
+                              borderRadius: '8px',
+                              transition: 'all 0.2s ease',
+                              textDecoration: 'none'
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                              e.currentTarget.style.color = '#fff';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.backgroundColor = 'transparent';
+                              e.currentTarget.style.color = 'rgba(255,255,255,0.7)';
+                            }}
+                          >
+                            {drop.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    </div>
                   )}
-                  <span className="nav__link-txt">{l.label}</span>
-                  {active && <motion.span layoutId="nav-active" className="nav__link-dot" />}
-                </Link>
+                </div>
               );
             })}
           </nav>

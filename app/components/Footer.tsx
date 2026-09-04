@@ -81,6 +81,13 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
+            <div className="footer__col">
+              <h4>Reach Us</h4>
+              <ul>
+                <li><span style={{ color: 'var(--muted)' }}>Sector 51, Gurgaon</span></li>
+                <li><a href="tel:+919711684074"><span>+91 9711684074</span></a></li>
+              </ul>
+            </div>
           </nav>
         </div>
 

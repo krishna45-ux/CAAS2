@@ -25,8 +25,8 @@ export default function Home() {
         <FunFact />
         <Industries />
         <Portfolio />
-        <Gear />
         <Pricing />
+        <Gear />
         <Monthly />
         <FinalCta />
       </div>

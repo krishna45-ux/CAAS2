@@ -20,13 +20,13 @@ export default function Booking() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="section wrap booking">
+    <section className="section wrap booking" style={{ backgroundColor: '#f8f9fa', color: '#111', borderRadius: '32px', padding: '80px 60px', margin: '80px auto', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
       <div className="booking__grid">
         <div>
-          <Reveal dir="up"><span className="eyebrow">No one&rsquo;s here to waste time &amp; money</span></Reveal>
-          <SplitText as="h2" className="h-section" text="Book Smart" highlight={['smart']} highlightClass="u-blue" />
+          <Reveal dir="up"><span className="eyebrow" style={{ color: '#f03e3e', fontWeight: 600 }}>No one&rsquo;s here to waste time &amp; money</span></Reveal>
+          <SplitText as="h2" className="h-section" text="Book Smart" highlight={['smart']} highlightClass="u-red" />
           <Reveal dir="up" delay={0.14}>
-            <p className="lead-txt">Manage your whole production calendar in one place. Certain days unlock faster turnarounds and premium kit availability.</p>
+            <p className="lead-txt" style={{ color: '#333' }}>Manage your whole production calendar in one place. Certain days unlock faster turnarounds and premium kit availability.</p>
           </Reveal>
         </div>
 
@@ -45,7 +45,7 @@ export default function Booking() {
                   <motion.span layoutId="cal-marker" className="calendar__marker"
                     transition={{ type: 'spring', stiffness: 380, damping: 34 }} />
                 )}
-                <span className="calendar__day-txt">{day.toUpperCase()}</span>
+                <span className="calendar__day-txt" style={{ color: active === day ? '#fff' : '#111', zIndex: 2, position: 'relative' }}>{day.toUpperCase()}</span>
                 <span className="tick" />
               </button>
             ))}
@@ -53,7 +53,7 @@ export default function Booking() {
 
           <div className="calendar__panel">
             <h4>
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 15 9l7 .5-5.5 4.5L18 21l-6-3.8L6 21l1.5-7L2 9.5 9 9z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" fill="none" style={{ color: '#f03e3e' }}><path d="M12 2 15 9l7 .5-5.5 4.5L18 21l-6-3.8L6 21l1.5-7L2 9.5 9 9z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" /></svg>
               Prime Availability
             </h4>
             <div className="calendar__msg">
@@ -73,7 +73,7 @@ export default function Booking() {
               <span>CREW <b>Ready</b></span><span>KIT <b>RED / Sony</b></span><span>TURNAROUND <b>24h</b></span>
             </div>
             <Magnetic strength={0.2}>
-              <a href="#pricing" className="btn btn--primary">
+              <a href="#pricing" className="btn btn--lg" style={{ backgroundColor: '#f03e3e', color: '#fff', border: 'none' }}>
                 Check if slots are available
                 <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </a>

@@ -70,31 +70,33 @@
 
 /* CURVE AND AVATARS */
 .pf-curve { position: relative; z-index: 2; margin-top: 40px; }
-.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; height: 320px; }
+.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; height: 400px; }
 .pf-avatar-card { display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; justify-content: flex-end; }
-.pf-avatar-card .name { 
-  background: #fff; color: var(--ink); font-size: 0.75rem; font-weight: 700; 
-  border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-  display: flex; justify-content: center;
+.pf-avatar-card .avatar-info { 
+  background: #fff; color: var(--ink); font-size: 0.8rem;
+  border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 100%; padding-top: 24px; 
+  width: 100%; padding: 16px 12px; text-align: center; z-index: 1;
 }
+.pf-avatar-card .avatar-title { font-weight: 700; color: var(--ink); display: block; }
+.pf-avatar-card .review-text { font-size: 0.65rem; font-weight: 500; color: var(--muted); margin-top: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
 .pf-avatar-card img { border-radius: 50%; object-fit: cover; position: relative; z-index: 2; margin-top: auto; }
 
 /* Sm */
-.pf-avatar-card.sm { width: 90px; height: 180px; margin-bottom: 90px; }
-.pf-avatar-card.sm .name { height: 130px; }
-.pf-avatar-card.sm img { width: 90px; height: 90px; }
+.pf-avatar-card.sm { width: 140px; height: 260px; margin-bottom: 90px; }
+.pf-avatar-card.sm .avatar-info { height: 180px; }
+.pf-avatar-card.sm img { width: 140px; height: 140px; }
 
 /* Md */
-.pf-avatar-card.md { width: 120px; height: 220px; margin-bottom: 45px; }
-.pf-avatar-card.md .name { height: 155px; }
-.pf-avatar-card.md img { width: 120px; height: 120px; }
+.pf-avatar-card.md { width: 160px; height: 300px; margin-bottom: 45px; }
+.pf-avatar-card.md .avatar-info { height: 210px; }
+.pf-avatar-card.md img { width: 160px; height: 160px; }
 
 /* Lg */
-.pf-avatar-card.lg { width: 180px; height: 280px; margin-bottom: 0px; }
-.pf-avatar-card.lg .name { height: 190px; }
-.pf-avatar-card.lg img { width: 180px; height: 180px; }
+.pf-avatar-card.lg { width: 200px; height: 360px; margin-bottom: 0px; }
+.pf-avatar-card.lg .avatar-info { height: 240px; }
+.pf-avatar-card.lg img { width: 200px; height: 200px; }
 
 .pf-curve__title { font-size: clamp(2rem, 4vw, 3rem); color: #fff; padding-bottom: 80px; }
 
@@ -103,8 +105,8 @@
 .pf-concept__header h2 { font-size: 3rem; margin-bottom: 8px; color: var(--ink); }
 .pf-concept__header p { font-size: 1.2rem; font-weight: 500; margin-bottom: 64px; }
 
-.pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.pf-price-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); color: var(--ink); }
+.pf-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: stretch; }
+.pf-price-card { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); color: var(--ink); height: 100%; display: flex; flex-direction: column; justify-content: center; }
 .pf-price-card .stars { color: var(--cyan-ink); font-size: 1.2rem; margin-bottom: 8px; }
 .pf-price-card .pkg { font-size: 0.75rem; font-weight: 700; color: var(--cyan-ink); margin-bottom: 16px; letter-spacing: 0.1em; }
 .pf-price-card .price { font-size: 4rem; font-weight: 800; font-family: var(--display); line-height: 1; color: var(--coral); margin-bottom: 16px; }
@@ -154,6 +156,7 @@
 .pf-surf p { font-size: 1.2rem; margin-bottom: 40px; color: var(--ink); }
 .pf-surf__ctas { display: flex; justify-content: center; gap: 16px; }
 .btn--ghost-dark { background: transparent; border: 1.5px solid var(--ink); color: var(--ink); }
+.btn--ink { background: var(--ink); border: 1.5px solid var(--ink); color: #fff; }
 
 /* 8. BIG FOOTER */
 .pf-big-footer { background: var(--cyan-bright); padding: 20px 20px 40px; text-align: center; }

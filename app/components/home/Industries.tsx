@@ -65,8 +65,8 @@ export default function Industries() {
   return (
     <section className="section wrap industries" id="industries">
       <div className="head">
-        <span className="eyebrow">Services</span>
-        <SplitText as="h2" className="h-section" text="Services We Provide" />
+        <span className="eyebrow">Industries</span>
+        <SplitText as="h2" className="h-section" text="Industries We Serve" />
         <Reveal dir="up" delay={0.12}>
           <p className="lead-txt">Deep expertise, translated into the unique visual language of your business.</p>
         </Reveal>
@@ -81,7 +81,7 @@ export default function Industries() {
 
         {/* one pinned frame; the footage inside it cuts as you read */}
         <div className="ind__stage" aria-hidden="true">
-          <div className="ind__frame">
+          <div className="ind__frame" style={{ transform: 'scale(0.8)', border: '4px solid white', borderRadius: '12px', overflow: 'hidden' }}>
             <AnimatePresence initial={false}>
               <motion.img
                 key={ROWS[active].img}
@@ -94,6 +94,7 @@ export default function Industries() {
                 transition={{ duration: 0.75, ease: EASE }}
               />
             </AnimatePresence>
+            <div className="flash-overlay"></div>
             <span className="ind__frame-hud">
               {String(active + 1).padStart(2, '0')} / {String(ROWS.length).padStart(2, '0')}
             </span>
@@ -101,6 +102,9 @@ export default function Industries() {
             <span className="ind__frame-c bl" /><span className="ind__frame-c br" />
           </div>
         </div>
+      </div>
+      <div className="ind__cta" style={{ textAlign: 'center', marginTop: '40px' }}>
+        <a href="/book" className="btn btn--primary btn--lg" style={{ backgroundColor: '#f03e3e', color: 'white', padding: '16px 40px', fontSize: '1.2em' }}>Book a Shoot</a>
       </div>
     </section>
   );

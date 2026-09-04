@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-
+import { Stagger, StaggerItem, Reveal } from '../components/motion';
 export default function PortfolioPage() {
   const [nicheTab, setNicheTab] = useState('inspiration'); 
 
@@ -21,7 +21,7 @@ export default function PortfolioPage() {
             
             <div className="pf-stats">
               <div className="pf-stat">
-                <h3>500+</h3>
+                <h3>180+</h3>
                 <span>SUCCESSFUL SHOOTS</span>
               </div>
               <div className="pf-stat">
@@ -29,7 +29,7 @@ export default function PortfolioPage() {
                 <span>HOURS FILMED</span>
               </div>
               <div className="pf-stat">
-                <h3>98%</h3>
+                <h3>83%</h3>
                 <span>CLIENT RETENTION</span>
               </div>
             </div>
@@ -58,6 +58,12 @@ export default function PortfolioPage() {
             </svg>
           </button>
         </div>
+      </section>
+
+      <section className="text-center reveal" style={{ padding: '60px 20px 20px', maxWidth: '800px', margin: '0 auto' }}>
+        <h3 style={{ fontSize: '1.8rem', fontWeight: 500, color: 'var(--ink)', fontStyle: 'italic', lineHeight: 1.4 }}>
+          "We're here to deliver your presence, not negotiate our worth - good karma, great work, zero shortcuts."
+        </h3>
       </section>
 
       {/* 2. NICHE / INSPIRATION TOGGLE */}
@@ -96,99 +102,101 @@ export default function PortfolioPage() {
           <h3 className="pf-niche__title u-cyan">Specific Niche in Mind?</h3>
         </div>
 
-        <div className="pf-niche-grid">
-          {/* Card 1 */}
-          <div className="pf-niche-card reveal">
-            <div className="pf-niche-card__img">
-              <span className="pf-badge pf-badge--dark">FASHION</span>
-              <img src="/images/blog_corporate.jpg" alt="Business" />
+        <div style={{ position: 'relative', marginTop: '48px' }}>
+          <div className="pf-niche-grid">
+            {/* Card 1 */}
+            <div className="pf-niche-card reveal">
+              <div className="pf-niche-card__img">
+                <span className="pf-badge pf-badge--dark">FASHION</span>
+                <img src="/images/blog_corporate.jpg" alt="Business" />
+              </div>
+              <div className="pf-niche-card__content">
+                <h4 className="u-cyan">BUSINESS & SPACES</h4>
+                <p>For businesses where the place, people or process tell the story.</p>
+                <ul className="pf-niche-list">
+                  <li><span className="icon">🏠</span> Real Estate Shoot</li>
+                  <li><span className="icon">🏥</span> Healthcare Shoot</li>
+                  <li><span className="icon">🏭</span> Manufacturing Shoot</li>
+                  <li><span className="icon">🎓</span> Education Shoot</li>
+                  <li><span className="icon">🏢</span> Corporate Shoot</li>
+                  <li><span className="icon">🏨</span> Hotel & Hospitality Shoot</li>
+                </ul>
+                <div className="pf-niche-footer">
+                  <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+                </div>
+              </div>
             </div>
-            <div className="pf-niche-card__content">
-              <h4 className="u-cyan">BUSINESS & SPACES</h4>
-              <p>For businesses where the place, people or process tell the story.</p>
-              <ul className="pf-niche-list">
-                <li><span className="icon">🏠</span> Real Estate Shoot</li>
-                <li><span className="icon">🏥</span> Healthcare Shoot</li>
-                <li><span className="icon">🏭</span> Manufacturing Shoot</li>
-                <li><span className="icon">🎓</span> Education Shoot</li>
-                <li><span className="icon">🏢</span> Corporate Shoot</li>
-                <li><span className="icon">🏨</span> Hotel & Hospitality Shoot</li>
-              </ul>
-              <div className="pf-niche-footer">
-                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+            {/* Card 2 */}
+            <div className="pf-niche-card reveal d1">
+              <div className="pf-niche-card__img">
+                <span className="pf-badge pf-badge--cyan">FEATURED</span>
+                <img src="/images/ind_product.jpg" alt="Apple" />
+              </div>
+              <div className="pf-niche-card__content">
+                <h4 className="u-cyan">PEOPLE & PERSONAL BRANDS</h4>
+                <p>For people who are the content.</p>
+                <ul className="pf-niche-list">
+                  <li><span className="icon">🎙️</span> Podcast Shoot</li>
+                  <li><span className="icon">🏋️</span> Gym & Fitness Shoot</li>
+                  <li><span className="icon">📱</span> Influencer Shoot</li>
+                  <li><span className="icon">👠</span> Model Shoot</li>
+                  <li><span className="icon">🎬</span> Creator Shoot</li>
+                  <li><span className="icon">🖊️</span> Personal Branding Shoot</li>
+                </ul>
+                <div className="pf-niche-footer">
+                  <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+                </div>
+              </div>
+            </div>
+            {/* Centered CTA inside Grid */}
+            <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'center', margin: '16px 0' }}>
+              <a href="/brochure.pdf" download className="btn btn--primary btn--lg" style={{ borderRadius: '999px', padding: '16px 40px', boxShadow: '0 10px 30px rgba(0,0,0,0.3)' }}>Download Portfolio PDF</a>
+            </div>
+            {/* Card 3 */}
+            <div className="pf-niche-card reveal">
+              <div className="pf-niche-card__img">
+                <span className="pf-badge pf-badge--dark">RESTAURANT</span>
+                <img src="/images/blog_wedding.jpg" alt="Restaurant" />
+              </div>
+              <div className="pf-niche-card__content">
+                <h4 className="u-cyan">EVENTS & EXPERIENCES</h4>
+                <p>For moments where everything happens once—and the camera can't miss it.</p>
+                <ul className="pf-niche-list">
+                  <li><span className="icon">🎉</span> Corporate Event</li>
+                  <li><span className="icon">🎪</span> Exhibition</li>
+                  <li><span className="icon">🎤</span> Brand Event</li>
+                  <li><span className="icon">🛍️</span> Store Launch</li>
+                  <li><span className="icon">🚀</span> Product Launch</li>
+                  <li><span className="icon">🎟️</span> Promotional Event</li>
+                </ul>
+                <div className="pf-niche-footer">
+                  <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+                </div>
+              </div>
+            </div>
+            {/* Card 4 */}
+            <div className="pf-niche-card reveal d1">
+              <div className="pf-niche-card__img">
+                <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
+                <img src="/images/hero_poster.jpg" alt="Car" />
+              </div>
+              <div className="pf-niche-card__content">
+                <h4 className="u-cyan">PRODUCTS & BRANDS</h4>
+                <p>For things that need to look as good on camera as they do in real life.</p>
+                <ul className="pf-niche-list">
+                  <li><span className="icon">📦</span> Product Shoot</li>
+                  <li><span className="icon">☕</span> Cafe Shoot</li>
+                  <li><span className="icon">🛒</span> E-Commerce Shoot</li>
+                  <li><span className="icon">🚗</span> Automobile Shoot</li>
+                  <li><span className="icon">🍽️</span> Restaurant Shoot</li>
+                  <li><span className="icon">👗</span> Fashion Shoot</li>
+                </ul>
+                <div className="pf-niche-footer">
+                  <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
+                </div>
               </div>
             </div>
           </div>
-          {/* Card 2 */}
-          <div className="pf-niche-card reveal d1">
-            <div className="pf-niche-card__img">
-              <span className="pf-badge pf-badge--cyan">FEATURED</span>
-              <img src="/images/ind_product.jpg" alt="Apple" />
-            </div>
-            <div className="pf-niche-card__content">
-              <h4 className="u-cyan">PEOPLE & PERSONAL BRANDS</h4>
-              <p>For people who are the content.</p>
-              <ul className="pf-niche-list">
-                <li><span className="icon">🎙️</span> Podcast Shoot</li>
-                <li><span className="icon">🏋️</span> Gym & Fitness Shoot</li>
-                <li><span className="icon">📱</span> Influencer Shoot</li>
-                <li><span className="icon">👠</span> Model Shoot</li>
-                <li><span className="icon">🎬</span> Creator Shoot</li>
-                <li><span className="icon">🖊️</span> Personal Branding Shoot</li>
-              </ul>
-              <div className="pf-niche-footer">
-                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
-              </div>
-            </div>
-          </div>
-          {/* Card 3 */}
-          <div className="pf-niche-card reveal">
-            <div className="pf-niche-card__img">
-              <span className="pf-badge pf-badge--dark">RESTAURANT</span>
-              <img src="/images/blog_wedding.jpg" alt="Restaurant" />
-            </div>
-            <div className="pf-niche-card__content">
-              <h4 className="u-cyan">EVENTS & EXPERIENCES</h4>
-              <p>For moments where everything happens once—and the camera can't miss it.</p>
-              <ul className="pf-niche-list">
-                <li><span className="icon">🎉</span> Corporate Event</li>
-                <li><span className="icon">🎪</span> Exhibition</li>
-                <li><span className="icon">🎤</span> Brand Event</li>
-                <li><span className="icon">🛍️</span> Store Launch</li>
-                <li><span className="icon">🚀</span> Product Launch</li>
-                <li><span className="icon">🎟️</span> Promotional Event</li>
-              </ul>
-              <div className="pf-niche-footer">
-                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
-              </div>
-            </div>
-          </div>
-          {/* Card 4 */}
-          <div className="pf-niche-card reveal d1">
-            <div className="pf-niche-card__img">
-              <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
-              <img src="/images/hero_poster.jpg" alt="Car" />
-            </div>
-            <div className="pf-niche-card__content">
-              <h4 className="u-cyan">PRODUCTS & BRANDS</h4>
-              <p>For things that need to look as good on camera as they do in real life.</p>
-              <ul className="pf-niche-list">
-                <li><span className="icon">📦</span> Product Shoot</li>
-                <li><span className="icon">☕</span> Cafe Shoot</li>
-                <li><span className="icon">🛒</span> E-Commerce Shoot</li>
-                <li><span className="icon">🚗</span> Automobile Shoot</li>
-                <li><span className="icon">🍽️</span> Restaurant Shoot</li>
-                <li><span className="icon">👗</span> Fashion Shoot</li>
-              </ul>
-              <div className="pf-niche-footer">
-                <span>📷 PHOTOGRAPHY</span><span>/</span><span>VIDEOGRAPHY</span><span>/</span><span>EDITS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center" style={{ marginTop: '48px' }}>
-          <Link href="/services" className="btn btn--cyan btn--lg" style={{ borderRadius: '999px', padding: '12px 32px' }}>See What Lens Delivers</Link>
         </div>
       </section>
 
@@ -246,23 +254,38 @@ export default function PortfolioPage() {
         <div className="pf-curve">
            <div className="pf-avatars">
               <div className="pf-avatar-card sm">
-                 <div className="name">Ravi M.</div>
+                 <div className="avatar-info">
+                   <span className="avatar-title">Ravi M.</span>
+                   <div className="review-text">"Bro shot my brand video like a Netflix trailer 🎬"</div>
+                 </div>
                  <img src="/images/storyteller.jpg" alt="Ravi M." />
               </div>
               <div className="pf-avatar-card md">
-                 <div className="name">Priya S.</div>
+                 <div className="avatar-info">
+                   <span className="avatar-title">Priya S.</span>
+                   <div className="review-text">"Took 200 photos of our team and somehow everyone looked good. Magic."</div>
+                 </div>
                  <img src="/images/sarcastic_crew_2.png" alt="Priya S." />
               </div>
               <div className="pf-avatar-card lg">
-                 <div className="name">Arjun K.</div>
+                 <div className="avatar-info">
+                   <span className="avatar-title">Arjun K.</span>
+                   <div className="review-text">"Been shooting for us 3 months now, still shows up before we're even ready. That's dedication."</div>
+                 </div>
                  <img src="/images/storyteller.jpg" alt="Arjun K." />
               </div>
               <div className="pf-avatar-card md">
-                 <div className="name">Meera D.</div>
+                 <div className="avatar-info">
+                   <span className="avatar-title">Meera D.</span>
+                   <div className="review-text">"Rude how talented this guy is honestly 😤 10/10"</div>
+                 </div>
                  <img src="/images/sarcastic_crew_2.png" alt="Meera D." />
               </div>
               <div className="pf-avatar-card sm">
-                 <div className="name">Sanya T.</div>
+                 <div className="avatar-info">
+                   <span className="avatar-title">Sanya T.</span>
+                   <div className="review-text">"Told him 'just casual pics' and he delivered a whole photoshoot. Never going back to anyone else."</div>
+                 </div>
                  <img src="/images/storyteller.jpg" alt="Sanya T." />
               </div>
            </div>
@@ -273,10 +296,7 @@ export default function PortfolioPage() {
       {/* 4. THE 3500 CONCEPT (Cyan) */}
       <section className="pf-concept">
         <div className="wrap">
-          <div className="pf-concept__header text-center reveal">
-            <h2>The <span className="u-red">₹3,500</span> Concept</h2>
-            <p>Professional camera. Real results. Fixed start. Flexible beyond.</p>
-          </div>
+
           
           <div className="pf-concept__grid">
             <div className="pf-concept__left reveal">
@@ -401,14 +421,14 @@ export default function PortfolioPage() {
       {/* 7. SURFING WEBSITES */}
       <section className="pf-surf page-section text-center">
         <div className="wrap reveal">
-          <h2 className="u-italic" style={{ color: 'var(--ink)' }}>
+          <h2 style={{ color: 'var(--ink)' }}>
             Surfing Websites and Reaching out to Random<br/>
             Connections won't solve your problem ...
           </h2>
           <p>Join 200+ brands using CAAS to produce high-end content at scale.<br/>Book your first 6-hour session today.</p>
           <div className="pf-surf__ctas">
             <Link href="/book" className="btn btn--white">BOOK A SHOOT NOW</Link>
-            <Link href="/pricing" className="btn btn--ghost-dark">VIEW PRICING</Link>
+            <Link href="/pricing" className="btn btn--ink">VIEW PRICING</Link>
           </div>
         </div>
       </section>

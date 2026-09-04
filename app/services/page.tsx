@@ -24,15 +24,15 @@ export default function ServicesPage() {
               </div>
               <div className="services-cta__stats">
                 <div>
-                  <strong>1500+</strong>
+                  <strong>150+</strong>
                   <span>PROJECTS COMPLETED</span>
                 </div>
                 <div>
                   <strong>15+</strong>
-                  <span>SPECIALIZED VERTICALS</span>
+                  <span>VERTICES WITH CAMERA</span>
                 </div>
                 <div>
-                  <strong>48hr</strong>
+                  <strong>36-48 hrs</strong>
                   <span>DELIVERY PROMISE</span>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export default function ServicesPage() {
             CAAS (<span className="u-cyan">Cameraman as a Service</span>) gives businesses, creators and agencies access to production-ready crews whenever content needs to happen.
           </p>
           <p className="services-intro__subtext">
-            Instead of finding a cameraman on social media, references and trusting new profiles, you simply schedule a production that actually solves your purpose.
+            Hiring a professional cameraman shouldn't depend on luck, availability or endless phone calls.
           </p>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function ServicesPage() {
             </div>
 
             {/* VS BADGE */}
-            <div className="comp-vs reveal">VS</div>
+            <div className="comp-vs">VS</div>
 
             {/* CAAS */}
             <div className="comp-card comp-card--caas reveal-right">
@@ -434,36 +434,36 @@ export default function ServicesPage() {
             <Stagger className="social-proof__testimonials" gap={0.15}>
               <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
-                <p>"CAAS completely transformed how we handle our monthly social content. No more calling freelancers, we just book a slot and the quality is consistently world-class."</p>
+                <p>"CAAS ne hamara pura content game change kar diya. Pehle har mahine freelancers dhoondhne ka tension rehta tha, ab bas slot book karo aur tension khatam. Quality itni consistent hai ki ab hum bina soche inpe bharosa karte hain."</p>
                 <div className="testimonial-author">
                   <div className="testimonial-avatar" style={{ backgroundColor: '#2b2b2b' }}></div>
                   <div>
-                    <strong>Sarah Jenkins</strong>
-                    <span>Marketing Director, Lumera</span>
+                    <strong>Neha Khurana</strong>
+                    <span>Restauranter | Gurugram</span>
                   </div>
                 </div>
               </StaggerItem>
 
               <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
-                <p>"The turnaround time is what hooked us. Getting high-end drone footage delivered within 48 hours is unheard of in this industry. A total game-changer for our workflow."</p>
+                <p>"48 hours mein premium drone footage milna pehle impossible lagta tha. CAAS ne jo turnaround diya hai na, usne humare project ki puri planning easy kar di. Professional team, proper process aur output bilkul next level."</p>
                 <div className="testimonial-author">
                   <div className="testimonial-avatar" style={{ backgroundColor: '#4a4a4a' }}></div>
                   <div>
-                    <strong>Marcus Chen</strong>
-                    <span>Founder of Apex Creatives</span>
+                    <strong>Rohan Mehta</strong>
+                    <span>Founder, The Wadhwa Realtors</span>
                   </div>
                 </div>
               </StaggerItem>
 
               <StaggerItem className="testimonial-card" dir="up">
                 <div className="testimonial-stars">★★★★★</div>
-                <p>"The level of professionalism and attention to detail from the CAAS crew is unmatched. They perfectly captured the essence of our corporate culture in just one shoot."</p>
+                <p>"Jo cheez CAAS ki team set pe leke aati hai na, woh sirf camera ya gear nahi hota — unka professionalism aur detailing next level hai. Ek shoot mein hi unhone hamari brand vibe itni achhe se samajh li ki har frame on-point tha."</p>
                 <div className="testimonial-author">
                   <div className="testimonial-avatar" style={{ backgroundColor: '#1a5f7a' }}></div>
                   <div>
-                    <strong>Priya Sharma</strong>
-                    <span>Head of Communications, TechNova</span>
+                    <strong>Anjali Verma</strong>
+                    <span>Brand Manager, Surbhi Designs | Delhi</span>
                   </div>
                 </div>
               </StaggerItem>
@@ -531,6 +531,23 @@ export default function ServicesPage() {
               <p>Checked equipment, experienced crew and professional workflow.</p>
             </div>
           </div>
+          
+          <div className="feature-item">
+            <div className="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <div className="feature-content">
+              <h4>DELIVER YOUR PRESENCE</h4>
+              <p>We're here to deliver your presence, not negotiate our worth.</p>
+            </div>
+          </div>
+
+          <div className="feature-item">
+            <div className="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></div>
+            <div className="feature-content">
+              <h4>ZERO SHORTCUTS</h4>
+              <p>Good karma, great work, zero shortcuts.</p>
+            </div>
+          </div>
+
           <div className="feature-item">
             <div className="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
             <div className="feature-content">
@@ -702,16 +719,16 @@ export default function ServicesPage() {
         <div className="wrap svc-cta-final__wrap">
           <div className="svc-cta-final__content reveal">
             <span className="svc-cta-pill">Contact Sales</span>
-            <h2>Ready to elevate your <span className="u-cyan" style={{ color: 'var(--cyan)' }}>brand&rsquo;s</span> visual identity?</h2>
+            <h2>Ready to elevate your <span className="u-cyan" style={{ color: '#46bbdf' }}>brand&rsquo;s</span> visual identity?</h2>
             <p>Whether it&rsquo;s a single product shoot or a global industrial campaign, our dedicated project managers are ready to build your custom production package.</p>
             <div className="svc-cta-final__btns">
-              <Link href="/contact" className="btn btn--primary btn--lg" style={{ backgroundColor: 'var(--cyan)', color: 'var(--ink)' }}>Request a Custom Quote</Link>
+              <Link href="/contact" className="btn btn--primary btn--lg" style={{ backgroundColor: '#46bbdf', color: 'var(--ink)' }}>Request a Custom Quote</Link>
               <Link href="/contact" className="btn btn--outline btn--lg" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#fff' }}>Schedule Consultation</Link>
             </div>
             
             <div style={{ display: 'flex', gap: '40px', marginTop: '48px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '32px' }}>
               <div>
-                <div style={{ color: 'var(--cyan)', fontWeight: 700, fontSize: '1.1rem', marginBottom: '4px' }}>₹3500</div>
+                <div style={{ color: '#46bbdf', fontWeight: 700, fontSize: '1.1rem', marginBottom: '4px' }}>₹3500</div>
                 <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase' }}>BASE SESSION RATE</div>
               </div>
               <div>

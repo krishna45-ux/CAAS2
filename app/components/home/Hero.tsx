@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from 'framer-motion';
-import { SplitText, Magnetic, EASE } from '../motion';
+import { Magnetic, EASE } from '../motion';
 
 const FEATURES = [
   {
@@ -113,24 +113,39 @@ export default function Hero() {
 
       <motion.div className="hero__inner" style={{ y: copyY, opacity: copyOpacity }}>
         <div className="hero__copy">
-          <motion.span className="eyebrow hero__eyebrow"
+          <motion.div className="hero__eyebrow"
             initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.7, ease: EASE }}>
-            — GET THE MOMENT
-          </motion.span>
+            transition={{ delay: 0.15, duration: 0.7, ease: EASE }}
+            style={{ marginBottom: '24px' }}>
+            <span style={{ 
+               border: '1px solid rgba(77, 210, 255, 0.3)', 
+               color: '#4dd2ff', 
+               backgroundColor: 'rgba(77, 210, 255, 0.05)', 
+               backdropFilter: 'blur(12px)',
+               WebkitBackdropFilter: 'blur(12px)',
+               padding: '6px 16px', 
+               borderRadius: '999px', 
+               fontWeight: 600, 
+               fontSize: '0.85rem',
+               letterSpacing: '0.02em',
+               display: 'inline-block'
+            }}>
+              No More Overspending on a Cameraman
+            </span>
+          </motion.div>
 
-          <SplitText
-            as="h1"
-            className="hero__title"
-            text={'Find the right\nperson to capture\nyour moment.'}
-            delay={0.25}
-            stagger={0.05}
-          />
+          <motion.h1 className="hero__title"
+            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.25, duration: 0.8, ease: EASE }}>
+            <span className="line" style={{ display: 'block' }}>Your Professional</span>
+            <span className="line" style={{ display: 'block' }}><span className="u-cyan" style={{ fontStyle: 'italic' }}>Cameraman</span></span>
+            <span className="line" style={{ display: 'block' }}>On Demand.</span>
+          </motion.h1>
 
           <motion.p className="hero__sub"
             initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.72, duration: 0.75, ease: EASE }}>
-            Discover talented photographers and videographers for weddings, parties, corporate events, celebrations, concerts and more.
+            The content shooting system for high-growth brands. <strong className="u-cyan" style={{ fontWeight: 600 }}>Book world-class Videographers and Photographers in minutes</strong>, not months.
           </motion.p>
 
           <motion.div className="hero__cta"
@@ -138,8 +153,7 @@ export default function Hero() {
             transition={{ delay: 0.85, duration: 0.75, ease: EASE }}>
             <Magnetic strength={0.3}>
               <Link href="/book" className="btn btn--primary btn--lg">
-                Book a Shoot
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                Book Your First Shoot
               </Link>
             </Magnetic>
           </motion.div>

@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 export default function PricingPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
-  const [currency, setCurrency] = useState<'INR' | 'USD'>('INR');
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -61,9 +60,9 @@ export default function PricingPage() {
           </div>
           <div className="contact-card__info">
             <span className="eyebrow eyebrow--dark">CALL US DIRECTLY</span>
-            <h3>+91 98765 43210</h3>
+            <h3>+91 9711684074</h3>
             <p>Available for immediate inquiries and technical support during business hours.</p>
-            <a href="tel:+919876543210" className="link-cyan">Call Now →</a>
+            <a href="tel:+919711684074" className="link-cyan">Call Now →</a>
           </div>
         </div>
 
@@ -141,7 +140,7 @@ export default function PricingPage() {
           <div className="base-card__left" style={{ padding: '50px 40px', borderRight: '1px solid rgba(0,0,0,0.05)' }}>
             <span className="eyebrow eyebrow--cyan" style={{ color: 'var(--cyan)', fontWeight: 700, letterSpacing: '0.05em', fontSize: '0.85rem' }}>STANDARD SESSION</span>
             <div className="base-price" style={{ margin: '20px 0 8px', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-              <span className="amount" style={{ fontSize: '3.5rem', fontWeight: 800, fontFamily: 'var(--display)', lineHeight: 1 }}>{currency === 'INR' ? '₹3,500' : '$45'}</span> <span className="duration" style={{ color: 'var(--muted)', fontSize: '1.1rem' }}>/ 6 Hours</span>
+              <span className="amount" style={{ fontSize: '3.5rem', fontWeight: 800, fontFamily: 'var(--display)', lineHeight: 1 }}>Contact Us</span>
             </div>
             <p className="base-sub" style={{ fontSize: '0.9rem', color: 'var(--muted)', marginBottom: '24px' }}>*Includes setup and simplify your local breakdown.</p>
             <p className="base-desc" style={{ fontSize: '1.1rem', marginBottom: '32px', lineHeight: 1.6, color: 'var(--ink)' }}>Flat rate for the first 6 hours. No hidden equipment, surcharges or travel fees within city limits.</p>
@@ -163,7 +162,7 @@ export default function PricingPage() {
             <div className="base-card__footer" style={{ display: 'flex', gap: '32px', borderTop: '1px solid rgba(0,0,0,0.05)', paddingTop: '24px' }}>
               <div className="footer-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)', fontSize: '0.85rem' }}>
                 <svg viewBox="0 0 24 24" fill="none" width="16"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/><path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                Overtime: {currency === 'INR' ? '₹600' : '$8'} / additional hour
+                Overtime: Contact Us
               </div>
               <div className="footer-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--muted)', fontSize: '0.85rem' }}>
                 <svg viewBox="0 0 24 24" fill="none" width="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -181,63 +180,22 @@ export default function PricingPage() {
             <h2 className="h-section" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: '12px' }}>Menu of Services</h2>
             <p style={{ color: 'var(--muted)', fontSize: '1.05rem' }}>Tailor your session with specific post-production or specialized gear add-ons. Pay only for what your story requires.</p>
           </div>
-          <div className="currency-toggle" style={{ display: 'flex', background: 'var(--bg-alt)', borderRadius: '8px', padding: '4px' }}>
-            <button 
-              type="button"
-              onClick={() => setCurrency('INR')}
-              className={currency === 'INR' ? 'active' : ''} 
-              style={{ 
-                padding: '8px 16px', 
-                background: currency === 'INR' ? '#fff' : 'transparent', 
-                border: 'none', 
-                borderRadius: '4px', 
-                boxShadow: currency === 'INR' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', 
-                color: currency === 'INR' ? 'var(--ink)' : 'var(--muted)',
-                fontWeight: 600, 
-                fontSize: '0.9rem', 
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              INR (₹)
-            </button>
-            <button 
-              type="button"
-              onClick={() => setCurrency('USD')}
-              className={currency === 'USD' ? 'active' : ''} 
-              style={{ 
-                padding: '8px 16px', 
-                background: currency === 'USD' ? '#fff' : 'transparent', 
-                border: 'none', 
-                borderRadius: '4px', 
-                boxShadow: currency === 'USD' ? '0 2px 8px rgba(0,0,0,0.08)' : 'none', 
-                color: currency === 'USD' ? 'var(--ink)' : 'var(--muted)',
-                fontWeight: 600, 
-                fontSize: '0.9rem', 
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-            >
-              USD ($)
-            </button>
-          </div>
         </div>
 
         <div className="addons-grid reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px' }}>
           {[
-            { icon: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-2.4 2.4a3 3 0 0 1-4.24-4.24l2.4-2.4a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.4z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'EXPRESS EDITING', priceInr: '₹1,500/HR', priceUsd: '$20/HR', desc: 'Quick turnaround video editing. Same-day delivery for short-form content.' },
-            { icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'COLOR GRADING', priceInr: '₹2,500/MIN', priceUsd: '$35/MIN', desc: 'Cinema grade color correction and stylized grading for high-end look.' },
-            { icon: <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'AUDIO ENGINEERING', priceInr: '₹1,200/HR', priceUsd: '$15/HR', desc: 'Advanced audio mixing, noise reduction, and studio-quality mastering.' },
-            { icon: <><rect x="2" y="7" width="20" height="15" rx="2" ry="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M17 2l-5 5-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'LIVE STREAMING KIT', priceInr: '₹4,000/SET', priceUsd: '$50/SET', desc: 'Includes capture card, specialized encoder, and multi-platform streaming.' },
-            { icon: <><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'GIMBAL STABILIZATION', priceInr: '₹1,500/DAY', priceUsd: '$20/DAY', desc: 'Professional 3-axis gimbal for cinematic movement and tracking shots.' },
-            { icon: <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'ADDITIONAL OPERATOR', priceInr: '₹3,000/SHIFT', priceUsd: '$40/SHIFT', desc: 'Hire an extra set of hands for complex multi-camera shoots or lighting assistance.' }
+            { icon: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 9.36l-2.4 2.4a3 3 0 0 1-4.24-4.24l2.4-2.4a6 6 0 0 1 9.36-7.94l-3.77 3.77a1 1 0 0 0 0 1.4z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'EXPRESS EDITING', desc: 'Quick-turnaround video editing for reels, social content, and short-form campaigns.' },
+            { icon: <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'AUDIO ENGINEERING', desc: 'Clean, balanced, professional audio with mixing, noise reduction, and mastering.' },
+            { icon: <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'LIGHTING SETUP', desc: 'Purpose-built lighting setups to make every subject, space, and shot look its best.' },
+            { icon: <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>, title: 'ADVANCED LENS & MODERN KIT', desc: 'Professional lenses and modern production gear to achieve the right look for your shoot.' },
+            { icon: <><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'COLOR GRADING', desc: 'Refined color correction and creative grading to give your footage its final visual character.' },
+            { icon: <><rect x="2" y="7" width="20" height="15" rx="2" ry="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M17 2l-5 5-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>, title: 'DISCUSS WHAT\'S IN YOUR MIND', desc: 'Have an idea but not sure what you need? Tell us what you\'re planning, and we\'ll figure out the right setup together.' }
           ].map((item, i) => (
             <div className="addon-card" key={i} style={{ padding: '28px', border: '1px solid rgba(0,0,0,0.05)', borderRadius: '12px', background: '#fff', display: 'flex', gap: '20px', alignItems: 'flex-start' }}>
               <div className="addon-card__icon" style={{ background: 'var(--bg-alt)', width: '44px', height: '44px', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--ink)' }}><svg viewBox="0 0 24 24" fill="none" width="20">{item.icon}</svg></div>
               <div className="addon-card__content">
                 <div className="addon-card__header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                   <h4 style={{ margin: 0, fontSize: '0.95rem', fontWeight: 700 }}>{item.title}</h4>
-                  <span className="price" style={{ color: 'var(--cyan)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.05em' }}>{currency === 'INR' ? item.priceInr : item.priceUsd}</span>
                 </div>
                 <p style={{ margin: 0, color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>{item.desc}</p>
               </div>
@@ -275,10 +233,15 @@ export default function PricingPage() {
                 </div>
                 <div className="form-group">
                   <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--ink)', marginBottom: '8px', letterSpacing: '0.05em' }}>INTEREST/SERVICE</label>
-                  <select style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s', appearance: 'none' }}>
-                    <option>Commercial Videography</option>
-                    <option>Corporate Film</option>
-                    <option>Event Coverage</option>
+                  <select style={{ width: '100%', padding: '14px', background: 'var(--bg)', border: '1px solid transparent', borderRadius: '8px', fontSize: '0.95rem', outline: 'none', transition: 'border-color 0.2s', appearance: 'none' }} defaultValue="">
+                    <option value="" disabled>Select what you need...</option>
+                    <option value="standard">Standard Session</option>
+                    <option value="express">Express Editing</option>
+                    <option value="audio">Audio Engineering</option>
+                    <option value="lighting">Lighting Setup</option>
+                    <option value="lens">Advanced Lens & Modern Kit</option>
+                    <option value="color">Color Grading</option>
+                    <option value="discuss">Discuss What's in Your Mind</option>
                   </select>
                 </div>
               </div>
@@ -299,9 +262,10 @@ export default function PricingPage() {
                 <svg viewBox="0 0 24 24" fill="none" width="24" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
               <div>
-                <h4 style={{ margin: '0 0 4px', fontSize: '1.05rem' }}>Our Studio</h4>
-                <p style={{ margin: '0 0 6px', color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>Precision Plaza, 4th Floor, Sector 5<br/>Tech City, Bangalore, KA - 560001</p>
-                <a href="#" className="link-muted" style={{ fontSize: '0.85rem', color: 'var(--ink)' }}>www.caas.pro</a>
+                <h4 style={{ margin: '0 0 4px', fontSize: '1.05rem' }}>Address -</h4>
+                <p style={{ margin: '0 0 6px', color: 'var(--muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>A5 - Krishna Nagar, East Delhi, 110051</p>
+                <h4 style={{ margin: '12px 0 4px', fontSize: '1.05rem' }}>Contact number</h4>
+                <a href="tel:+917531074311" className="link-muted" style={{ fontSize: '0.9rem', color: 'var(--ink)', textDecoration: 'none' }}>+91 7531074311</a>
               </div>
             </div>
 
@@ -324,7 +288,7 @@ export default function PricingPage() {
               <div className="hq-icon" style={{ color: 'var(--cyan)', marginBottom: '12px' }}>
                 <svg viewBox="0 0 24 24" fill="none" width="28" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
-              <h4 style={{ margin: '0 0 6px', fontSize: '0.85rem', letterSpacing: '0.05em' }}>HQ LOCATED IN BANGALORE</h4>
+              <h4 style={{ margin: '0 0 6px', fontSize: '0.85rem', letterSpacing: '0.05em' }}>HQ LOCATED IN GURGAON</h4>
               <p style={{ margin: 0, fontSize: '0.82rem', color: 'var(--muted)' }}>Open in Google Maps</p>
             </div>
           </div>

@@ -6,25 +6,25 @@ import { SplitText, Reveal } from '../motion';
 
 const STORIES = [
   {
-    name: 'Priya · Brand Lead',
-    slate: 'ON SET / 01',
-    quote: '"The CAAS crew turned up fully organised — I didn’t have to babysit a thing. One shift, full setup, cleanup and capture, handled."',
-    img: '/images/home_priya.jpg',
-    alt: "Priya's brand shoot on set",
+    name: '01 — THE "ONE LAST SHOT"',
+    slate: "We don't pack up until the story is told.",
+    quote: '“One last shot.” Said at 5:40 PM. We were still shooting at 8:15. Somewhere between the 11th “last shot” and the 14th, the client stopped being the client and started roasting us for still having energy. Punchline: That’s when you know the shoot went well.',
+    img: '/images/Real life img/set stories 1.png',
+    alt: 'One last shot',
   },
   {
-    name: 'Arjun · NGO Launch',
-    slate: 'ON SET / 02',
-    quote: '"The rig they brought for our launch was insane — RED Komodo, the works. The final cut looks like it belongs on Netflix."',
-    img: '/images/home_ngo.jpg',
-    alt: 'Cinematic lighting on the NGO launch shoot',
+    name: '02 — THE CAMERA SHY CLIENT',
+    slate: 'Direction is 80% psychology, 20% framing.',
+    quote: '“I’m really awkward on camera.” First take: awkward. Second take: nervous. Third take: everyone started laughing. By take seven, the client was improvising better than the script. Punchline: The camera stopped feeling like a camera. That’s the real win.',
+    img: '/images/Real life img/set stories 2.png',
+    alt: 'Camera shy client',
   },
   {
-    name: 'Meera · Real Estate',
-    slate: 'ON SET / 03',
-    quote: '"I used to underestimate turnaround. Booked at noon, had the high-res edit the same evening. The result? Priceless."',
-    img: '/images/kc_real_estate.jpg',
-    alt: 'Real-estate property capture',
+    name: '03 — WHEN EVERYTHING GOES WRONG',
+    slate: 'Bad weather is just good lighting in disguise.',
+    quote: 'Battery: 3%. Memory card: full. Weather: changed its mind. Client: “Can we still get the shot?” Somehow, everyone jumped in. Someone found a charger. Someone held the reflector. Someone ordered chai. Punchline: The shot worked. The chaos became the story.',
+    img: '/images/Real life img/set stories 3.png',
+    alt: 'When everything goes wrong',
   },
 ];
 

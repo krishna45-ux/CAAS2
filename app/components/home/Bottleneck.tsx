@@ -23,16 +23,12 @@ export default function Bottleneck() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="section dark bottleneck">
-      <Parallax className="bottleneck__bg-wrap" distance={60}>
-        <img className="bottleneck__bg" src="/images/home_lighting.jpg" alt="" aria-hidden="true" loading="lazy" />
-      </Parallax>
-
+    <section className="section bottleneck">
       <div className="wrap bottleneck__grid">
         <div className="bottleneck__lede">
           <Reveal dir="up"><span className="eyebrow">Content OS</span></Reveal>
           <SplitText as="h2" className="h-section" text={"Why Content Creation\nShouldn't Be a Bottleneck."}
-            highlight={["shouldn't"]} highlightClass="u-blue" stagger={0.038} />
+            highlight={["bottleneck"]} highlightClass="u-red" stagger={0.038} />
           <Reveal dir="up" delay={0.14}>
             <p className="lead-txt bottleneck__body">We&rsquo;ve spent 12,000+ hours on set so you don&rsquo;t have to. CAAS is the engineering answer to production logistics — one system, any shoot, on demand.</p>
           </Reveal>

@@ -46,7 +46,7 @@ export function Statement() {
       <Reveal dir="up" delay={0.18}>
         <div className="lead-card">
           <span className="lead-card__bar" aria-hidden="true" />
-          <b>CAAS (Cameraman as a Service)</b> connects businesses, creators, influencers and brands with professional cameramen on demand. From social media content, influencer and personal-brand shoots to product, business, real-estate and event coverage — you book the right cameraman for exactly what you need. Starting at <span className="price-chip">₹3,500 for a 3-hour shoot</span>, with flexible additional hours and production requirements based on the project.
+          <b>CAAS (Cameraman as a Service)</b> connects businesses, creators, influencers and brands with professional cameramen on demand. From social media content, influencer and personal-brand shoots to product, business, real-estate and event coverage — you book the right cameraman for exactly what you need. Starting at <span className="price-chip u-red" style={{fontSize: '1.2em'}}>₹3500 for 5 hrs 30 mins - including break, ₹500 for every extra hour</span>, with flexible additional hours and production requirements based on the project.
         </div>
       </Reveal>
     </section>
@@ -66,7 +66,7 @@ export function Shoot() {
     <section className="section wrap shoot" id="shoot">
       <div className="head head--center">
         <span className="eyebrow eyebrow--center">Usually where we shoot</span>
-        <SplitText as="h2" className="h-section" text="Usually Where We Shoot" highlight={['shoot']} highlightClass="u-blue" />
+        <SplitText as="h2" className="h-section" text="Usually Where We Shoot" highlight={['shoot']} highlightClass="u-cyan" />
         <Reveal dir="up" delay={0.12}>
           <p className="lead-txt">Our crew is ready to deploy across a range of real-world scenarios and environments — no brief too big or too small.</p>
         </Reveal>
@@ -104,7 +104,7 @@ export function Crew() {
         </Reveal>
         <div className="crew__cta">
           <Reveal dir="right"><span className="eyebrow">The professionals</span></Reveal>
-          <SplitText as="h2" className="h-section" text="Meet the SarCAAStic Crew" highlight={['sarcaastic']} highlightClass="u-blue" />
+          <SplitText as="h2" className="h-section" text="Meet the SarCAAStic Crew" highlight={['sarcaastic']} highlightClass="u-cyan" />
           <Reveal dir="up" delay={0.16}>
             <Magnetic strength={0.22}>
               <a href="#stories" className="btn btn--primary btn--lg">They&rsquo;re waiting to capture{ARROW}</a>
@@ -128,11 +128,36 @@ export function Crew() {
 export function FunFact() {
   return (
     <div className="funfact wrap">
-      <Reveal dir="scale" className="funfact__inner">
-        <span className="funfact__glow" aria-hidden="true" />
-        <div className="funfact__tag">FUN FACT</div>
-        <h3>You don&rsquo;t need to know what kind of shoot you need.</h3>
-        <strong>THAT&rsquo;S OUR JOB.</strong>
+      <Reveal dir="up" className="funfact__card funfact__card--split">
+        {/* Badge pinned to top-left of entire card */}
+        <div className="funfact__badge-top">
+          <span className="funfact__badge-icon">💡</span> FUN FACT
+        </div>
+
+        {/* Left: full annotated camera image */}
+        <div className="funfact__visual">
+          <img
+            src="/images/cc801b1b-0a6a-4f47-9700-9e11bf7b3f3e.png"
+            alt="Camera on tripod with annotations"
+            className="funfact__cam-img"
+          />
+        </div>
+
+        {/* Divider dots */}
+        <div className="funfact__divider" aria-hidden="true">
+          <span /><span /><span />
+        </div>
+
+        {/* Right: text */}
+        <div className="funfact__body">
+          <div className="funfact__tag funfact__tag--light">FUN FACT</div>
+          <h3 className="funfact__h">
+            You don&rsquo;t need to know what kind of&nbsp;shoot{' '}
+            <span className="funfact__accent">you need.</span>
+          </h3>
+          <div className="funfact__rule" />
+          <p className="funfact__sub">That&rsquo;s our job.</p>
+        </div>
       </Reveal>
     </div>
   );
@@ -154,7 +179,7 @@ export function Portfolio() {
     <section className="section wrap portfolio" id="portfolio">
       <div className="head">
         <span className="eyebrow">Fresh from the field</span>
-        <SplitText as="h2" className="h-section" text={'Our Latest Appearance,\nFresh From the Field'} highlight={['field']} highlightClass="u-blue" stagger={0.038} />
+        <SplitText as="h2" className="h-section" text={'Our Latest Appearance,\nFresh From the Field'} highlight={['field']} highlightClass="u-cyan" stagger={0.038} />
         <Reveal dir="up" delay={0.12}>
           <p className="lead-txt">A living feed of our most recent work — straight off the memory card.</p>
         </Reveal>
@@ -189,7 +214,6 @@ export function Portfolio() {
 
 const INCLUDES = [
   'Professional cameraman & crew',
-  '3-hour production shoot',
   'Cinema-grade kit & lighting',
   'Raw + edited deliverables',
   'Fully vetted & insured',
@@ -228,7 +252,7 @@ export function Pricing() {
               <span className="pricing__cur">₹</span>
               <Counter to={3500} />
             </div>
-            <div className="pricing__rate">Base rate · 3-hour session</div>
+            <div className="pricing__rate">Base rate · 5 hrs 30 mins - including break<br/>+ ₹500 for every extra hour</div>
             <p className="pricing__quote">&ldquo;Whether it&rsquo;s a one-off drop or a monthly retainer — one crew, one price, zero drama.&rdquo;</p>
           </div>
 
@@ -285,7 +309,7 @@ export function FinalCta() {
     <section className="section final wrap" ref={ref}>
       <motion.span className="final__glow" aria-hidden="true"
         style={reduce ? undefined : { opacity: glow, y: lift }} />
-      <SplitText as="h2" className="final__h" text={'Ready to Capture\nPrecision?'} highlight={['precision?']} highlightClass="u-blue" stagger={0.055} duration={0.95} />
+      <SplitText as="h2" className="final__h" text={'Ready to Capture\nPrecision?'} highlight={['precision?']} highlightClass="u-cyan" stagger={0.055} duration={0.95} />
       <Reveal dir="up" delay={0.16}>
         <p>Join 500+ brands using CAAS to produce high-end content at scale. No arguments, no complicated quotes — just results.</p>
       </Reveal>
@@ -296,7 +320,10 @@ export function FinalCta() {
         </div>
       </Reveal>
       <Reveal dir="up" delay={0.32}>
-        <p className="final__small">Available across 12 cities · Book in under 60 seconds</p>
+        <p className="final__small" style={{ textTransform: 'none', fontSize: '0.85rem', lineHeight: '1.6' }}>
+          Available across NCR region for now,<br />
+          Get verified bookings under 60 seconds
+        </p>
       </Reveal>
     </section>
   );

@@ -658,7 +658,7 @@
 }
 .social-proof-block {
   background: var(--hero-blue);
-  color: #fff;
+  color: var(--ink);
   border-radius: 32px;
   padding: 80px 40px;
   margin: 40px 20px 0; /* floating container */
@@ -2176,31 +2176,51 @@
 
 /* CURVE AND AVATARS */
 .pf-curve { position: relative; z-index: 2; margin-top: 40px; }
-.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; height: 320px; }
-.pf-avatar-card { display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; justify-content: flex-end; }
-.pf-avatar-card .name { 
-  background: #fff; color: var(--ink); font-size: 0.75rem; font-weight: 700; 
-  border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-  display: flex; justify-content: center;
+.pf-avatars { display: flex; justify-content: center; align-items: flex-end; gap: 24px; margin-bottom: 60px; height: 400px; }
+.pf-avatar-card { display: flex; flex-direction: column; align-items: center; position: relative; height: 100%; justify-content: flex-end; transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
+.pf-avatar-card .avatar-info { 
+  background: #fff; color: var(--ink); font-size: 0.8rem;
+  border-radius: 24px 24px 100px 100px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 100%; padding-top: 24px; 
+  width: 100%; height: 100%; padding: 16px 12px 60px 12px; text-align: center; z-index: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.pf-avatar-card img { border-radius: 50%; object-fit: cover; position: relative; z-index: 2; margin-top: auto; }
+.pf-avatar-card:hover {
+  margin-bottom: 0 !important; /* let it push up into the margin space */
+  z-index: 10;
+}
+.pf-avatar-card.sm:hover { height: 360px; }
+.pf-avatar-card.md:hover { height: 400px; }
+.pf-avatar-card.lg:hover { height: 460px; }
+
+.pf-avatar-card .avatar-title { font-weight: 700; color: var(--ink); display: block; }
+.pf-avatar-card .review-text { font-size: 0.75rem; font-weight: 500; color: #4a4a4a; margin-top: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; transition: all 0.3s ease; }
+
+.pf-avatar-card:hover .avatar-info {
+  /* padding-bottom and height are now inherently managed by the default state */
+}
+
+.pf-avatar-card:hover .review-text {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.pf-avatar-card img { border-radius: 50%; object-fit: cover; position: relative; z-index: 2; margin-top: auto; transition: transform 0.3s ease; }
+.pf-avatar-card:hover img {
+  transform: translateY(-10px) scale(1.05);
+}
 
 /* Sm */
-.pf-avatar-card.sm { width: 90px; height: 180px; margin-bottom: 90px; }
-.pf-avatar-card.sm .name { height: 130px; }
-.pf-avatar-card.sm img { width: 90px; height: 90px; }
+.pf-avatar-card.sm { width: 140px; height: 260px; margin-bottom: 90px; }
+.pf-avatar-card.sm img { width: 140px; height: 140px; }
 
 /* Md */
-.pf-avatar-card.md { width: 120px; height: 220px; margin-bottom: 45px; }
-.pf-avatar-card.md .name { height: 155px; }
-.pf-avatar-card.md img { width: 120px; height: 120px; }
+.pf-avatar-card.md { width: 160px; height: 300px; margin-bottom: 45px; }
+.pf-avatar-card.md img { width: 160px; height: 160px; }
 
 /* Lg */
-.pf-avatar-card.lg { width: 180px; height: 280px; margin-bottom: 0px; }
-.pf-avatar-card.lg .name { height: 190px; }
-.pf-avatar-card.lg img { width: 180px; height: 180px; }
+.pf-avatar-card.lg { width: 200px; height: 360px; margin-bottom: 0px; }
+.pf-avatar-card.lg img { width: 200px; height: 200px; }
 
 .pf-curve__title { text-align: center; width: 100%; font-size: clamp(2rem, 4vw, 3rem); color: #fff; padding-bottom: 80px; margin-top: 40px; }
 
@@ -2655,7 +2675,7 @@
 .comp-cards {
   display: flex;
   align-items: stretch;
-  gap: 24px;
+  gap: 80px;
   position: relative;
   margin-bottom: 24px;
 }
@@ -2670,17 +2690,21 @@
 
 .comp-card--trad {
   background: #f4f5f7;
+  padding-right: 60px;
 }
 
 .comp-card--caas {
   background: #eff9fc;
+  padding-left: 60px;
 }
 
-.comp-vs {
+.comp-vs,
+.comp-vs.reveal,
+.comp-vs.is-in {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
   width: 64px;
   height: 64px;
   background: #fff;
@@ -2756,7 +2780,7 @@
 
 .comp-trad-note {
   position: absolute;
-  right: 10px;
+  right: 40px;
   top: 50%;
   transform: translateY(-50%) rotate(-6deg);
   text-align: center;
@@ -2785,7 +2809,7 @@
 /* CAAS SIDE */
 .comp-timeline-line {
   position: absolute;
-  left: 64px;
+  left: 84px;
   top: 80px;
   bottom: 150px;
   width: 2px;
@@ -3696,7 +3720,7 @@
 
 .svc-cta-pill {
   display: inline-block;
-  background: var(--cyan);
+  background: #46bbdf;
   color: #fff;
   font-weight: 700;
   padding: 6px 14px;
@@ -3881,13 +3905,13 @@
   z-index: 1;
 }
 .niche-connector.left {
-  right: 50%;
+  right: calc(50% - 1px);
   border-right: 2px solid #00C2FF;
   border-bottom: 2px solid #00C2FF;
   border-bottom-right-radius: 20px;
 }
 .niche-connector.right {
-  left: 50%;
+  left: calc(50% - 1px);
   border-left: 2px solid #00C2FF;
   border-bottom: 2px solid #00C2FF;
   border-bottom-left-radius: 20px;

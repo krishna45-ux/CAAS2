@@ -410,7 +410,8 @@
    so they all resolve to blue — bright on dark grounds, ink on paper.
    ============================================================ */
 
-.u-cyan{color:var(--cyan) !important}
+.u-cyan{color:#46bbdf !important}
+.u-red{color:#f03e3e !important}
 .u-coral,.u-gold{color:var(--blue-ink)}
 .dark .u-coral,.dark .u-gold,
 .page-hero .u-coral,.page-hero .u-gold{

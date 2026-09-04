@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './pages.css';
 import './responsive-overrides.css';
 import './home.css';
 import './pages-theme.css';

@@ -108,9 +108,21 @@ button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
 
 /* ---------- Typography ---------- */
 h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.02em;color:var(--text)}
-.u-cyan{color:var(--cyan)}
+.u-cyan{color:#46bbdf !important}
 .u-coral{color:var(--blue-ink)}
-.u-blue{color:var(--cyan) !important}
+.u-blue{color:#46bbdf !important}
+.u-red{color:#f03e3e !important}
+@keyframes camera-flash {
+  0% { opacity: 0; background: white; }
+  10% { opacity: 1; background: white; }
+  100% { opacity: 0; background: transparent; }
+}
+.flash-overlay {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0; z-index: 10;
+}
+.ind__frame:hover .flash-overlay {
+  animation: camera-flash 0.5s ease-out;
+}
 .u-strike{text-decoration:line-through;text-decoration-thickness:.06em;text-decoration-color:var(--blue);color:var(--text)}
 .u-italic{font-style:italic}
 
@@ -169,15 +181,15 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .btn:hover::after{transform:translateX(130%)}
 .btn:active{transform:translateY(-1px) scale(.985);transition-duration:.12s}
 
-/* PRIMARY — blue. The single most important action on any screen. */
+/* PRIMARY — cyan (#46bbdf). The single most important action on any screen. */
 .btn--primary,.btn--blue,.btn--cyan,.btn--coral{
-  --bg:var(--blue);--fg:var(--ink);
-  box-shadow:var(--blue-glow);
+  --bg:#46bbdf;--fg:#fff;
+  box-shadow:0 18px 50px -18px rgba(70,187,223,0.65);
 }
 .btn--primary:hover,.btn--blue:hover,.btn--cyan:hover,.btn--coral:hover{
-  --bg:var(--blue-lift);
+  --bg:#3ca5c4;
   transform:translateY(-3px);
-  box-shadow:var(--blue-glow-lg);
+  box-shadow:0 30px 90px -28px rgba(70,187,223,0.75);
 }
 
 /* SOLID NEUTRAL — supporting action on light ground. */
@@ -575,15 +587,17 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .chat{display:flex;flex-direction:column;gap:14px}
 .msg{background:rgba(20,26,45,0.65);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1em 1.1em;
   max-width:88%;box-shadow:0 20px 40px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.05)}
-.msg--q{align-self:flex-start;border-bottom-left-radius:5px}
+.msg--q{align-self:flex-start;border-bottom-left-radius:5px;
+  background:#f8f9fa;border-color:#e2e6ea;box-shadow:0 10px 30px rgba(0,0,0,0.15);}
 .msg--a{align-self:flex-end;border-bottom-right-radius:5px;
   background:linear-gradient(180deg,rgba(18,203,221,.18),rgba(18,203,221,.08));border-color:rgba(18,203,221,.3)}
 .msg__tag{display:flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:.66rem;
   letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5em}
-.msg--q .msg__tag{color:var(--coral)}
-.msg--a .msg__tag{color:var(--cyan-bright)}
+.msg--q .msg__tag{color:#f03e3e;font-weight:700}
+.msg--a .msg__tag{color: #46bbdf}
 .msg__tag .ic{width:16px;height:16px}
 .msg p{font-size:.96rem;color:var(--text)}
+.msg--q p{color:#111;font-weight:500}
 .msg--a p{font-weight:500}
 
 /* ============================================================
@@ -641,6 +655,8 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
 .funfact__tag{font-family:var(--mono);font-size:.8rem;letter-spacing:.2em;color:var(--gold)}
 .funfact h3{font-family:var(--display);font-weight:700;
   font-size:clamp(1.5rem,3.2vw,2.2rem);line-height:1.2;margin:.6em 0;color:#fff}
+/* Override for the new split white card */
+.funfact__card--split h3, .funfact__h { color: var(--ink) !important; }
 .funfact strong{font-family:var(--display);font-weight:700;letter-spacing:.04em;font-size:1.1rem;color:var(--hero-blue)}
 
 /* ============================================================
@@ -719,12 +735,10 @@ h1,h2,h3,h4{font-family:var(--display);font-weight:800;line-height:1;letter-spac
    MONTHLY callout
    ============================================================ */
 .monthly{position:relative}
-.monthly__card{background:var(--cyan);color:#062024;border-radius:var(--radius);
-  padding:clamp(26px,3.6vw,42px);max-width:900px;margin-inline:auto;position:relative;
-  box-shadow:0 40px 80px -40px rgba(18,203,221,.9)}
+.monthly__card{border-radius:var(--radius);padding:clamp(26px,3.6vw,42px);max-width:900px;margin-inline:auto;position:relative;}
 .monthly__ey{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75}
-.monthly__card h3{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem, 4vw, 3.8rem);margin:.15em 0 .3em;color:#062024;letter-spacing:-0.02em;line-height:1.15;}
-.monthly__card p{font-size:clamp(1.1rem, 1.4vw, 1.25rem);max-width:55ch;color:#083339;line-height:1.5;font-weight:500;}
+.monthly__card h3{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem, 4vw, 3.8rem);margin:.15em 0 .3em;letter-spacing:-0.02em;line-height:1.15;}
+.monthly__card p{font-size:clamp(1.1rem, 1.4vw, 1.25rem);max-width:55ch;line-height:1.5;font-weight:500;}
 .monthly__wire{display:none}
 
 /* ============================================================
