@@ -2194,9 +2194,9 @@
   margin-bottom: 0 !important; /* let it push up into the margin space */
   z-index: 10;
 }
-.pf-avatar-card.sm:hover { height: 360px; }
-.pf-avatar-card.md:hover { height: 400px; }
-.pf-avatar-card.lg:hover { height: 460px; }
+.pf-avatar-card.sm:hover { height: 280px; }
+.pf-avatar-card.md:hover { height: 320px; }
+.pf-avatar-card.lg:hover { height: 380px; }
 
 .pf-avatar-card .avatar-title { font-weight: 700; color: var(--ink); display: block; }
 .pf-avatar-card .review-text { font-size: 0.75rem; font-weight: 500; color: #4a4a4a; margin-top: 8px; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; transition: all 0.3s ease; }
@@ -2215,16 +2215,16 @@
 }
 
 /* Sm */
-.pf-avatar-card.sm { width: 140px; height: 260px; margin-bottom: 90px; }
-.pf-avatar-card.sm img { width: 140px; height: 140px; }
+.pf-avatar-card.sm { width: 120px; height: 210px; margin-bottom: 70px; }
+.pf-avatar-card.sm img { width: 120px; height: 120px; }
 
 /* Md */
-.pf-avatar-card.md { width: 160px; height: 300px; margin-bottom: 45px; }
-.pf-avatar-card.md img { width: 160px; height: 160px; }
+.pf-avatar-card.md { width: 140px; height: 250px; margin-bottom: 35px; }
+.pf-avatar-card.md img { width: 140px; height: 140px; }
 
 /* Lg */
-.pf-avatar-card.lg { width: 200px; height: 360px; margin-bottom: 0px; }
-.pf-avatar-card.lg img { width: 200px; height: 200px; }
+.pf-avatar-card.lg { width: 170px; height: 290px; margin-bottom: 0px; }
+.pf-avatar-card.lg img { width: 170px; height: 170px; }
 
 .pf-curve__title { text-align: center; width: 100%; font-size: clamp(2rem, 4vw, 3rem); color: #fff; padding-bottom: 80px; margin-top: 40px; }
 
