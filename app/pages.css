@@ -425,6 +425,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
+  transition: aspect-ratio 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bento-card:hover .bento-card__img {
+  aspect-ratio: 4/3;
 }
 .bento-card--wide .bento-card__img {
   width: 40%;
@@ -2340,7 +2344,7 @@
 .pricing-intro__content { padding: 40px 0; padding-right: 10%; position: relative; z-index: 2; }
 .pricing-intro__content .hero__sub { color: var(--muted) !important; max-width: 100%; }
 .pricing-intro__quote-wrap { position: relative; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px; min-height: 480px; border-radius: 24px; overflow: hidden; }
-.pricing-intro__bg { position: absolute; inset: 0; background: var(--paper-2) url('/images/hero_cinematic.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
+.pricing-intro__bg { position: absolute; inset: 0; background: var(--paper-2) url('/images/Contact us img/pexels-kudung-setiawan-92376778-19102538.jpg') no-repeat center center / cover; border-radius: 24px; z-index: 1; }
 
 .pricing-quote-card {
   position: relative;
@@ -2412,8 +2416,8 @@
   font-size: 3rem;
   font-weight: 900;
   font-family: var(--display);
-  color: var(--blue);
-  opacity: 0.15;
+  color: var(--cyan, #46bbdf);
+  opacity: 1;
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -3896,22 +3900,23 @@
 .niche-item.left .niche-card { margin-right: 70px; }
 .niche-item.right .niche-card { margin-left: 70px; }
 
-/* Connectors */
 .niche-connector {
   position: absolute;
-  top: 0;
-  height: 50%; 
+  top: -50%;
+  height: 100%; 
   width: 70px;
   z-index: 1;
 }
 .niche-connector.left {
-  right: calc(50% - 1px);
+  left: 50%;
+  margin-left: -69px;
   border-right: 2px solid #00C2FF;
   border-bottom: 2px solid #00C2FF;
   border-bottom-right-radius: 20px;
 }
 .niche-connector.right {
-  left: calc(50% - 1px);
+  left: 50%;
+  margin-left: -1px;
   border-left: 2px solid #00C2FF;
   border-bottom: 2px solid #00C2FF;
   border-bottom-left-radius: 20px;

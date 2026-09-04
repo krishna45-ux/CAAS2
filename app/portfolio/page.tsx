@@ -108,7 +108,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--dark">FASHION</span>
-                <img src="/images/blog_corporate.jpg" alt="Business" />
+                <img src="/images/Portfolio img/6.webp" alt="Business" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">BUSINESS & SPACES</h4>
@@ -130,7 +130,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal d1">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--cyan">FEATURED</span>
-                <img src="/images/ind_product.jpg" alt="Apple" />
+                <img src="/images/Portfolio img/set stories.png" alt="Apple" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">PEOPLE & PERSONAL BRANDS</h4>
@@ -156,7 +156,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--dark">RESTAURANT</span>
-                <img src="/images/blog_wedding.jpg" alt="Restaurant" />
+                <img src="/images/Portfolio img/DSC00095.JPG" alt="Restaurant" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">EVENTS & EXPERIENCES</h4>
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal d1">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
-                <img src="/images/hero_poster.jpg" alt="Car" />
+                <img src="/images/Portfolio img/corporate events shoot.jpg" alt="Car" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">PRODUCTS & BRANDS</h4>

@@ -46,7 +46,7 @@ export function Statement() {
       <Reveal dir="up" delay={0.18}>
         <div className="lead-card">
           <span className="lead-card__bar" aria-hidden="true" />
-          <b>CAAS (Cameraman as a Service)</b> connects businesses, creators, influencers and brands with professional cameramen on demand. From social media content, influencer and personal-brand shoots to product, business, real-estate and event coverage — you book the right cameraman for exactly what you need. Starting at <span className="price-chip u-red" style={{fontSize: '1.2em'}}>₹3500 for 5 hrs 30 mins - including break, ₹500 for every extra hour</span>, with flexible additional hours and production requirements based on the project.
+          <b>CAAS (Cameraman as a Service)</b> connects businesses, creators, influencers and brands with professional cameramen on demand. From social media content, influencer and personal-brand shoots to product, business, real-estate and event coverage — you book the right cameraman for exactly what you need. Starting at <span className="price-chip">₹3500 for 5 hrs 30 mins - including break, ₹500 for every extra hour</span>, with flexible additional hours and production requirements based on the project.
         </div>
       </Reveal>
     </section>
@@ -56,9 +56,9 @@ export function Statement() {
 /* ---------- Where we shoot ---------- */
 
 const SHOOTS = [
-  { img: '/images/home_studio.jpg', alt: 'Cameraman filming social-media content in a studio', title: 'Social Media Content', meta: 'f/2.0 · 35mm' },
-  { img: '/images/home_event.jpg', alt: 'Crew covering an outdoor event', title: 'Events & Exhibitions', meta: 'f/2.8 · 24mm' },
-  { img: '/images/home_corporate.jpg', alt: 'Corporate team on a real-estate shoot', title: 'Real Estate & Infra', meta: 'f/4.0 · 16mm' },
+  { img: '/images/UsuallyWhereWeShoot img/social media content.jpg', alt: 'Cameraman filming social-media content in a studio', title: 'Social Media Content', meta: 'f/2.0 · 35mm' },
+  { img: '/images/UsuallyWhereWeShoot img/event image.png', alt: 'Crew covering an outdoor event', title: 'Events & Exhibitions', meta: 'f/2.8 · 24mm' },
+  { img: '/images/UsuallyWhereWeShoot img/infra and real estate.png', alt: 'Corporate team on a real-estate shoot', title: 'Real Estate & Infra', meta: 'f/4.0 · 16mm' },
 ];
 
 export function Shoot() {
@@ -137,7 +137,7 @@ export function FunFact() {
         {/* Left: full annotated camera image */}
         <div className="funfact__visual">
           <img
-            src="/images/cc801b1b-0a6a-4f47-9700-9e11bf7b3f3e.png"
+            src="/images/fun-fact-camera.jpg"
             alt="Camera on tripod with annotations"
             className="funfact__cam-img"
           />
@@ -166,12 +166,12 @@ export function FunFact() {
 /* ---------- Portfolio ---------- */
 
 const STILLS = [
-  { img: '/images/ind_camera_rig.jpg', alt: 'Cinema prime lens detail', cap: 'STILL 01 · f/2.8', drift: 34 },
-  { img: '/images/blog_lighting.jpg', alt: 'Golden-hour silhouette shoot', cap: 'STILL 02 · f/1.8', drift: -22 },
-  { img: '/images/storyteller.jpg', alt: 'Studio storyteller in frame', cap: 'STILL 03 · f/4.0', drift: 26 },
-  { img: '/images/blog_wedding.jpg', alt: 'Outdoor event coverage', cap: 'STILL 04 · f/2.0', drift: -30 },
-  { img: '/images/blog_corporate.jpg', alt: 'Corporate team on set', cap: 'STILL 05 · f/2.8', drift: 20 },
-  { img: '/images/hero_poster.jpg', alt: 'Frame from a recent brand film', cap: 'STILL 06 · f/5.6', drift: -26 },
+  { img: '/images/Wanna see more img/DSC00062.JPG', alt: 'Cinema prime lens detail', cap: 'STILL 01 · f/2.8', drift: 34 },
+  { img: '/images/Wanna see more img/DSC00545.JPG', alt: 'Golden-hour silhouette shoot', cap: 'STILL 02 · f/1.8', drift: -22 },
+  { img: '/images/Wanna see more img/DSC00788.JPG', alt: 'Studio storyteller in frame', cap: 'STILL 03 · f/4.0', drift: 26 },
+  { img: '/images/Wanna see more img/DSC05651.JPG', alt: 'Outdoor event coverage', cap: 'STILL 04 · f/2.0', drift: -30 },
+  { img: '/images/Wanna see more img/DSC09999.JPG', alt: 'Corporate team on set', cap: 'STILL 05 · f/2.8', drift: 20 },
+  { img: '/images/Wanna see more img/image.png', alt: 'Frame from a recent brand film', cap: 'STILL 06 · f/5.6', drift: -26 },
 ];
 
 export function Portfolio() {

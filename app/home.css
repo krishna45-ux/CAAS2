@@ -682,7 +682,7 @@
 .pricing__cur{color:var(--text)}
 .home .pricing__rate{
   font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
-  color:var(--blue-ink);text-transform:uppercase;margin-top:.8em;
+  color:var(--ink, #111727); font-weight: 600; text-transform:uppercase;margin-top:.8em;
 }
 .home .pricing__quote{
   font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--muted);
