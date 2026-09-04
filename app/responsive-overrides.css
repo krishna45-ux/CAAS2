@@ -341,13 +341,25 @@
 
   /* Specific Component Fixes */
   .pf-hero {
-    padding-top: 100px !important;
+    padding-top: 80px !important;
+  }
+  
+  .pf-hero__title {
+    margin-bottom: 12px !important;
+  }
+  
+  .pf-hero__badge {
+    margin-bottom: 16px !important;
+  }
+  
+  .pf-hero__sub {
+    margin-bottom: 20px !important;
   }
   
   .pf-stats {
     flex-direction: column !important;
     gap: 16px !important;
-    align-items: center !important;
+    align-items: flex-start !important;
   }
 
   .pf-avatar-card {
