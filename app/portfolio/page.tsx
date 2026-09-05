@@ -258,35 +258,35 @@ export default function PortfolioPage() {
                    <span className="avatar-title">Ravi M.</span>
                    <div className="review-text">"Bro shot my brand video like a Netflix trailer 🎬"</div>
                  </div>
-                 <img src="/images/storyteller.jpg" alt="Ravi M." />
+                 <img src="/images/avatar_ravi.jpg" alt="Ravi M." />
               </div>
               <div className="pf-avatar-card md">
                  <div className="avatar-info">
                    <span className="avatar-title">Priya S.</span>
                    <div className="review-text">"Took 200 photos of our team and somehow everyone looked good. Magic."</div>
                  </div>
-                 <img src="/images/sarcastic_crew_2.png" alt="Priya S." />
+                 <img src="/images/avatar_priya.jpg" alt="Priya S." />
               </div>
               <div className="pf-avatar-card lg">
                  <div className="avatar-info">
                    <span className="avatar-title">Arjun K.</span>
                    <div className="review-text">"Been shooting for us 3 months now, still shows up before we're even ready. That's dedication."</div>
                  </div>
-                 <img src="/images/storyteller.jpg" alt="Arjun K." />
+                 <img src="/images/avatar_arjun.jpg" alt="Arjun K." />
               </div>
               <div className="pf-avatar-card md">
                  <div className="avatar-info">
                    <span className="avatar-title">Meera D.</span>
                    <div className="review-text">"Rude how talented this guy is honestly 😤 10/10"</div>
                  </div>
-                 <img src="/images/sarcastic_crew_2.png" alt="Meera D." />
+                 <img src="/images/avatar_meera.jpg" alt="Meera D." />
               </div>
               <div className="pf-avatar-card sm">
                  <div className="avatar-info">
                    <span className="avatar-title">Sanya T.</span>
                    <div className="review-text">"Told him 'just casual pics' and he delivered a whole photoshoot. Never going back to anyone else."</div>
                  </div>
-                 <img src="/images/storyteller.jpg" alt="Sanya T." />
+                 <img src="/images/avatar_sanya.jpg" alt="Sanya T." />
               </div>
            </div>
            <h2 className="pf-curve__title text-center" style={{ marginTop: '40px' }}>Latest Client Feedback for<br/><span className="u-cyan u-italic">Our Masters</span></h2>
