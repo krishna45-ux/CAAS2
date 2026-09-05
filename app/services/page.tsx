@@ -184,7 +184,7 @@ export default function ServicesPage() {
           {/* Top Row: 2 large cards */}
           <div className="bento-card bento-card--large reveal d1">
             <div className="bento-card__img">
-              <Image src="/images/Service img/DSC09221.JPG" alt="Real Estate" fill style={{ objectFit: 'cover' }} />
+              <Image src="/images/the_deck_reception.jpg" alt="Real Estate" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
               <div className="bento-card__header">
