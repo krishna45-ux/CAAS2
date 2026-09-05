@@ -753,8 +753,8 @@ export default function ServicesPage() {
       
       {lightboxImage && (
         <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
-          <button className="lightbox-close">&times;</button>
-          <img src={lightboxImage} alt="Expanded view" className="lightbox-img" />
+          <button className="lightbox-close" onClick={(e) => { e.stopPropagation(); setLightboxImage(null); }}>&times;</button>
+          <img src={lightboxImage} alt="Expanded view" className="lightbox-img" onClick={(e) => e.stopPropagation()} />
         </div>
       )}
     </>
