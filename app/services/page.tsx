@@ -1,9 +1,14 @@
+"use client";
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Stagger, StaggerItem, Reveal } from '../components/motion';
 
 export default function ServicesPage() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
   return (
+    <>
     <main id="top" className="page-main services-page" data-nav="light">
       
       {/* 1. HERO — two-column, per Figma */}
@@ -183,7 +188,7 @@ export default function ServicesPage() {
         <div className="expertise-bento">
           {/* Top Row: 2 large cards */}
           <div className="bento-card bento-card--large reveal d1">
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/the_deck_reception.jpg")} style={{ cursor: 'pointer' }}>
               <Image src="/images/the_deck_reception.jpg" alt="Real Estate" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
@@ -196,7 +201,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="bento-card bento-card--large reveal d2">
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/Service img/Screenshot 2026-09-04 154614.png")} style={{ cursor: 'pointer' }}>
               <Image src="/images/Service img/Screenshot 2026-09-04 154614.png" alt="Manufacturing" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
@@ -214,7 +219,7 @@ export default function ServicesPage() {
 
           {/* Middle Row: 3 small cards */}
           <div className="bento-card bento-card--small reveal d4">
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/service img2/C0060T01.JPG")} style={{ cursor: 'pointer' }}>
               <Image src="/images/service img2/C0060T01.JPG" alt="Influencers" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
@@ -231,7 +236,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="bento-card bento-card--small reveal d5">
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/service img2/DSC00205.JPG")} style={{ cursor: 'pointer' }}>
               <Image src="/images/service img2/DSC00205.JPG" alt="Personal Branding" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
@@ -248,7 +253,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="bento-card bento-card--small reveal d6">
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/service img2/DSC00899.JPG")} style={{ cursor: 'pointer' }}>
               <Image src="/images/service img2/DSC00899.JPG" alt="Food & Restaurant" fill style={{ objectFit: 'cover' }} />
             </div>
             <div className="bento-card__content">
@@ -283,7 +288,7 @@ export default function ServicesPage() {
                 <Link href="/portfolio" className="btn btn--outline">View Showcase</Link>
               </div>
             </div>
-            <div className="bento-card__img">
+            <div className="bento-card__img" onClick={() => setLightboxImage("/images/home_corporate.jpg")} style={{ cursor: 'pointer' }}>
               <Image src="/images/home_corporate.jpg" alt="Agencies" fill style={{ objectFit: 'cover' }} />
             </div>
           </div>
@@ -745,5 +750,13 @@ export default function ServicesPage() {
       </section>
 
     </main>
+      
+      {lightboxImage && (
+        <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
+          <button className="lightbox-close">&times;</button>
+          <img src={lightboxImage} alt="Expanded view" className="lightbox-img" />
+        </div>
+      )}
+    </>
   );
 }
