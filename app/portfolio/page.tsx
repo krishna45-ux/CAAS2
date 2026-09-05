@@ -156,7 +156,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--dark">RESTAURANT</span>
-                <img src="/images/Portfolio img/DSC00095.JPG" alt="Restaurant" />
+                <img src="/images/Portfolio img/corporate events shoot.jpg" alt="Car" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">EVENTS & EXPERIENCES</h4>
@@ -178,7 +178,7 @@ export default function PortfolioPage() {
             <div className="pf-niche-card reveal d1">
               <div className="pf-niche-card__img">
                 <span className="pf-badge pf-badge--dark">AUTOMOTIVE</span>
-                <img src="/images/Portfolio img/corporate events shoot.jpg" alt="Car" />
+                <img src="/images/Portfolio img/DSC00095.JPG" alt="Restaurant" />
               </div>
               <div className="pf-niche-card__content">
                 <h4 className="u-cyan">PRODUCTS & BRANDS</h4>
