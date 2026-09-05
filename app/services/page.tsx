@@ -687,7 +687,7 @@ export default function ServicesPage() {
              <Image src="/images/service img3/C8602T01.JPG" alt="Gallery 2" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="gallery-img">
-             <Image src="/images/service img3/C9436T01.JPG" alt="Gallery 3" fill style={{ objectFit: 'cover' }} />
+             <Image src="/images/new_collab.jpg" alt="Gallery 3" fill style={{ objectFit: 'cover' }} />
           </div>
           <div className="gallery-img">
              <Image src="/images/service img3/DSC00888.JPG" alt="Gallery 4" fill style={{ objectFit: 'cover' }} />
